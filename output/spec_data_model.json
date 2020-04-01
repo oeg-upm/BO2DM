@@ -1,0 +1,862 @@
+{
+"building": {
+    "definition": "A physical structure with walls and a roof to give protection to occupants, animals and things.",
+    "related_terms": [
+      "Construction",
+      "Edifice"
+    ],
+    "standards": [
+      "ifcXML",
+      "obXML"
+    ],
+    "data_added": "15/10/2019",
+    "date_deprecated": null,
+    "version": 1,
+    "children": {
+      "space": {
+        "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
+        "type": "string",
+        "related_terms": [
+          "IfcSpace"
+        ],
+        "standards": {
+          "ifcXML": "IfcSpace",
+          "type": "element"
+        },
+        "data_added": "05/11/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        },
+        "children":{
+          "spaceID": {
+            "definition": "A unique identifier for a space.",
+            "type": "string",
+            "related_terms": [
+              "ID"
+            ],
+            "standards": [
+              {
+                "ifcXML": "IfcSpace/id",
+                "type": "attribute",
+                "use": "optional"
+              }
+            ],
+            "data_added": "15/10/2019",
+            "date_deprecated": null,
+            "version": 1,
+            "facet": {
+              "cardinalityMax": 1,
+              "ordered": false,
+              "sensitive": false
+            }
+          },
+          "spaceGlobalID": {
+            "definition": "A unique global identifier for this space.",
+            "type": "string",
+            "related_terms": [
+              "Global ID"
+            ],
+            "standards": [
+              {
+                "ifcXML": "IfcSpace/GlobalID",
+                "type": "element"
+              }
+            ],
+            "data_added": "15/10/2019",
+            "date_deprecated": null,
+            "version": 1,
+            "facet": {
+              "cardinalityMax": 1,
+              "ordered": false,
+              "sensitive": false
+            }
+          },
+          "spaceName": {
+            "definition": "The unique name (or number) for this space from the building plan.",
+            "type": "string",
+            "related_terms": [
+              "Space Name"
+            ],
+            "standards": [
+              {
+                "ifcXML": "IfcSpace/Name",
+                "type": "element"
+              }
+            ],
+            "data_added": "15/10/2019",
+            "date_deprecated": null,
+            "version": 1,
+            "facet": {
+              "cardinalityMax": 1,
+              "ordered": false,
+              "sensitive": false
+            }
+          },
+          "spaceLongName": {
+            "definition": "The full name of the space, that is often used in addition to the Name, if a number is assigned to the room, then the descriptive name is exchanged as LongName.",
+            "type": "string",
+            "related_terms": [
+              "Space Long Name"
+            ],
+            "standards": [
+              {
+                "ifcXML": "IfcSpace/LongName",
+                "type": "element"
+              }
+            ],
+            "data_added": "15/10/2019",
+            "date_deprecated": null,
+            "version": 1,
+            "facet": {
+              "cardinalityMax": 1,
+              "ordered": false,
+              "sensitive": false
+            }
+          },
+          "spaceCompositionType": {
+            "definition": "A composition type indicating whether a space can  be decomposed in parts, where each part defines a partial space. Its values range from COMPLEX (indicating a space group), ELEMENT (indicating a space), to PARTIAL (for a partial space)",
+            "type": "string",
+            "related_terms": [
+              "Space Composition Type"
+            ],
+            "standards": [
+              {
+                "ifcXML": "IfcSpace/CompositionType",
+                "type": "element"
+              }
+            ],
+            "data_added": "15/10/2019",
+            "date_deprecated": null,
+            "version": 1,
+            "facet": {
+              "cardinalityMax": 1,
+              "ordered": false,
+              "sensitive": false
+            }
+          }
+        }
+      }
+    }
+},
+"occupant": {
+    "definition": "A person who a person who lives or works in a space or building.",
+    "related_terms": [
+      "habitant",
+      "resident"
+    ],
+    "standards": ["obXML", "UN/CEFACT CCTS"],
+    "data_added": "15/10/2019",
+    "date_deprecated": null,
+    "version": 1,
+    "children": {
+      "occupantID": {
+        "definition": "A unique identifier for this occupant.",
+        "type": "string",
+        "related_terms": [
+          "UID"
+        ],
+        "standards": [
+          {
+            "UN/CEFACT CCTS": "ID"
+          },
+          {
+            "obXML": "Occupant/ID",
+            "type": "element"
+          }
+        ],
+        "data_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "occupantName": {
+        "definition": "The official  name or set of names, expressed as text, by which this person is known in its identity documents.",
+        "type": "string",
+        "related_terms": [
+          "Given Name",
+          "First Name"
+        ],
+        "standards": [
+            {
+              "obXML": "Occupant/Name",
+              "type": "element"
+            },
+          {
+            "UN/CEFACT CCTS": ["Name", "FamilyName"]
+          }
+        ],
+        "data_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "transformation":
+          { 
+            "applicableStandard": "UN/CEFACT CCTS",
+            "function": ["concatenate"],
+            "parameters": ["Name", " ", "FamilyName"]
+          },
+          "cardinalityMax": 3,
+          "ordered": true,
+          "sensitive": true
+        }
+      },
+      "occupantAge": {
+        "definition": "A measure of the age of this person such as his/her age at a particular point in time.",
+        "type": "integer",
+        "related_terms": null,
+        "standards": [
+            {
+              "obXML": "Occupant/Age",
+              "type": "element"
+            },
+            {
+              "UN/CEFACT CCTS": "Age"
+            } 
+        ],
+        "data_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": null,
+          "measurementUnit": "Year",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": true
+        }
+      },
+      "genderCode": {
+        "definition": "The male or female sex, or the state of being either male or female",
+        "type": "code",
+        "related_terms": "sex",
+        "standards": [
+          {
+            "UN/CEFACT CCTS": "Gender"
+          }
+        ],
+        "data_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "codeList": "LINK",
+          "codeType": "Alpha-2 code",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "contactEmail": {
+        "definition": "The email for communication with the occupant.",
+        "type": "string",
+        "related_terms": null,
+        "standards": [
+          {
+            "CCTS": "Communication_URI"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 2,
+          "ordered": true,
+          "sensitive": true
+        }
+      },
+      "contactTelephone": {
+        "definition": "The text string of characters that make up the complete number for this telephone communication, including the country access code for this communication number such as 44, 1, 353 etc",
+        "type": "string",
+        "related_terms": [
+          "Contact Tel"
+        ],
+        "standards": [
+          {
+            "CCTS": "Communication_Telephone"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 2,
+          "ordered": true,
+          "sensitive": true
+        }
+      },
+      "jobType": {
+        "definition": "A description of the job / occupation of the specific occupant.",
+        "type": "string",
+        "related_terms": [
+          "Job Position",
+          "Occupation",
+          "Profession"
+        ],
+        "standards": [
+          {
+            "obXML":"Occupant/JobTitle",
+            "type": "element" 
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "lifestyle": {
+        "definition": "A description of the way of living of the specific occupant.",
+        "type": "string",
+        "related_terms": [
+          "Way of Living",
+          "Life Style"
+        ],
+        "standards": [
+          {
+            "obXML":"Occupant/LifeStyle",
+            "type": "element" 
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 5,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "typicalBehavior": {
+        "definition": "The typical way that an occupant behaves in a particular situation or under particular conditions.",
+        "type": {
+          "$ref": "#/behavior"
+        },
+        "related_terms": [
+          "Typical Behavioral Patterns",
+          "Usual Attitude"
+        ],
+        "standards": [
+          {
+            "obXML": "Occupant/Behavior/BehaviorID",
+            "type": "element"
+          }
+        ],
+        "data_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": "unbounded",
+          "ordered": false,
+          "sensitive": false
+        }
+      }
+    }
+  },
+"behavior": {
+    "definition": "The behaviour of an occupant related to his/her interaction with buildings.",
+    "related_terms": [
+      "Behavior in Building"
+    ],
+    "standards": ["obXML"],
+    "date_added": "15/10/2019",
+    "date_deprecated": null,
+    "version": 1,
+    "children": {
+      "behaviorIF": {
+        "definition": "A unique identifier of the specific behavior.",
+        "type": "string",
+        "related_terms": null,
+        "standards": [
+          {
+            "obXML": "Behavior/ID",
+            "type": "attribute",
+            "use": "required"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "description": {
+        "definition": "A description of the specific behavior.",
+        "type": "string",
+        "related_terms": null,
+        "standards": [
+          {
+            "obXML": "Behavior/Description",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "specialIndicator": {
+        "definition": "An indication whether it refers to a special behavior. When the special behavior is triggered, other behaviors are ignored.",
+        "type": "boolean",
+        "related_terms": [
+          "Special Behavior"
+        ],
+        "standards": [
+          {
+            "obXML": "Behavior/IsSpecialBehavior",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      }
+    }
+  },
+"thermalRequirements": {
+    "definition": "The thermal conditions and requirements in a particular space, spatial zone, zone.",
+    "related_terms": [
+      "Space Thermal Requirements"
+    ],
+    "standards": ["ifcXML"],
+    "date_added": "15/10/2019",
+    "date_deprecated": null,
+    "version": 1,
+    "children": {
+      "requirementsStatus": {
+        "definition": "An indication whether the thermal requirements refer to stated or observed requirements by the occupants.",
+        "type": "string",
+        "related_terms": [
+          "Thermal Requirements Status"
+        ],
+        "standards": null,
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "requirementsIssueTime": {
+        "definition": "The time that the thermal requirements report was issued.",
+        "type": "datetime",
+        "related_terms": [
+          "Requirements Issue Datetime"
+        ],
+        "standards": null,
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "timezone": "UTC",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "requirementsLocation": {
+        "definition": "The location that the requirements concern. INDICATIVE FIELD",
+        "type": {
+          "$ref": "#/location"
+        },
+        "related_terms": null,
+        "standards": null,
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 5,
+          "ordered": true,
+          "sensitive": false
+        }
+      },
+      "meanTemperature": {
+        "definition": "Temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period. Provide this value, if no temperatur range (Min-Max) is available.",
+        "type": "double",
+        "related_terms": [
+          "Average Temp",
+          "SpaceTemperature"
+        ],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/SpaceTemperature",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "temperature",
+          "measurementUnit": "Celcius",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "maxTemperature": {
+        "definition": "Maximal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period.",
+        "type": "double",
+        "related_terms": [
+          "SpaceTemperatureMax"
+        ],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/SpaceTemperatureMax",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "temperature",
+          "measurementUnit": "Celcius",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "minTemperature": {
+        "definition": "Minimal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period.",
+        "type": "double",
+        "related_terms": [
+          "Minimum Temperature",
+          "SpaceTemperatureMin"
+        ],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/SpaceTemperatureMin",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "temperature",
+          "measurementUnit": "Celcius",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "absoluteHumidity": {
+        "definition": "An absolute measurement of how much water there is in the air.",
+        "type": "double",
+        "related_terms": ["Absolute Dew Point"],
+        "standards": null,
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "humidity",
+          "measurementUnit": "Dew Point",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "relativeHumidity": {
+        "definition": "A relative measurement of how much water there is in the air.",
+        "type": "double",
+        "related_terms": ["SpaceHumidity"],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/SpaceHumidity",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "percentage",
+          "measurementUnit": "%",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "meanPressure": {
+        "definition": "The mean pressure measured under the associated meteorological conditions.",
+        "type": "double",
+        "related_terms": [
+          "Mean Pressure",
+          "Average Pressure"
+        ],
+        "standards": null,
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "pressure",
+          "measurementUnit": "Bar",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "ventilationIndicator": {
+        "definition": "An indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
+        "type": "boolean",
+        "related_terms": ["NaturalVentilation"],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/NaturalVentilation",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      },
+      "ventilationRate": {
+        "definition": "A particular natural air ventilation rate, given in air changes per hour.",
+        "type": "double",
+        "related_terms": ["NaturalVentilationRate"],
+        "standards": [
+          {
+            "ifcXML": "Pset_SpaceThermalRequirements/NaturalVentilationRate",
+            "type": "element"
+          }
+        ],
+        "date_added": "15/10/2019",
+        "date_deprecated": null,
+        "version": 1,
+        "facet": {
+          "measurementType": "ventilation",
+          "measurementUnit": "air changes/h",
+          "cardinalityMax": 1,
+          "ordered": false,
+          "sensitive": false
+        }
+      }
+    }
+  },
+"location": {
+      "definition": "A specific place or position identifying a building.",
+      "related_terms": [
+        "Place",
+        "POI"
+      ],
+      "standards": null,
+      "date_added": "15/10/2019",
+      "date_deprecated": null,
+      "version": 1,
+      "children": {
+        "locationCode": {
+          "definition": "A specific location code.",
+          "type": "string",
+          "related_terms": [
+            "Location Code",
+            "Location ID"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationType": {
+          "definition": "A type associated to this location.",
+          "type": "string",
+          "related_terms": [
+            "Location Type"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationName": {
+          "definition": "The official name with which this location is known.",
+          "type": "string",
+          "related_terms": [
+            "Location Official Name"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "countryCode": {
+          "definition": "The ISO country code to which this location belongs.",
+          "type": "string",
+          "related_terms": [
+            "Location Country Code"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "codeList": "LINK",
+            "codeType": "ISO 3166 Country Codes, Alpha 2-code",
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationTimezone": {
+          "definition": "The normal time variation from GMT/UTC as an indication of which of the twenty-four parts into which the world is divided this location belongs to.",
+          "type": "string",
+          "related_terms": [
+            "GMT/UTC Variation"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "longitude": {
+          "definition": "The location's co-ordinates in terms of distance east or west of an imaginary line between the North Pole and the South Pole, measured in degrees.",
+          "type": "double",
+          "related_terms": [
+            "Location Long."
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "measurementType": null,
+            "measurementUnit": "Degrees",
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "latitude": {
+          "definition": "The location's co-ordinates in terms of position north or south of the equator, measured in degrees.",
+          "type": "double",
+          "related_terms": [
+            "Location Lat."
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "measurementType": null,
+            "measurementUnit": "Degrees",
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "status": {
+          "definition": "An indicator of the status of the location to identify whether it is currently active.",
+          "type": "string",
+          "related_terms": [
+            "Inactive Indicator"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationEvent": {
+          "definition": "A description of an event occuring to a location in a specific reference datetime.",
+          "type": "string",
+          "related_terms": [
+            "Location Incident"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationEventType": {
+          "definition": "The type of an event occuring to a location in a specific reference datetime.",
+          "type": "string",
+          "related_terms": [
+            "Location Event Type"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        },
+        "locationEventOccurence": {
+          "definition": "The datetime when an event occured / is expected to occur to a location.",
+          "type": "datetime",
+          "related_terms": [
+            "Location Incident Occurence Date",
+            "Location Event Date"
+          ],
+          "standards": null,
+          "date_added": "15/10/2019",
+          "date_deprecated": null,
+          "version": 1,
+          "facet": {
+            "timezone": "UTC",
+            "cardinalityMax": 1,
+            "ordered": false,
+            "sensitive": false
+          }
+        }
+      }
+    }
+}
