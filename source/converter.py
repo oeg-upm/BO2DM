@@ -3,6 +3,8 @@ from rdflib.serializer import Serializer
 import json
 import os
 
+project_dir = os.path.dirname(os.getcwd())
+
 def find_ontology_element(element_uri, ont_jsonld):
 
     for element in ont_jsonld:
@@ -36,7 +38,6 @@ print(ont_jsonld)
 data_model = {}
 
 # Namespaces
-building = "https://bimerr.iot.linkeddata.es/def/building#"
 ont_uri = "https://bimerr.iot.linkeddata.es/def/occupancy-profile#"
 rdfs = "http://www.w3.org/2000/01/rdf-schema#"
 rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -51,11 +52,11 @@ for concept_uri in concepts:
 
     concept_name = concept_uri[concept_uri.find("#")+1:]
     element = find_ontology_element(concept_uri, ont_jsonld)
-    definition = element[rdfs + "comment"][0]["@value"]
-    standard = element[rdfs + "isDefinedBy"][0]["@value"]
-    date_added = element[dc + "dateAdded"][0]["@value"]
-    date_deprecated = element[dc + "dateDeprecated"][0]["@value"]
-    version = element[dc + "version"][0]["@value"]
+    definition = element[rdfs+"comment"][0]["@value"] if rdfs+"comment" in element else None
+    standard = element[rdfs+"isDefinedBy"][0]["@value"] if rdfs+"isDefinedBy" in element else None
+    date_added = element[dc+"dateAdded"][0]["@value"] if dc+"dateAdded" in element else None
+    date_deprecated = element[dc+"dateDeprecated"][0]["@value"] if dc+"dateDeprecated" in element else None
+    version = element[owl+"versionInfo"][0]["@value"] if owl+"versionInfo" in element else None
     data_model[concept_name] = {"definition": definition}
     data_model[concept_name]["standards"] = [standard]
     data_model[concept_name]["date_added"] = date_added
@@ -77,56 +78,49 @@ for concept_uri in concepts:
         property_uri = superclass_element[owl + "onProperty"][0]["@id"]
         property_element = find_ontology_element(property_uri, ont_jsonld)
         property_types = property_element["@type"]
+        property_name = property_uri[property_uri.find("#") + 1:]
 
-        # One property could be of more than one type
-        #interesting_types = [owl+"ObjectProperty", owl+"DatatypeProperty"]
-        #property_type = [type for type in property_types if type in interesting_types][0]
+        data_model[concept_name]["children"][property_name] = {}
+        definition = property_element[rdfs + "comment"][0]["@value"] if rdfs + "comment" in property_element else None
+        standard = property_element[rdfs + "isDefinedBy"][0][
+            "@value"] if rdfs + "isDefinedBy" in property_element else None
+        date_added = property_element[dc + "dateAdded"][0]["@value"] if dc + "dateAdded" in property_element else None
+        date_deprecated = property_element[dc + "dateDeprecated"][0][
+            "@value"] if dc + "dateDeprecated" in property_element else None
+        version = property_element[owl + "versionInfo"][0][
+            "@value"] if owl + "versionInfo" in property_element else None
+        ordered = property_element[dc + "ordered"][0]["@value"] if dc + "ordered" in property_element else None
+        sensitive = property_element[dc + "sensitive"][0]["@value"] if dc + "sensitive" in property_element else None
+        data_model[concept_name]["children"][property_name]["definition"] = definition
+        data_model[concept_name]["children"][property_name]["standards"] = [standard]
+        data_model[concept_name]["children"][property_name]["date_added"] = date_added
+        data_model[concept_name]["children"][property_name]["date_deprecated"] = date_deprecated
+        data_model[concept_name]["children"][property_name]["version"] = version
 
-        #if property_type == owl + "ObjectProperty":
-        if owl+"ObjectProperty" in property_types:
-            try:
-                range_uri = superclass_element[owl + "someValuesFrom"][0]["@id"]
-            except:
-                range_uri = superclass_element[owl + "allValuesFrom"][0]["@id"]
-
-            range_name = range_uri[range_uri.find("#") + 1:]
-            data_model[concept_name]["children"][range_name] = {"type": {"$ref": "#/" + range_name}}
-
-            if owl + "FunctionalProperty" in property_types:
-                data_model[concept_name]["children"][range_name]["facet"] = {"cardinalityMax": 1}
-            else:
-                max_cardinality = superclass_element[owl + "maxQualifiedCardinality"][0]["@value"]
-                data_model[concept_name]["children"][range_name]["facet"] = {"cardinalityMax": max_cardinality}
-
+        if owl + "someValuesFrom" in superclass_element:
+            datatype = superclass_element[owl + "someValuesFrom"][0]["@id"]
+        elif owl + "allValuesFrom" in superclass_element:
+            datatype = superclass_element[owl + "allValuesFrom"][0]["@id"]
         else:
-            property_name = property_uri[property_uri.find("#") + 1:]
-            data_model[concept_name]["children"][property_name] = {}
-            definition = property_element[rdfs + "comment"][0]["@value"]
-            standard = property_element[rdfs + "isDefinedBy"][0]["@value"]
-            date_added = property_element[dc + "dateAdded"][0]["@value"]
-            date_deprecated = property_element[dc + "dateDeprecated"][0]["@value"]
-            version = property_element[dc + "version"][0]["@value"]
-            ordered = property_element[dc + "ordered"][0]["@value"]
-            sensitive = property_element[dc + "sensitive"][0]["@value"]
-            data_model[concept_name]["children"][property_name]["definition"] = definition
-            data_model[concept_name]["children"][property_name]["standards"] = [standard]
-            data_model[concept_name]["children"][property_name]["date_added"] = date_added
-            data_model[concept_name]["children"][property_name]["date-deprecated"] = date_deprecated
-            data_model[concept_name]["children"][property_name]["version"] = version
+            datatype = superclass_element[owl + "onClass"][0]["@id"]
 
-            try:
-                datatype = superclass_element[owl + "someValuesFrom"][0]["@id"]
-            except:
-                datatype = superclass_element[owl + "allValuesFrom"][0]["@id"]
+        datatype = datatype[datatype.find("#") + 1:]
 
-            datatype = datatype[datatype.find("#") + 1:]
+        if owl + "FunctionalProperty" in property_types:
+            data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": 1}
+        elif owl + "maxQualifiedCardinality" in superclass_element:
+            max_cardinality = superclass_element[owl + "maxQualifiedCardinality"][0]["@value"]
+            data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
+        else:
+            data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": None}
+
+        data_model[concept_name]["children"][property_name]["facet"]["ordered"] = ordered
+        data_model[concept_name]["children"][property_name]["facet"]["sensitive"] = sensitive
+
+        if owl+"ObjectProperty" in property_types:
+            data_model[concept_name]["children"][property_name]["type"] = {"$ref": "#/" + datatype}
+        else:
             data_model[concept_name]["children"][property_name]["type"] = datatype
-
-            if owl + "FunctionalProperty" in property_types:
-                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": 1}
-            else:
-                max_cardinality = superclass_element[owl + "maxQualifiedCardinality"][0]["@value"]
-                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
 
 for i in data_model:
     print(i, data_model[i])
@@ -134,7 +128,6 @@ for i in data_model:
 
 result = json.dumps(data_model, indent=4, separators=(',', ': '))
 
-"""
-with open("./op_data_model2.json", "w") as f:
-    json.dump(ont_dict, f, indent=4, separators=(',', ': '))
-"""
+with open(project_dir + "/output/op_data_model.json", "w") as f:
+    json.dump(data_model, f, indent=4, separators=(',', ': '))
+

@@ -16,6 +16,10 @@
 <http://purl.org/dc/elements/1.1/dateAdded> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/elements/1.1/dateDeprecated
+<http://purl.org/dc/elements/1.1/dateDeprecated> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -24,17 +28,21 @@
 :relation1 rdf:type owl:ObjectProperty ,
                     owl:FunctionalProperty ;
            <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+           <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
            rdfs:comment "Definition of relation 1"@en ;
            rdfs:isDefinedBy "IFC" ;
-           rdfs:label "relation 1"@en .
+           rdfs:label "relation 1"@en ;
+           owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#relation2
 :relation2 rdf:type owl:ObjectProperty ;
            <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+           <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
            rdfs:comment "Definition of relation 2"@en ;
            rdfs:isDefinedBy "obXML" ;
-           rdfs:label "relation 2"@en .
+           rdfs:label "relation 2"@en ;
+           owl:versionInfo 1 .
 
 
 #################################################################
@@ -44,33 +52,41 @@
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#attribute1
 :attribute1 rdf:type owl:DatatypeProperty ;
             <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+            <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
             rdfs:comment "Definition for attribute 1"@en ;
             rdfs:isDefinedBy "obXML"@en ;
-            rdfs:label "attribute 1"@en .
+            rdfs:label "attribute 1"@en ;
+            owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#attribute2
 :attribute2 rdf:type owl:DatatypeProperty ;
             <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+            <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
             rdfs:comment "Definition for attribute 2"@en ;
             rdfs:isDefinedBy "obXML"@en ;
-            rdfs:label "attribute 2"@en .
+            rdfs:label "attribute 2"@en ;
+            owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#attribute3
 :attribute3 rdf:type owl:DatatypeProperty ;
             <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+            <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
             rdfs:comment "Definition for attribute 3"@en ;
             rdfs:isDefinedBy "ISA"@en ;
-            rdfs:label "attribute 3"@en .
+            rdfs:label "attribute 3"@en ;
+            owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#attribute4
 :attribute4 rdf:type owl:DatatypeProperty ;
             <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+            <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
             rdfs:comment "Definition for attribute 4"@en ;
             rdfs:isDefinedBy "ISA"@en ;
-            rdfs:label "attribute 4"@en .
+            rdfs:label "attribute 4"@en ;
+            owl:versionInfo 1 .
 
 
 #################################################################
@@ -94,7 +110,8 @@
           <http://purl.org/dc/elements/1.1/dateAdded> "19/03/2020" ;
           rdfs:comment "Definition of concept 1"@en ;
           rdfs:isDefinedBy "IFC" ;
-          rdfs:label "Concept 1"@en .
+          rdfs:label "Concept 1"@en ;
+          owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#Concept2
@@ -109,9 +126,11 @@
                             owl:someValuesFrom xsd:float
                           ] ;
           <http://purl.org/dc/elements/1.1/dateAdded> "21/03/2020" ;
+          <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
           rdfs:comment "Definition of concept 2"@en ;
           rdfs:isDefinedBy "obXML" ;
-          rdfs:label "Concept 2"@en .
+          rdfs:label "Concept 2"@en ;
+          owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#Concept3
@@ -121,27 +140,33 @@
                             owl:someValuesFrom xsd:float
                           ] ;
           <http://purl.org/dc/elements/1.1/dateAdded> "22/03/2020" ;
+          <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
           rdfs:comment "Definition of concept 3"@en ;
           rdfs:isDefinedBy "ISA" ;
-          rdfs:label "Concept 3"@en .
+          rdfs:label "Concept 3"@en ;
+          owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#Subconcept1
 :Subconcept1 rdf:type owl:Class ;
              rdfs:subClassOf :Concept1 ;
              <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
+             <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
              rdfs:comment "Definition of sub concept 1"@en ;
              rdfs:isDefinedBy "IFC" ;
-             rdfs:label "sub concept 1"@en .
+             rdfs:label "sub concept 1"@en ;
+             owl:versionInfo 1 .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#Subconcept2
 :Subconcept2 rdf:type owl:Class ;
              rdfs:subClassOf :Concept1 ;
              <http://purl.org/dc/elements/1.1/dateAdded> "21/03/2020" ;
+             <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
              rdfs:comment "Definition of sub concept 2"@en ;
              rdfs:isDefinedBy "IFC" ;
-             rdfs:label "sub concept 2"@en .
+             rdfs:label "sub concept 2"@en ;
+             owl:versionInfo 1 .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
