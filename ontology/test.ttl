@@ -89,6 +89,12 @@
             owl:versionInfo 1 .
 
 
+###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#attribute5
+:attribute5 rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Definition for attribute 5"@en ;
+            rdfs:label "attribute 5"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -149,7 +155,11 @@
 
 ###  http://www.semanticweb.org/hp/ontologies/2020/3/untitled-ontology-34#Subconcept1
 :Subconcept1 rdf:type owl:Class ;
-             rdfs:subClassOf :Concept1 ;
+             rdfs:subClassOf :Concept1 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :attribute5 ;
+                               owl:someValuesFrom xsd:float
+                             ] ;
              <http://purl.org/dc/elements/1.1/dateAdded> "15/03/2020" ;
              <http://purl.org/dc/elements/1.1/dateDeprecated> "06/04/2020" ;
              rdfs:comment "Definition of sub concept 1"@en ;

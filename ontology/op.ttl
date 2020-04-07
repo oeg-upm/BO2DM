@@ -1,6 +1,5 @@
 @prefix : <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 @prefix dc: <http://purl.org/dc/elements/1.1> .
-@prefix op: <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -13,1406 +12,1546 @@
 @prefix s4bldg: <https://w3id.org/def/saref4building#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix building: <http://bimerr.iot.linkeddata.es/def/building#> .
-@base <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#> rdf:type owl:Ontology ;
-                                                          <http://purl.org/dc/elements/1.1/created> "2020-02-01" ;
-                                                          <http://purl.org/dc/elements/1.1/creator> "María Poveda Vilallón" ,
-                                                                                                    "Serge Chávez Feria" ;
-                                                          <http://purl.org/dc/elements/1.1/description> "The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces."@en ;
-                                                          <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
-                                                          <http://purl.org/dc/elements/1.1/title> "Occupancy Profile ontology"@en ;
-                                                          dcterms:creator <http://www.oeg-upm.net/> ;
-                                                          dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
-                                                          vann:preferredNamespacePrefix "op"@en ;
-                                                          vann:preferredNamespaceUri "http://bimerr.iot.linkeddata.es/def/occupancy-profile#" ;
-                                                          owl:versionInfo "0.0.4" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/elements/1.1/created
-<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/dateDeprecated
-<http://purl.org/dc/elements/1.1/dateDeprecated> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/publisher
-<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/modified
-dcterms:modified rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#duration
-xsd:duration rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#gMonthDay
-xsd:gMonthDay rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#time
-xsd:time rdf:type rdfs:Datatype .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf
-op:composedOf rdf:type owl:ObjectProperty ;
-              rdfs:label "composed of"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange
-op:definedByRange rdf:type owl:ObjectProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:label "defined by range"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula
-op:describedByFormula rdf:type owl:ObjectProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:label "described by formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter
-op:describesParameter rdf:type owl:ObjectProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:label "describes parameter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesProperty
-op:describesProperty rdf:type owl:ObjectProperty ;
-                     rdfs:label "describes property"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy
-op:detailedBy rdf:type owl:ObjectProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:label "detailed by"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy
-op:drivenBy rdf:type owl:ObjectProperty ;
-            rdfs:label "driven by"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior
-op:hasBehavior rdf:type owl:ObjectProperty ;
-               rdfs:label "has behavior"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient
-op:hasCoefficient rdf:type owl:ObjectProperty ;
-                  rdfs:domain op:InteractionFormula ;
-                  rdfs:range op:Coefficient ;
-                  rdfs:label "has coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek
-op:hasDayOfWeek rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "has day of week"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasEnvironmentalParameter
-op:hasEnvironmentalParameter rdf:type owl:ObjectProperty ;
-                             rdfs:label "has environmental parameter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable
-op:hasIndependentVariable rdf:type owl:ObjectProperty ;
-                          rdfs:domain op:InteractionFormula ;
-                          rdfs:range op:EnvironmentalParameter ;
-                          rdfs:label "has independent variable"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting
-op:hasMeeting rdf:type owl:ObjectProperty ;
-              rdfs:label "has meeting"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant
-op:hasOccupant rdf:type owl:ObjectProperty ;
-               rdfs:label "has occupant"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode
-op:hasOperationalMode rdf:type owl:ObjectProperty ;
-                      rdfs:label "has operational mode"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason
-op:hasSeason rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:label "has season"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay
-op:hasTimeOfDay rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "has time of day"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType
-op:hasTransitionType rdf:type owl:ObjectProperty ;
-                     rdfs:label "has transition type"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure
-op:hasUnitOfMeasure rdf:type owl:ObjectProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:label "has unit of measure"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema
-op:inSchema rdf:type owl:ObjectProperty ;
-            rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-            rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-            rdfs:label "in schema"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#influencedByNeed
-op:influencedByNeed rdf:type owl:ObjectProperty ;
-                    rdfs:label "influenced by need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver
-op:interactsOver rdf:type owl:ObjectProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "interacts over"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo
-op:leadsTo rdf:type owl:ObjectProperty ;
-           rdfs:label "leads to"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace
-op:relatedToSpace rdf:type owl:ObjectProperty ;
-                  rdfs:label "related to space"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy
-op:specifiedBy rdf:type owl:ObjectProperty ;
-               rdfs:label "specified by"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#broader
-<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                              rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                              rdfs:label "broader"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrower
-<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                               rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                               rdfs:label "narrower"@en .
-
-
-###  https://w3id.org/def/saref4building#contains
-s4bldg:contains rdf:type owl:ObjectProperty ;
-                rdfs:label "contains"@en .
-
-
-###  https://w3id.org/def/saref4building#hasSpace
-s4bldg:hasSpace rdf:type owl:ObjectProperty ;
-                rdfs:label "has space"@en .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress
-op:buildingAddress rdf:type owl:DatatypeProperty ;
-                   rdfs:label "building address"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue
-op:coefficientValue rdf:type owl:DatatypeProperty ;
-                    rdfs:label "coefficient value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue
-op:controlValue rdf:type owl:DatatypeProperty ;
-                rdfs:label "control value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#description
-op:description rdf:type owl:DatatypeProperty ;
-               rdfs:label "description"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration
-op:duration rdf:type owl:DatatypeProperty ;
-            rdfs:label "duration"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime
-op:earlyOccurTime rdf:type owl:DatatypeProperty ;
-                  rdfs:label "early occur time"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason
-op:endSeason rdf:type owl:DatatypeProperty ;
-             rdfs:label "end season"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime
-op:endTime rdf:type owl:DatatypeProperty ;
-           rdfs:label "end time"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier
-op:identifier rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:label "identifier"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
-op:maxNumberOccupants rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:label "max number occupants"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
-op:maxRangeValue rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "max range value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
-op:minNumberOccupants rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:label "min number occupants"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
-op:minRangeValue rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "min range value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration
-op:minimalDuration rdf:type owl:DatatypeProperty ;
-                   rdfs:label "minimal duration"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#name
-op:name rdf:type owl:DatatypeProperty ;
-        rdfs:comment "name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
-op:occupantAge rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:label "occupant age"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender
-op:occupantGender rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:label "occupant gender"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype
-op:occupantJobtype rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
-                   rdfs:label "occupant jobtype"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle
-op:occupantLifestyle rdf:type owl:DatatypeProperty ,
-                              owl:FunctionalProperty ;
-                     rdfs:label "occupant lifestyle"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays
-op:onHolidays rdf:type owl:DatatypeProperty ;
-              rdfs:label "on holidays"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence
-op:percentTimePresence rdf:type owl:DatatypeProperty ;
-                       rdfs:label "percent time presence"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability
-op:probability rdf:type owl:DatatypeProperty ;
-               rdfs:label "probability"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason
-op:startSeason rdf:type owl:DatatypeProperty ;
-               rdfs:label "start season"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime
-op:startTime rdf:type owl:DatatypeProperty ;
-             rdfs:label "start time"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#time
-op:time rdf:type owl:DatatypeProperty ;
-        rdfs:label "time"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration
-op:typicalDuration rdf:type owl:DatatypeProperty ;
-                   rdfs:label "typical duration"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime
-op:typicalTime rdf:type owl:DatatypeProperty ;
-               rdfs:label "typical time"@en .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/building#Building
-building:Building rdf:type owl:Class ;
-                  rdfs:subClassOf s4bldg:Building ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:buildingAddress ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:description ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:identifier ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ;
-                  rdfs:comment "Building where the occupancy behaviors occur."@en ;
-                  rdfs:label "Building"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
-building:BuildingSpace rdf:type owl:Class ;
-                       rdfs:subClassOf s4bldg:BuildingSpace ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:hasMeeting ;
-                                         owl:allValuesFrom op:Meeting
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:hasOccupant ;
-                                         owl:allValuesFrom op:Occupant
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:identifier ;
-                                         owl:someValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:description ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:maxNumberOccupants ;
-                                         owl:allValuesFrom xsd:integer
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:minNumberOccupants ;
-                                         owl:allValuesFrom xsd:integer
-                                       ] ;
-                       rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
-                       rdfs:label "Building Space"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed
-op:AccousticNeed rdf:type owl:Class ;
-                 rdfs:subClassOf op:PhysicalNeed ;
-                 rdfs:comment "Range of parameter values where occupants do not feel accoustic discomfort and therefore, they don't carry out any actions."@en ;
-                 rdfs:label "Accoustic Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action
-op:Action rdf:type owl:Class ;
-          rdfs:comment "Actions are the interactions with systems or activities that an occupant can conduct to achieve environmental comfort. Actions connect occupants' inside-world needs with the environmental outside world. (Defintion taken from obXML)"@en ;
-          rdfs:label "Action"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior
-op:Behavior rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty op:drivenBy ;
-                              owl:someValuesFrom op:DriverSet
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:leadsTo ;
-                              owl:someValuesFrom [ rdf:type owl:Class ;
-                                                   owl:unionOf ( op:Action
-                                                                 op:Inaction
-                                                               )
-                                                 ]
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:influencedByNeed ;
-                              owl:allValuesFrom op:Need
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:identifier ;
-                              owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:description ;
-                              owl:allValuesFrom xsd:string
-                            ] ;
-            rdfs:comment "Behavior related to the interaction with buildings"@en ;
-            rdfs:label "Behavior"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient
-op:Coefficient rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:coefficientValue ;
-                                 owl:someValuesFrom xsd:float
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:name ;
-                                 owl:someValuesFrom xsd:string
-                               ] ;
-               rdfs:comment "Class to represent the value and name of coefficients inside mathematical formulas."@en ;
-               rdfs:label "Coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula
-op:ConstantValueFormula rdf:type owl:Class ;
-                        rdfs:subClassOf op:InteractionFormula ;
-                        rdfs:comment "Class to represent constant value mathematical formulas"@en ;
-                        rdfs:label "Constant Value Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#CustomProbabilityModel
-op:CustomProbabilityModel rdf:type owl:Class ;
-                          rdfs:subClassOf op:MovementModel ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:probability ;
-                                            owl:someValuesFrom xsd:float
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:time ;
-                                            owl:someValuesFrom xsd:time
-                                          ] ;
-                          rdfs:comment "Class to represent instances of custom probabilistic models."@en ;
-                          rdfs:label "Custom probability model"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver
-op:Driver rdf:type owl:Class ;
-          rdfs:comment "A Driver represents the environmental factor from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need."@en ;
-          rdfs:label "Driver"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet
-op:DriverSet rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty op:composedOf ;
-                               owl:someValuesFrom op:Driver
-                             ] ;
-             rdfs:comment "Set of drivers that could be causing a behavior at a specific time."@en ;
-             rdfs:label "Driver set"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Environment
-op:Environment rdf:type owl:Class ;
-               rdfs:subClassOf op:Driver ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:hasEnvironmentalParameter ;
-                                 owl:someValuesFrom op:EnvironmentalParameter
-                               ] ;
-               rdfs:comment "Driver related to the environmental conditions that could be causing a behavior."@en ;
-               rdfs:label "Environment"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter
-op:EnvironmentalParameter rdf:type owl:Class ;
-                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:describesProperty ;
-                                            owl:someValuesFrom saref:Property
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:hasUnitOfMeasure ;
-                                            owl:someValuesFrom saref:UnitOfMeasure
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:identifier ;
-                                            owl:someValuesFrom xsd:string
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:description ;
-                                            owl:allValuesFrom xsd:string
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:name ;
-                                            owl:allValuesFrom xsd:string
-                                          ] ;
-                          rdfs:comment "Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant."@en ;
-                          rdfs:label "Environmental parameter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Equipment
-op:Equipment rdf:type owl:Class ;
-             rdfs:subClassOf saref:Device ;
-             rdfs:comment "Class to represent electrical equipments occupants interact with but do not have influence over indoor thermal conditions. These systems contribute to the energy bugdet estimation."@en ;
-             rdfs:label "Equipment"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Event
-op:Event rdf:type owl:Class ;
-         rdfs:subClassOf op:Driver ;
-         rdfs:comment "Driver related to events that could be causing a behavior."@en ;
-         rdfs:label "Event"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Habit
-op:Habit rdf:type owl:Class ;
-         rdfs:subClassOf op:Driver ;
-         rdfs:comment "Driver related to habits that could be causing a behavior."@en ;
-         rdfs:label "Habit"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed
-op:IAQNeed rdf:type owl:Class ;
-           rdfs:subClassOf op:PhysicalNeed ;
-           rdfs:comment "Range of parameter values where occupants do not feel indoor air quality discomfort and therefore, they don't carry out any actions."@en ;
-           rdfs:label "IAQ Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Inaction
-op:Inaction rdf:type owl:Class .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction
-op:Interaction rdf:type owl:Class ;
-               rdfs:subClassOf op:Action ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:describedByFormula ;
-                                 owl:someValuesFrom op:InteractionFormula
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:interactsOver ;
-                                 owl:someValuesFrom s4bldg:BuildingObject
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:controlValue ;
-                                 owl:someValuesFrom xsd:float
-                               ] ;
-               rdfs:comment "The Interaction class represent the interactions of occupants with systems within a space to recover their comfort."@en ;
-               rdfs:label "Interaction"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept
-op:InteractionConcept rdf:type owl:Class ;
-                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                      rdfs:comment "Types of interactions between occupants and systems."@en ;
-                      rdfs:label "Interaction concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula
-op:InteractionFormula rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty op:hasCoefficient ;
-                                        owl:someValuesFrom op:Coefficient
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty op:hasIndependentVariable ;
-                                        owl:someValuesFrom op:EnvironmentalParameter
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty op:description ;
-                                        owl:someValuesFrom xsd:string
-                                      ] ;
-                      rdfs:comment "Formula to model the probability of interaction between ocupant and system."@en ;
-                      rdfs:label "Interaction Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme
-op:InteractionScheme rdf:type owl:Class ;
-                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                     rdfs:comment "An aggregation of SKOS concepts regarding the interaction type between occupants and space systems"@en ;
-                     rdfs:label "Interaction scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice
-op:LightingDevice rdf:type owl:Class ;
-                  rdfs:subClassOf saref:Device ;
-                  rdfs:comment "A devide used for illumination."@en ;
-                  rdfs:label "Lighting device"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#LinearFormula
-op:LinearFormula rdf:type owl:Class ;
-                 rdfs:subClassOf op:InteractionFormula ;
-                 rdfs:comment "Class to represent linear mathematical formulas"@en ;
-                 rdfs:label "Linear Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#LogitFormula
-op:LogitFormula rdf:type owl:Class ;
-                rdfs:subClassOf op:InteractionFormula ;
-                rdfs:comment "Class to represent logit mathematical formulas."@en ;
-                rdfs:label "Logit Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#MarkovChainModel
-op:MarkovChainModel rdf:type owl:Class ;
-                    rdfs:subClassOf op:MovementModel ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:earlyOccurTime ;
-                                      owl:someValuesFrom xsd:time
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:typicalTime ;
-                                      owl:someValuesFrom xsd:time
-                                    ] ;
-                    rdfs:comment "Class to represent instances of Markov chain models."@en ;
-                    rdfs:label "Markov chain model"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting
-op:Meeting rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty op:duration ;
-                             owl:someValuesFrom xsd:duration
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty op:endTime ;
-                             owl:someValuesFrom xsd:dateTime
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty op:probability ;
-                             owl:someValuesFrom xsd:float
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty op:startTime ;
-                             owl:someValuesFrom xsd:dateTime
-                           ] ;
-           rdfs:comment "Class to represent a meeting inside a communal space."@en ;
-           rdfs:label "Meeting"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement
-op:Movement rdf:type owl:Class ;
-            rdfs:subClassOf op:Action ;
-            rdfs:comment "The Movement class is used to represent the occupant's movements inside or between spaces."@en ;
-            rdfs:label "Movement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel
-op:MovementModel rdf:type owl:Class ;
-                 rdfs:comment "Probabilistic model to define occupant movements inside and between spaces."@en ;
-                 rdfs:label "Movement Model"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need
-op:Need rdf:type owl:Class ;
-        rdfs:comment "Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment."@en ;
-        rdfs:label "Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#NonPhysicalNeed
-op:NonPhysicalNeed rdf:type owl:Class ;
-                   rdfs:subClassOf op:Need ;
-                   owl:disjointWith op:PhysicalNeed ;
-                   rdfs:comment "Non physical comfort needs (e.g. privacy, status, etc) that could influence a behavior."@en ;
-                   rdfs:label "Non Physical Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#NormalProbabilityModel
-op:NormalProbabilityModel rdf:type owl:Class ;
-                          rdfs:subClassOf op:MovementModel ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:earlyOccurTime ;
-                                            owl:someValuesFrom xsd:time
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty op:typicalTime ;
-                                            owl:someValuesFrom xsd:time
-                                          ] ;
-                          rdfs:comment "Class to represent instances of Normal probabilistic models."@en ;
-                          rdfs:label "Normal probability model"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant
-op:Occupant rdf:type owl:Class ;
-            rdfs:subClassOf foaf:Person ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:hasBehavior ;
-                              owl:someValuesFrom op:Behavior
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:identifier ;
-                              owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:occupantAge ;
-                              owl:allValuesFrom xsd:integer
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:occupantGender ;
-                              owl:allValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:occupantJobtype ;
-                              owl:allValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:occupantLifestyle ;
-                              owl:allValuesFrom xsd:string
-                            ] ;
-            rdfs:comment "Occupants or residents of a building."@en ;
-            rdfs:label "Occupant"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept
-op:OperationalModeConcept rdf:type owl:Class ;
-                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                          rdfs:comment "Types of operational modes for space systems."@en ;
-                          rdfs:label "Operational mode concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme
-op:OperationalModeConceptScheme rdf:type owl:Class ;
-                                rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                rdfs:comment "An aggregation of SKOS concepts regarding the operational mode of space systems."@en ;
-                                rdfs:label "Operational mode scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange
-op:ParameterRange rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:describesParameter ;
-                                    owl:someValuesFrom op:EnvironmentalParameter
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:maxRangeValue ;
-                                    owl:someValuesFrom xsd:float
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:minRangeValue ;
-                                    owl:someValuesFrom xsd:float
-                                  ] ;
-                  rdfs:comment "Class to represent the minimum and maximm comfort values with respect to an environmental parameter."@en ;
-                  rdfs:label "Parameter Range"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed
-op:PhysicalNeed rdf:type owl:Class ;
-                rdfs:subClassOf op:Need ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty op:definedByRange ;
-                                  owl:someValuesFrom op:ParameterRange
-                                ] ;
-                rdfs:comment "Physical comfort need that could influence a behavior."@en ;
-                rdfs:label "Physical Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula
-op:QuadraticFormula rdf:type owl:Class ;
-                    rdfs:subClassOf op:InteractionFormula ;
-                    rdfs:comment "Class to represent quadratic mathematical formulas."@en ;
-                    rdfs:label "Quadratic Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement
-op:RandomMovement rdf:type owl:Class ;
-                  rdfs:subClassOf op:Movement ;
-                  rdfs:comment "Type of occupant movements inside a building or space."@en ;
-                  rdfs:label "Random movement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Report
-op:Report rdf:type owl:Class ;
-          rdfs:subClassOf op:Action ;
-          rdfs:comment "The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs."@en ;
-          rdfs:label "Report"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season
-op:Season rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty op:endSeason ;
-                            owl:someValuesFrom xsd:gMonthDay
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty op:startSeason ;
-                            owl:someValuesFrom xsd:gMonthDay
-                          ] ;
-          rdfs:comment "Season of the year."@en ;
-          rdfs:label "Season"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy
-op:SpaceOccupancy rdf:type owl:Class ;
-                  rdfs:subClassOf op:RandomMovement ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:relatedToSpace ;
-                                    owl:someValuesFrom building:BuildingSpace
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:duration ;
-                                    owl:someValuesFrom xsd:duration
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:percentTimePresence ;
-                                    owl:someValuesFrom xsd:float
-                                  ] ;
-                  rdfs:comment "Occupancy percentage of staying in a specific space category in a building."@en ;
-                  rdfs:label "Space occupancy"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial
-op:Spatial rdf:type owl:Class ;
-           rdfs:subClassOf op:Driver ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty op:detailedBy ;
-                             owl:someValuesFrom building:BuildingSpace
-                           ] ;
-           rdfs:comment "Driver related to spatial conditions that could be causing a behavior."@en ;
-           rdfs:label "Spatial"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition
-op:StatusTransition rdf:type owl:Class ;
-                    rdfs:subClassOf op:Movement ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:hasTransitionType ;
-                                      owl:someValuesFrom op:StatusTransitionTypeConcept
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:specifiedBy ;
-                                      owl:someValuesFrom op:MovementModel
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:minimalDuration ;
-                                      owl:someValuesFrom xsd:duration
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:typicalDuration ;
-                                      owl:someValuesFrom xsd:duration
-                                    ] ;
-                    rdfs:comment "Type of movements to represent transition events between spaces."@en ;
-                    rdfs:label "Status transition"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionScheme
-op:StatusTransitionScheme rdf:type owl:Class ;
-                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                          rdfs:comment "An aggregation of SKOS concepts regarding the status transition type of movements between spaces."@en ;
-                          rdfs:label "Status transition scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept
-op:StatusTransitionTypeConcept rdf:type owl:Class ;
-                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                               rdfs:comment "One time event involving occupancy status transition in building level."@en ;
-                               rdfs:label "Status transition type concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ThermalNeed
-op:ThermalNeed rdf:type owl:Class ;
-               rdfs:subClassOf op:PhysicalNeed ;
-               rdfs:comment "Range of parameter values where occupants do not feel thermal discomfort and therefore, they don't carry out any actions."@en ;
-               rdfs:label "Thermal Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Thermostat
-op:Thermostat rdf:type owl:Class ;
-              rdfs:subClassOf s4bldg:UnitaryControlElement ;
-              rdfs:comment "A thermostat is a component which senses the temperature of a physical space and performs actions so that the space temperature is maintained near a desired setpoint. (Definition adapted from Wikipedia)"@en ;
-              rdfs:label "Thermostat"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time
-op:Time rdf:type owl:Class ;
-        rdfs:subClassOf op:Driver ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty op:hasDayOfWeek ;
-                          owl:allValuesFrom time:DayOfWeek
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty op:hasSeason ;
-                          owl:allValuesFrom op:Season
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty op:hasTimeOfDay ;
-                          owl:allValuesFrom op:TimeOfDay
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty op:onHolidays ;
-                          owl:allValuesFrom xsd:date
-                        ] ;
-        rdfs:comment "Driver related to time conditions that could be causing a behavior. It also describes the time when another type of driver occur."@en ;
-        rdfs:label "Time"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay
-op:TimeOfDay rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty op:endTime ;
-                               owl:someValuesFrom xsd:time
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty op:startTime ;
-                               owl:someValuesFrom xsd:time
-                             ] ;
-             rdfs:comment "Relative time of day."@en ;
-             rdfs:label "Time Of Day"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#VisualNeed
-op:VisualNeed rdf:type owl:Class ;
-              rdfs:subClassOf op:PhysicalNeed ;
-              rdfs:comment "Range of parameter values where occupants do not feel visual discomfort and therefore, they don't carry out any actions."@en ;
-              rdfs:label "Visual Need"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula
-op:WeibullFormula rdf:type owl:Class ;
-                  rdfs:subClassOf op:InteractionFormula ;
-                  rdfs:comment "Class to represent weibull mathematical formulas."@en ;
-                  rdfs:label "Weibull Formula"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Window
-op:Window rdf:type owl:Class ;
-          rdfs:subClassOf s4bldg:BuildingObject ;
-          rdfs:comment "A window is an opening in a wall, door, roof or vehicle that allows the passage of light, sound, and sometimes air. (Definition taken from Wikipedia)"@en ;
-          rdfs:label "Window"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
-                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                owl:onProperty op:inSchema ;
-                                                                owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#ConceptScheme>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
-                                                                owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#narrower> ;
-                                                                owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
-                                                              ] ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
-                                              rdfs:label "Concept"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
-                                                    rdfs:label "Concept Scheme"@en .
-
-
-###  http://www.w3.org/2006/time#DayOfWeek
-time:DayOfWeek rdf:type owl:Class ;
-               rdfs:comment "The day of the week."@en ;
-               rdfs:label "Day of week"@en .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class ;
-            rdfs:comment "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)"@en ;
-            rdfs:label "Person"@en .
-
-
-###  https://w3id.org/def/saref4building#Building
-s4bldg:Building rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty s4bldg:hasSpace ;
-                                  owl:someValuesFrom s4bldg:BuildingSpace
-                                ] ;
-                rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from S4BLDG ontology)"@en ;
-                rdfs:label "Building"@en .
-
-
-###  https://w3id.org/def/saref4building#BuildingObject
-s4bldg:BuildingObject rdf:type owl:Class ;
-                      rdfs:subClassOf s4bldg:PhysicalObject ;
-                      rdfs:comment "An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)"@en ;
-                      rdfs:label "Building object"@en .
-
-
-###  https://w3id.org/def/saref4building#BuildingSpace
-s4bldg:BuildingSpace rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty s4bldg:contains ;
-                                       owl:someValuesFrom s4bldg:BuildingObject
-                                     ] ;
-                     rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects. (Definition taken from S4BLDG ontology)"@en ;
-                     rdfs:label "Building space"@en .
-
-
-###  https://w3id.org/def/saref4building#PhysicalObject
-s4bldg:PhysicalObject rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty op:hasOperationalMode ;
-                                        owl:someValuesFrom op:OperationalModeConcept
-                                      ] ;
-                      rdfs:comment "Any Object that has a proper space region. (Definition extracted from DUL ontology)"@en ;
-                      rdfs:label "Physical object"@en .
-
-
-###  https://w3id.org/def/saref4building#ShadingDevice
-s4bldg:ShadingDevice rdf:type owl:Class ;
-                     rdfs:subClassOf saref:Device ;
-                     rdfs:comment "Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable. (Definition taken from S4BLDG ontology)"@en ;
-                     rdfs:label "Shading device"@en .
-
-
-###  https://w3id.org/def/saref4building#UnitaryControlElement
-s4bldg:UnitaryControlElement rdf:type owl:Class ;
-                             rdfs:subClassOf saref:Device ;
-                             rdfs:comment "A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location. (Definition taken from S4BLDG ontology)"@en ;
-                             rdfs:label "Unitary control element"@en .
-
-
-###  https://w3id.org/saref#Device
-saref:Device rdf:type owl:Class ;
-             rdfs:subClassOf s4bldg:PhysicalObject ;
-             rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function."@en ;
-             rdfs:label "Device"@en .
-
-
-###  https://w3id.org/saref#HVAC
-saref:HVAC rdf:type owl:Class ;
-           rdfs:subClassOf saref:Device ;
-           rdfs:comment "Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. A saref:HVAC is typically used to accomplish saref:Comfort."@en ;
-           rdfs:label "HVAC"@en .
-
-
-###  https://w3id.org/saref#Property
-saref:Property rdf:type owl:Class ;
-               rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
-               rdfs:label "Property"@en .
-
-
-###  https://w3id.org/saref#UnitOfMeasure
-saref:UnitOfMeasure rdf:type owl:Class ;
-                    rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
-                    rdfs:label "Unit of measure"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEAdaptiveComfort
-op:ASHRAEAdaptiveComfort rdf:type owl:NamedIndividual ,
-                                  op:ThermalNeed .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEComfortEnvelop
-op:ASHRAEComfortEnvelop rdf:type owl:NamedIndividual ,
-                                 op:ThermalNeed .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Adjustable
-op:Adjustable rdf:type owl:NamedIndividual ,
-                       op:OperationalModeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Afternoon
-op:Afternoon rdf:type owl:NamedIndividual ,
-                      op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Arrival
-op:Arrival rdf:type owl:NamedIndividual ,
-                    op:StatusTransitionTypeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ContinuousControl
-op:ContinuousControl rdf:type owl:NamedIndividual ,
-                              op:OperationalModeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Day
-op:Day rdf:type owl:NamedIndividual ,
-                op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#DayLight
-op:DayLight rdf:type owl:NamedIndividual ,
-                     saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Departure
-op:Departure rdf:type owl:NamedIndividual ,
-                      op:StatusTransitionTypeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnteringRoom
-op:EnteringRoom rdf:type owl:NamedIndividual ,
-                         op:Event .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Evening
-op:Evening rdf:type owl:NamedIndividual ,
-                    op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Fall
-op:Fall rdf:type owl:NamedIndividual ,
-                 op:Season .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Fixed
-op:Fixed rdf:type owl:NamedIndividual ,
-                  op:OperationalModeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Glare
-op:Glare rdf:type owl:NamedIndividual ,
-                  saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort
-op:ISOAdaptiveComfort rdf:type owl:NamedIndividual ,
-                               op:ThermalNeed .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Illuminance
-op:Illuminance rdf:type owl:NamedIndividual ,
-                        saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Inaction
-op:Inaction rdf:type owl:NamedIndividual ,
-                     op:Inaction .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#IndoorAirQuality
-op:IndoorAirQuality rdf:type owl:NamedIndividual ,
-                             saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#LeavingRoom
-op:LeavingRoom rdf:type owl:NamedIndividual ,
-                        op:Event .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Morning
-op:Morning rdf:type owl:NamedIndividual ,
-                    op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Night
-op:Night rdf:type owl:NamedIndividual ,
-                  op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Noise
-op:Noise rdf:type owl:NamedIndividual ,
-                  saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Noon
-op:Noon rdf:type owl:NamedIndividual ,
-                 op:TimeOfDay .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OnOff
-op:OnOff rdf:type owl:NamedIndividual ,
-                  op:OperationalModeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Operable
-op:Operable rdf:type owl:NamedIndividual ,
-                     op:OperationalModeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Rain
-op:Rain rdf:type owl:NamedIndividual ,
-                 saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#RelativeHumidity
-op:RelativeHumidity rdf:type owl:NamedIndividual ,
-                             saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue
-op:SetToControlValue rdf:type owl:NamedIndividual ,
-                              op:InteractionConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermLeaving
-op:ShortTermLeaving rdf:type owl:NamedIndividual ,
-                             op:StatusTransitionTypeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermVisiting
-op:ShortTermVisiting rdf:type owl:NamedIndividual ,
-                              op:StatusTransitionTypeConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#SolarIrradiance
-op:SolarIrradiance rdf:type owl:NamedIndividual ,
-                            saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spring
-op:Spring rdf:type owl:NamedIndividual ,
-                   op:Season .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#StayingInRoom
-op:StayingInRoom rdf:type owl:NamedIndividual ,
-                          op:Event .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Summer
-op:Summer rdf:type owl:NamedIndividual ,
-                   op:Season .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Temperature
-op:Temperature rdf:type owl:NamedIndividual ,
-                        saref:Property .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff
-op:TurnOff rdf:type owl:NamedIndividual ,
-                    op:InteractionConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn
-op:TurnOn rdf:type owl:NamedIndividual ,
-                   op:InteractionConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
-op:Winter rdf:type owl:NamedIndividual ,
-                   op:Season .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ZoneOnOff
-op:ZoneOnOff rdf:type owl:NamedIndividual ,
-                      op:OperationalModeConcept .
-
-
-###  http://www.w3.org/2006/time#Friday
-time:Friday rdf:type owl:NamedIndividual ,
-                     time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Monday
-time:Monday rdf:type owl:NamedIndividual ,
-                     time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Saturday
-time:Saturday rdf:type owl:NamedIndividual ,
-                       time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Sunday
-time:Sunday rdf:type owl:NamedIndividual ,
-                     time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Thursday
-time:Thursday rdf:type owl:NamedIndividual ,
-                       time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Tuesday
-time:Tuesday rdf:type owl:NamedIndividual ,
-                      time:DayOfWeek .
-
-
-###  http://www.w3.org/2006/time#Wednesday
-time:Wednesday rdf:type owl:NamedIndividual ,
-                        time:DayOfWeek .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-op:Inaction rdfs:label "Inaction"@en ;
-            rdfs:comment "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space."@en .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( op:AccousticNeed
-                op:IAQNeed
-                op:ThermalNeed
-                op:VisualNeed
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( op:ConstantValueFormula
-                op:LinearFormula
-                op:LogitFormula
-                op:QuadraticFormula
-                op:WeibullFormula
-              )
-] .
-
-
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( op:ASHRAEAdaptiveComfort
-                        op:ASHRAEComfortEnvelop
-                        op:ISOAdaptiveComfort
-                      )
-] .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#> a owl:Ontology ;
+	<http://purl.org/dc/elements/1.1/created> "2020-02-01" ;
+	<http://purl.org/dc/elements/1.1/creator> "María Poveda Vilallón" , "Serge Chávez Feria" ;
+	<http://purl.org/dc/elements/1.1/description> "The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces."@en ;
+	<http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
+	<http://purl.org/dc/elements/1.1/title> "Occupancy Profile ontology"@en ;
+	dcterms:creator <http://www.oeg-upm.net/> ;
+	dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
+	vann:preferredNamespacePrefix "op"@en ;
+	vann:preferredNamespaceUri "http://bimerr.iot.linkeddata.es/def/occupancy-profile#" ;
+	owl:versionInfo "0.0.4" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+
+<http://purl.org/dc/elements/1.1/created> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/creator
+
+<http://purl.org/dc/elements/1.1/creator> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/dateDeprecated
+
+<http://purl.org/dc/elements/1.1/dateDeprecated> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/description
+
+<http://purl.org/dc/elements/1.1/description> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+
+<http://purl.org/dc/elements/1.1/publisher> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/creator
+
+dcterms:creator a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+dcterms:license a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/modified
+
+dcterms:modified a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+
+xsd:date a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+
+xsd:duration a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#gMonthDay
+
+xsd:gMonthDay a rdfs:Datatype .
+# 
+# http://www.w3.org/2001/XMLSchema#time
+
+xsd:time a rdfs:Datatype .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf
+
+:composedOf a owl:ObjectProperty ;
+	rdfs:label "composed of"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange
+
+:definedByRange a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "defined by range"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula
+
+:describedByFormula a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "described by formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter
+
+:describesParameter a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "describes parameter"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesProperty
+
+:describesProperty a owl:ObjectProperty ;
+	rdfs:label "describes property"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy
+
+:detailedBy a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "detailed by"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy
+
+:drivenBy a owl:ObjectProperty ;
+	rdfs:label "driven by"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior
+
+:hasBehavior a owl:ObjectProperty ;
+	rdfs:label "has behavior"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient
+
+:hasCoefficient a owl:ObjectProperty ;
+	rdfs:domain :InteractionFormula ;
+	rdfs:range :Coefficient ;
+	rdfs:label "has coefficient"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek
+
+:hasDayOfWeek a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "has day of week"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasEnvironmentalParameter
+
+:hasEnvironmentalParameter a owl:ObjectProperty ;
+	rdfs:label "has environmental parameter"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable
+
+:hasIndependentVariable a owl:ObjectProperty ;
+	rdfs:domain :InteractionFormula ;
+	rdfs:range :EnvironmentalParameter ;
+	rdfs:label "has independent variable"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting
+
+:hasMeeting a owl:ObjectProperty ;
+	rdfs:label "has meeting"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant
+
+:hasOccupant a owl:ObjectProperty ;
+	rdfs:label "has occupant"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode
+
+:hasOperationalMode a owl:ObjectProperty ;
+	rdfs:label "has operational mode"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason
+
+:hasSeason a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "has season"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay
+
+:hasTimeOfDay a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "has time of day"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType
+
+:hasTransitionType a owl:ObjectProperty ;
+	rdfs:label "has transition type"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure
+
+:hasUnitOfMeasure a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "has unit of measure"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema
+
+:inSchema a owl:ObjectProperty ;
+	rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	rdfs:label "in schema"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#influencedByNeed
+
+:influencedByNeed a owl:ObjectProperty ;
+	rdfs:label "influenced by need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver
+
+:interactsOver a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:label "interacts over"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo
+
+:leadsTo a owl:ObjectProperty ;
+	rdfs:label "leads to"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace
+
+:relatedToSpace a owl:ObjectProperty ;
+	rdfs:label "related to space"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy
+
+:specifiedBy a owl:ObjectProperty ;
+	rdfs:label "specified by"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+
+<http://www.w3.org/2004/02/skos/core#broader> a owl:ObjectProperty ;
+	rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:label "broader"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+
+<http://www.w3.org/2004/02/skos/core#narrower> a owl:ObjectProperty ;
+	rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:label "narrower"@en .
+# 
+# https://w3id.org/def/saref4building#contains
+
+s4bldg:contains a owl:ObjectProperty ;
+	rdfs:label "contains"@en .
+# 
+# https://w3id.org/def/saref4building#hasSpace
+
+s4bldg:hasSpace a owl:ObjectProperty ;
+	rdfs:label "has space"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress
+
+:buildingAddress a owl:DatatypeProperty ;
+	rdfs:label "building address"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue
+
+:coefficientValue a owl:DatatypeProperty ;
+	rdfs:label "coefficient value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue
+
+:controlValue a owl:DatatypeProperty ;
+	rdfs:label "control value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#description
+
+:description a owl:DatatypeProperty ;
+	rdfs:label "description"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration
+
+:duration a owl:DatatypeProperty ;
+	rdfs:label "duration"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime
+
+:earlyOccurTime a owl:DatatypeProperty ;
+	rdfs:label "early occur time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason
+
+:endSeason a owl:DatatypeProperty ;
+	rdfs:label "end season"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime
+
+:endTime a owl:DatatypeProperty ;
+	rdfs:label "end time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier
+
+:identifier a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "identifier"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
+
+:maxNumberOccupants a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "max number occupants"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
+
+:maxRangeValue a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "max range value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
+
+:minNumberOccupants a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "min number occupants"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
+
+:minRangeValue a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "min range value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration
+
+:minimalDuration a owl:DatatypeProperty ;
+	rdfs:label "minimal duration"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#name
+
+:name a owl:DatatypeProperty ;
+	rdfs:comment "name"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
+
+:occupantAge a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "occupant age"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender
+
+:occupantGender a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "occupant gender"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype
+
+:occupantJobtype a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "occupant jobtype"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle
+
+:occupantLifestyle a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "occupant lifestyle"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays
+
+:onHolidays a owl:DatatypeProperty ;
+	rdfs:label "on holidays"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence
+
+:percentTimePresence a owl:DatatypeProperty ;
+	rdfs:label "percent time presence"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability
+
+:probability a owl:DatatypeProperty ;
+	rdfs:label "probability"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason
+
+:startSeason a owl:DatatypeProperty ;
+	rdfs:label "start season"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime
+
+:startTime a owl:DatatypeProperty ;
+	rdfs:label "start time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#time
+
+:time a owl:DatatypeProperty ;
+	rdfs:label "time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration
+
+:typicalDuration a owl:DatatypeProperty ;
+	rdfs:label "typical duration"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime
+
+:typicalTime a owl:DatatypeProperty ;
+	rdfs:label "typical time"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Building
+
+building:Building a owl:Class ;
+	rdfs:subClassOf s4bldg:Building , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty :buildingAddress ;
+	owl:someValuesFrom xsd:string .
+
+building:Building rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :description ;
+	owl:someValuesFrom xsd:string .
+
+building:Building rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :identifier ;
+	owl:someValuesFrom xsd:string .
+
+building:Building rdfs:comment "Building where the occupancy behaviors occur."@en ;
+	rdfs:label "Building"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
+
+building:BuildingSpace a owl:Class ;
+	rdfs:subClassOf s4bldg:BuildingSpace , _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty :hasMeeting ;
+	owl:allValuesFrom :Meeting .
+
+building:BuildingSpace rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty :hasOccupant ;
+	owl:allValuesFrom :Occupant .
+
+building:BuildingSpace rdfs:subClassOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty :identifier ;
+	owl:someValuesFrom xsd:string .
+
+building:BuildingSpace rdfs:subClassOf _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty :description ;
+	owl:allValuesFrom xsd:string .
+
+building:BuildingSpace rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :maxNumberOccupants ;
+	owl:allValuesFrom xsd:integer .
+
+building:BuildingSpace rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty :minNumberOccupants ;
+	owl:allValuesFrom xsd:integer .
+
+building:BuildingSpace rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
+	rdfs:label "Building Space"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed
+
+:AccousticNeed a owl:Class ;
+	rdfs:subClassOf :PhysicalNeed ;
+	rdfs:comment "Range of parameter values where occupants do not feel accoustic discomfort and therefore, they don't carry out any actions."@en ;
+	rdfs:label "Accoustic Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action
+
+:Action a owl:Class ;
+	rdfs:comment "Actions are the interactions with systems or activities that an occupant can conduct to achieve environmental comfort. Actions connect occupants' inside-world needs with the environmental outside world. (Defintion taken from obXML)"@en ;
+	rdfs:label "Action"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior
+
+:Behavior a owl:Class ;
+	rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty :drivenBy ;
+	owl:someValuesFrom :DriverSet .
+
+:Behavior rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty :leadsTo ;
+	owl:someValuesFrom _:genid12 .
+
+_:genid12 a owl:Class ;
+	owl:unionOf _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :Action ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :Inaction ;
+	rdf:rest rdf:nil .
+
+:Behavior rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty :influencedByNeed ;
+	owl:allValuesFrom :Need .
+
+:Behavior rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty :identifier ;
+	owl:someValuesFrom xsd:string .
+
+:Behavior rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty :description ;
+	owl:allValuesFrom xsd:string .
+
+:Behavior rdfs:comment "Behavior related to the interaction with buildings"@en ;
+	rdfs:label "Behavior"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient
+
+:Coefficient a owl:Class ;
+	rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty :coefficientValue ;
+	owl:someValuesFrom xsd:float .
+
+:Coefficient rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty :name ;
+	owl:someValuesFrom xsd:string .
+
+:Coefficient rdfs:comment "Class to represent the value and name of coefficients inside mathematical formulas."@en ;
+	rdfs:label "Coefficient"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula
+
+:ConstantValueFormula a owl:Class ;
+	rdfs:subClassOf :InteractionFormula ;
+	rdfs:comment "Class to represent constant value mathematical formulas"@en ;
+	rdfs:label "Constant Value Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#CustomProbabilityModel
+
+:CustomProbabilityModel a owl:Class ;
+	rdfs:subClassOf :MovementModel , _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty :probability ;
+	owl:someValuesFrom xsd:float .
+
+:CustomProbabilityModel rdfs:subClassOf _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty :time ;
+	owl:someValuesFrom xsd:time .
+
+:CustomProbabilityModel rdfs:comment "Class to represent instances of custom probabilistic models."@en ;
+	rdfs:label "Custom probability model"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver
+
+:Driver a owl:Class ;
+	rdfs:comment "A Driver represents the environmental factor from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need."@en ;
+	rdfs:label "Driver"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet
+
+:DriverSet a owl:Class ;
+	rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty :composedOf ;
+	owl:someValuesFrom :Driver .
+
+:DriverSet rdfs:comment "Set of drivers that could be causing a behavior at a specific time."@en ;
+	rdfs:label "Driver set"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Environment
+
+:Environment a owl:Class ;
+	rdfs:subClassOf :Driver , _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty :hasEnvironmentalParameter ;
+	owl:someValuesFrom :EnvironmentalParameter .
+
+:Environment rdfs:comment "Driver related to the environmental conditions that could be causing a behavior."@en ;
+	rdfs:label "Environment"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter
+
+:EnvironmentalParameter a owl:Class ;
+	rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty :describesProperty ;
+	owl:someValuesFrom saref:Property .
+
+:EnvironmentalParameter rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty :hasUnitOfMeasure ;
+	owl:someValuesFrom saref:UnitOfMeasure .
+
+:EnvironmentalParameter rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty :identifier ;
+	owl:someValuesFrom xsd:string .
+
+:EnvironmentalParameter rdfs:subClassOf _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty :description ;
+	owl:allValuesFrom xsd:string .
+
+:EnvironmentalParameter rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction ;
+	owl:onProperty :name ;
+	owl:allValuesFrom xsd:string .
+
+:EnvironmentalParameter rdfs:comment "Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant."@en ;
+	rdfs:label "Environmental parameter"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Equipment
+
+:Equipment a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:comment "Class to represent electrical equipments occupants interact with but do not have influence over indoor thermal conditions. These systems contribute to the energy bugdet estimation."@en ;
+	rdfs:label "Equipment"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Event
+
+:Event a owl:Class ;
+	rdfs:subClassOf :Driver ;
+	rdfs:comment "Driver related to events that could be causing a behavior."@en ;
+	rdfs:label "Event"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Habit
+
+:Habit a owl:Class ;
+	rdfs:subClassOf :Driver ;
+	rdfs:comment "Driver related to habits that could be causing a behavior."@en ;
+	rdfs:label "Habit"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed
+
+:IAQNeed a owl:Class ;
+	rdfs:subClassOf :PhysicalNeed ;
+	rdfs:comment "Range of parameter values where occupants do not feel indoor air quality discomfort and therefore, they don't carry out any actions."@en ;
+	rdfs:label "IAQ Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Inaction
+
+:Inaction a owl:Class .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction
+
+:Interaction a owl:Class ;
+	rdfs:subClassOf :Action , _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty :describedByFormula ;
+	owl:someValuesFrom :InteractionFormula .
+
+:Interaction rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty :interactsOver ;
+	owl:someValuesFrom s4bldg:BuildingObject .
+
+:Interaction rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty :controlValue ;
+	owl:someValuesFrom xsd:float .
+
+:Interaction rdfs:comment "The Interaction class represent the interactions of occupants with systems within a space to recover their comfort."@en ;
+	rdfs:label "Interaction"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept
+
+:InteractionConcept a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:comment "Types of interactions between occupants and systems."@en ;
+	rdfs:label "Interaction concept"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula
+
+:InteractionFormula a owl:Class ;
+	rdfs:subClassOf _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty :hasCoefficient ;
+	owl:someValuesFrom :Coefficient .
+
+:InteractionFormula rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty :hasIndependentVariable ;
+	owl:someValuesFrom :EnvironmentalParameter .
+
+:InteractionFormula rdfs:subClassOf _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty :description ;
+	owl:someValuesFrom xsd:string .
+
+:InteractionFormula rdfs:comment "Formula to model the probability of interaction between ocupant and system."@en ;
+	rdfs:label "Interaction Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme
+
+:InteractionScheme a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	rdfs:comment "An aggregation of SKOS concepts regarding the interaction type between occupants and space systems"@en ;
+	rdfs:label "Interaction scheme"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice
+
+:LightingDevice a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:comment "A devide used for illumination."@en ;
+	rdfs:label "Lighting device"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#LinearFormula
+
+:LinearFormula a owl:Class ;
+	rdfs:subClassOf :InteractionFormula ;
+	rdfs:comment "Class to represent linear mathematical formulas"@en ;
+	rdfs:label "Linear Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#LogitFormula
+
+:LogitFormula a owl:Class ;
+	rdfs:subClassOf :InteractionFormula ;
+	rdfs:comment "Class to represent logit mathematical formulas."@en ;
+	rdfs:label "Logit Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#MarkovChainModel
+
+:MarkovChainModel a owl:Class ;
+	rdfs:subClassOf :MovementModel , _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty :earlyOccurTime ;
+	owl:someValuesFrom xsd:time .
+
+:MarkovChainModel rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty :typicalTime ;
+	owl:someValuesFrom xsd:time .
+
+:MarkovChainModel rdfs:comment "Class to represent instances of Markov chain models."@en ;
+	rdfs:label "Markov chain model"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting
+
+:Meeting a owl:Class ;
+	rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty :duration ;
+	owl:someValuesFrom xsd:duration .
+
+:Meeting rdfs:subClassOf _:genid38 .
+
+_:genid38 a owl:Restriction ;
+	owl:onProperty :endTime ;
+	owl:someValuesFrom xsd:dateTime .
+
+:Meeting rdfs:subClassOf _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty :probability ;
+	owl:someValuesFrom xsd:float .
+
+:Meeting rdfs:subClassOf _:genid40 .
+
+_:genid40 a owl:Restriction ;
+	owl:onProperty :startTime ;
+	owl:someValuesFrom xsd:dateTime .
+
+:Meeting rdfs:comment "Class to represent a meeting inside a communal space."@en ;
+	rdfs:label "Meeting"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement
+
+:Movement a owl:Class ;
+	rdfs:subClassOf :Action ;
+	rdfs:comment "The Movement class is used to represent the occupant's movements inside or between spaces."@en ;
+	rdfs:label "Movement"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel
+
+:MovementModel a owl:Class ;
+	rdfs:comment "Probabilistic model to define occupant movements inside and between spaces."@en ;
+	rdfs:label "Movement Model"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need
+
+:Need a owl:Class ;
+	rdfs:comment "Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment."@en ;
+	rdfs:label "Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#NonPhysicalNeed
+
+:NonPhysicalNeed a owl:Class ;
+	rdfs:subClassOf :Need ;
+	owl:disjointWith :PhysicalNeed ;
+	rdfs:comment "Non physical comfort needs (e.g. privacy, status, etc) that could influence a behavior."@en ;
+	rdfs:label "Non Physical Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#NormalProbabilityModel
+
+:NormalProbabilityModel a owl:Class ;
+	rdfs:subClassOf :MovementModel , _:genid41 .
+
+_:genid41 a owl:Restriction ;
+	owl:onProperty :earlyOccurTime ;
+	owl:someValuesFrom xsd:time .
+
+:NormalProbabilityModel rdfs:subClassOf _:genid42 .
+
+_:genid42 a owl:Restriction ;
+	owl:onProperty :typicalTime ;
+	owl:someValuesFrom xsd:time .
+
+:NormalProbabilityModel rdfs:comment "Class to represent instances of Normal probabilistic models."@en ;
+	rdfs:label "Normal probability model"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant
+
+:Occupant a owl:Class ;
+	rdfs:subClassOf foaf:Person , _:genid43 .
+
+_:genid43 a owl:Restriction ;
+	owl:onProperty :hasBehavior ;
+	owl:someValuesFrom :Behavior .
+
+:Occupant rdfs:subClassOf _:genid44 .
+
+_:genid44 a owl:Restriction ;
+	owl:onProperty :identifier ;
+	owl:someValuesFrom xsd:string .
+
+:Occupant rdfs:subClassOf _:genid45 .
+
+_:genid45 a owl:Restriction ;
+	owl:onProperty :occupantAge ;
+	owl:allValuesFrom xsd:integer .
+
+:Occupant rdfs:subClassOf _:genid46 .
+
+_:genid46 a owl:Restriction ;
+	owl:onProperty :occupantGender ;
+	owl:allValuesFrom xsd:string .
+
+:Occupant rdfs:subClassOf _:genid47 .
+
+_:genid47 a owl:Restriction ;
+	owl:onProperty :occupantJobtype ;
+	owl:allValuesFrom xsd:string .
+
+:Occupant rdfs:subClassOf _:genid48 .
+
+_:genid48 a owl:Restriction ;
+	owl:onProperty :occupantLifestyle ;
+	owl:allValuesFrom xsd:string .
+
+:Occupant rdfs:comment "Occupants or residents of a building."@en ;
+	rdfs:label "Occupant"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept
+
+:OperationalModeConcept a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:comment "Types of operational modes for space systems."@en ;
+	rdfs:label "Operational mode concept"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme
+
+:OperationalModeConceptScheme a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	rdfs:comment "An aggregation of SKOS concepts regarding the operational mode of space systems."@en ;
+	rdfs:label "Operational mode scheme"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange
+
+:ParameterRange a owl:Class ;
+	rdfs:subClassOf _:genid49 .
+
+_:genid49 a owl:Restriction ;
+	owl:onProperty :describesParameter ;
+	owl:someValuesFrom :EnvironmentalParameter .
+
+:ParameterRange rdfs:subClassOf _:genid50 .
+
+_:genid50 a owl:Restriction ;
+	owl:onProperty :maxRangeValue ;
+	owl:someValuesFrom xsd:float .
+
+:ParameterRange rdfs:subClassOf _:genid51 .
+
+_:genid51 a owl:Restriction ;
+	owl:onProperty :minRangeValue ;
+	owl:someValuesFrom xsd:float .
+
+:ParameterRange rdfs:comment "Class to represent the minimum and maximm comfort values with respect to an environmental parameter."@en ;
+	rdfs:label "Parameter Range"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed
+
+:PhysicalNeed a owl:Class ;
+	rdfs:subClassOf :Need , _:genid52 .
+
+_:genid52 a owl:Restriction ;
+	owl:onProperty :definedByRange ;
+	owl:someValuesFrom :ParameterRange .
+
+:PhysicalNeed rdfs:comment "Physical comfort need that could influence a behavior."@en ;
+	rdfs:label "Physical Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula
+
+:QuadraticFormula a owl:Class ;
+	rdfs:subClassOf :InteractionFormula ;
+	rdfs:comment "Class to represent quadratic mathematical formulas."@en ;
+	rdfs:label "Quadratic Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement
+
+:RandomMovement a owl:Class ;
+	rdfs:subClassOf :Movement ;
+	rdfs:comment "Type of occupant movements inside a building or space."@en ;
+	rdfs:label "Random movement"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Report
+
+:Report a owl:Class ;
+	rdfs:subClassOf :Action ;
+	rdfs:comment "The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs."@en ;
+	rdfs:label "Report"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season
+
+:Season a owl:Class ;
+	rdfs:subClassOf _:genid53 .
+
+_:genid53 a owl:Restriction ;
+	owl:onProperty :endSeason ;
+	owl:someValuesFrom xsd:gMonthDay .
+
+:Season rdfs:subClassOf _:genid54 .
+
+_:genid54 a owl:Restriction ;
+	owl:onProperty :startSeason ;
+	owl:someValuesFrom xsd:gMonthDay .
+
+:Season rdfs:comment "Season of the year."@en ;
+	rdfs:label "Season"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy
+
+:SpaceOccupancy a owl:Class ;
+	rdfs:subClassOf :RandomMovement , _:genid55 .
+
+_:genid55 a owl:Restriction ;
+	owl:onProperty :relatedToSpace ;
+	owl:someValuesFrom building:BuildingSpace .
+
+:SpaceOccupancy rdfs:subClassOf _:genid56 .
+
+_:genid56 a owl:Restriction ;
+	owl:onProperty :duration ;
+	owl:someValuesFrom xsd:duration .
+
+:SpaceOccupancy rdfs:subClassOf _:genid57 .
+
+_:genid57 a owl:Restriction ;
+	owl:onProperty :percentTimePresence ;
+	owl:someValuesFrom xsd:float .
+
+:SpaceOccupancy rdfs:comment "Occupancy percentage of staying in a specific space category in a building."@en ;
+	rdfs:label "Space occupancy"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial
+
+:Spatial a owl:Class ;
+	rdfs:subClassOf :Driver , _:genid58 .
+
+_:genid58 a owl:Restriction ;
+	owl:onProperty :detailedBy ;
+	owl:someValuesFrom building:BuildingSpace .
+
+:Spatial rdfs:comment "Driver related to spatial conditions that could be causing a behavior."@en ;
+	rdfs:label "Spatial"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition
+
+:StatusTransition a owl:Class ;
+	rdfs:subClassOf :Movement , _:genid59 .
+
+_:genid59 a owl:Restriction ;
+	owl:onProperty :hasTransitionType ;
+	owl:someValuesFrom :StatusTransitionTypeConcept .
+
+:StatusTransition rdfs:subClassOf _:genid60 .
+
+_:genid60 a owl:Restriction ;
+	owl:onProperty :specifiedBy ;
+	owl:someValuesFrom :MovementModel .
+
+:StatusTransition rdfs:subClassOf _:genid61 .
+
+_:genid61 a owl:Restriction ;
+	owl:onProperty :minimalDuration ;
+	owl:someValuesFrom xsd:duration .
+
+:StatusTransition rdfs:subClassOf _:genid62 .
+
+_:genid62 a owl:Restriction ;
+	owl:onProperty :typicalDuration ;
+	owl:someValuesFrom xsd:duration .
+
+:StatusTransition rdfs:comment "Type of movements to represent transition events between spaces."@en ;
+	rdfs:label "Status transition"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionScheme
+
+:StatusTransitionScheme a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	rdfs:comment "An aggregation of SKOS concepts regarding the status transition type of movements between spaces."@en ;
+	rdfs:label "Status transition scheme"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept
+
+:StatusTransitionTypeConcept a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdfs:comment "One time event involving occupancy status transition in building level."@en ;
+	rdfs:label "Status transition type concept"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ThermalNeed
+
+:ThermalNeed a owl:Class ;
+	rdfs:subClassOf :PhysicalNeed ;
+	rdfs:comment "Range of parameter values where occupants do not feel thermal discomfort and therefore, they don't carry out any actions."@en ;
+	rdfs:label "Thermal Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Thermostat
+
+:Thermostat a owl:Class ;
+	rdfs:subClassOf s4bldg:UnitaryControlElement ;
+	rdfs:comment "A thermostat is a component which senses the temperature of a physical space and performs actions so that the space temperature is maintained near a desired setpoint. (Definition adapted from Wikipedia)"@en ;
+	rdfs:label "Thermostat"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time
+
+:Time a owl:Class ;
+	rdfs:subClassOf :Driver , _:genid63 .
+
+_:genid63 a owl:Restriction ;
+	owl:onProperty :hasDayOfWeek ;
+	owl:allValuesFrom time:DayOfWeek .
+
+:Time rdfs:subClassOf _:genid64 .
+
+_:genid64 a owl:Restriction ;
+	owl:onProperty :hasSeason ;
+	owl:allValuesFrom :Season .
+
+:Time rdfs:subClassOf _:genid65 .
+
+_:genid65 a owl:Restriction ;
+	owl:onProperty :hasTimeOfDay ;
+	owl:allValuesFrom :TimeOfDay .
+
+:Time rdfs:subClassOf _:genid66 .
+
+_:genid66 a owl:Restriction ;
+	owl:onProperty :onHolidays ;
+	owl:allValuesFrom xsd:date .
+
+:Time rdfs:comment "Driver related to time conditions that could be causing a behavior. It also describes the time when another type of driver occur."@en ;
+	rdfs:label "Time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay
+
+:TimeOfDay a owl:Class ;
+	rdfs:subClassOf _:genid67 .
+
+_:genid67 a owl:Restriction ;
+	owl:onProperty :endTime ;
+	owl:someValuesFrom xsd:time .
+
+:TimeOfDay rdfs:subClassOf _:genid68 .
+
+_:genid68 a owl:Restriction ;
+	owl:onProperty :startTime ;
+	owl:someValuesFrom xsd:time .
+
+:TimeOfDay rdfs:comment "Relative time of day."@en ;
+	rdfs:label "Time Of Day"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#VisualNeed
+
+:VisualNeed a owl:Class ;
+	rdfs:subClassOf :PhysicalNeed ;
+	rdfs:comment "Range of parameter values where occupants do not feel visual discomfort and therefore, they don't carry out any actions."@en ;
+	rdfs:label "Visual Need"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula
+
+:WeibullFormula a owl:Class ;
+	rdfs:subClassOf :InteractionFormula ;
+	rdfs:comment "Class to represent weibull mathematical formulas."@en ;
+	rdfs:label "Weibull Formula"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Window
+
+:Window a owl:Class ;
+	rdfs:subClassOf s4bldg:BuildingObject ;
+	rdfs:comment "A window is an opening in a wall, door, roof or vehicle that allows the passage of light, sound, and sometimes air. (Definition taken from Wikipedia)"@en ;
+	rdfs:label "Window"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+
+<http://www.w3.org/2004/02/skos/core#Concept> a owl:Class ;
+	rdfs:subClassOf _:genid69 .
+
+_:genid69 a owl:Restriction ;
+	owl:onProperty :inSchema ;
+	owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:subClassOf _:genid70 .
+
+_:genid70 a owl:Restriction ;
+	owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+	owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:subClassOf _:genid71 .
+
+_:genid71 a owl:Restriction ;
+	owl:onProperty <http://www.w3.org/2004/02/skos/core#narrower> ;
+	owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:label "Concept"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> a owl:Class ;
+	rdfs:label "Concept Scheme"@en .
+# 
+# http://www.w3.org/2006/time#DayOfWeek
+
+time:DayOfWeek a owl:Class ;
+	rdfs:comment "The day of the week."@en ;
+	rdfs:label "Day of week"@en .
+# 
+# http://xmlns.com/foaf/0.1/Person
+
+foaf:Person a owl:Class ;
+	rdfs:comment "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)"@en ;
+	rdfs:label "Person"@en .
+# 
+# https://w3id.org/def/saref4building#Building
+
+s4bldg:Building a owl:Class ;
+	rdfs:subClassOf _:genid72 .
+
+_:genid72 a owl:Restriction ;
+	owl:onProperty s4bldg:hasSpace ;
+	owl:someValuesFrom s4bldg:BuildingSpace .
+
+s4bldg:Building rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from S4BLDG ontology)"@en ;
+	rdfs:label "Building"@en .
+# 
+# https://w3id.org/def/saref4building#BuildingObject
+
+s4bldg:BuildingObject a owl:Class ;
+	rdfs:subClassOf s4bldg:PhysicalObject ;
+	rdfs:comment "An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)"@en ;
+	rdfs:label "Building object"@en .
+# 
+# https://w3id.org/def/saref4building#BuildingSpace
+
+s4bldg:BuildingSpace a owl:Class ;
+	rdfs:subClassOf _:genid73 .
+
+_:genid73 a owl:Restriction ;
+	owl:onProperty s4bldg:contains ;
+	owl:someValuesFrom s4bldg:BuildingObject .
+
+s4bldg:BuildingSpace rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects. (Definition taken from S4BLDG ontology)"@en ;
+	rdfs:label "Building space"@en .
+# 
+# https://w3id.org/def/saref4building#PhysicalObject
+
+s4bldg:PhysicalObject a owl:Class ;
+	rdfs:subClassOf _:genid74 .
+
+_:genid74 a owl:Restriction ;
+	owl:onProperty :hasOperationalMode ;
+	owl:someValuesFrom :OperationalModeConcept .
+
+s4bldg:PhysicalObject rdfs:comment "Any Object that has a proper space region. (Definition extracted from DUL ontology)"@en ;
+	rdfs:label "Physical object"@en .
+# 
+# https://w3id.org/def/saref4building#ShadingDevice
+
+s4bldg:ShadingDevice a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:comment "Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable. (Definition taken from S4BLDG ontology)"@en ;
+	rdfs:label "Shading device"@en .
+# 
+# https://w3id.org/def/saref4building#UnitaryControlElement
+
+s4bldg:UnitaryControlElement a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:comment "A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location. (Definition taken from S4BLDG ontology)"@en ;
+	rdfs:label "Unitary control element"@en .
+# 
+# https://w3id.org/saref#Device
+
+saref:Device a owl:Class ;
+	rdfs:subClassOf s4bldg:PhysicalObject ;
+	rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function."@en ;
+	rdfs:label "Device"@en .
+# 
+# https://w3id.org/saref#HVAC
+
+saref:HVAC a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:comment "Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. A saref:HVAC is typically used to accomplish saref:Comfort."@en ;
+	rdfs:label "HVAC"@en .
+# 
+# https://w3id.org/saref#Property
+
+saref:Property a owl:Class ;
+	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
+	rdfs:label "Property"@en .
+# 
+# https://w3id.org/saref#UnitOfMeasure
+
+saref:UnitOfMeasure a owl:Class ;
+	rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
+	rdfs:label "Unit of measure"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEAdaptiveComfort
+
+:ASHRAEAdaptiveComfort a owl:NamedIndividual , :ThermalNeed .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEComfortEnvelop
+
+:ASHRAEComfortEnvelop a owl:NamedIndividual , :ThermalNeed .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Adjustable
+
+:Adjustable a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Afternoon
+
+:Afternoon a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Arrival
+
+:Arrival a owl:NamedIndividual , :StatusTransitionTypeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ContinuousControl
+
+:ContinuousControl a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Day
+
+:Day a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#DayLight
+
+:DayLight a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Departure
+
+:Departure a owl:NamedIndividual , :StatusTransitionTypeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnteringRoom
+
+:EnteringRoom a owl:NamedIndividual , :Event .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Evening
+
+:Evening a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Fall
+
+:Fall a owl:NamedIndividual , :Season .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Fixed
+
+:Fixed a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Glare
+
+:Glare a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort
+
+:ISOAdaptiveComfort a owl:NamedIndividual , :ThermalNeed .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Illuminance
+
+:Illuminance a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Inaction
+
+:Inaction a owl:NamedIndividual , :Inaction .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#IndoorAirQuality
+
+:IndoorAirQuality a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#LeavingRoom
+
+:LeavingRoom a owl:NamedIndividual , :Event .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Morning
+
+:Morning a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Night
+
+:Night a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Noise
+
+:Noise a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Noon
+
+:Noon a owl:NamedIndividual , :TimeOfDay .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#OnOff
+
+:OnOff a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Operable
+
+:Operable a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Rain
+
+:Rain a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#RelativeHumidity
+
+:RelativeHumidity a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue
+
+:SetToControlValue a owl:NamedIndividual , :InteractionConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermLeaving
+
+:ShortTermLeaving a owl:NamedIndividual , :StatusTransitionTypeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermVisiting
+
+:ShortTermVisiting a owl:NamedIndividual , :StatusTransitionTypeConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#SolarIrradiance
+
+:SolarIrradiance a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spring
+
+:Spring a owl:NamedIndividual , :Season .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#StayingInRoom
+
+:StayingInRoom a owl:NamedIndividual , :Event .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Summer
+
+:Summer a owl:NamedIndividual , :Season .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Temperature
+
+:Temperature a owl:NamedIndividual , saref:Property .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff
+
+:TurnOff a owl:NamedIndividual , :InteractionConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn
+
+:TurnOn a owl:NamedIndividual , :InteractionConcept .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
+
+:Winter a owl:NamedIndividual , :Season .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#ZoneOnOff
+
+:ZoneOnOff a owl:NamedIndividual , :OperationalModeConcept .
+# 
+# http://www.w3.org/2006/time#Friday
+
+time:Friday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Monday
+
+time:Monday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Saturday
+
+time:Saturday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Sunday
+
+time:Sunday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Thursday
+
+time:Thursday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Tuesday
+
+time:Tuesday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# http://www.w3.org/2006/time#Wednesday
+
+time:Wednesday a owl:NamedIndividual , time:DayOfWeek .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:Inaction rdfs:label "Inaction"@en ;
+	rdfs:comment "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid75 a owl:AllDisjointClasses ;
+	owl:members _:genid79 .
+
+_:genid79 a rdf:List ;
+	rdf:first :AccousticNeed ;
+	rdf:rest _:genid78 .
+
+_:genid78 a rdf:List ;
+	rdf:first :IAQNeed ;
+	rdf:rest _:genid77 .
+
+_:genid77 a rdf:List ;
+	rdf:first :ThermalNeed ;
+	rdf:rest _:genid76 .
+
+_:genid76 a rdf:List ;
+	rdf:first :VisualNeed ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid80 a owl:AllDisjointClasses ;
+	owl:members _:genid85 .
+
+_:genid85 a rdf:List ;
+	rdf:first :ConstantValueFormula ;
+	rdf:rest _:genid84 .
+
+_:genid84 a rdf:List ;
+	rdf:first :LinearFormula ;
+	rdf:rest _:genid83 .
+
+_:genid83 a rdf:List ;
+	rdf:first :LogitFormula ;
+	rdf:rest _:genid82 .
+
+_:genid82 a rdf:List ;
+	rdf:first :QuadraticFormula ;
+	rdf:rest _:genid81 .
+
+_:genid81 a rdf:List ;
+	rdf:first :WeibullFormula ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid86 a owl:AllDifferent ;
+	owl:distinctMembers _:genid89 .
+
+_:genid89 a rdf:List ;
+	rdf:first :ASHRAEAdaptiveComfort ;
+	rdf:rest _:genid88 .
+
+_:genid88 a rdf:List ;
+	rdf:first :ASHRAEComfortEnvelop ;
+	rdf:rest _:genid87 .
+
+_:genid87 a rdf:List ;
+	rdf:first :ISOAdaptiveComfort ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
