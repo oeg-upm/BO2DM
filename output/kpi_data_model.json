@@ -1,0 +1,943 @@
+{
+    "KPIValue": {
+        "definition": null,
+        "related_terms": [
+            "Key Performance Indicator Value"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "hasProject": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Project"
+                }
+            },
+            "hasScenario": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Scenario"
+                }
+            },
+            "hasValue": {
+                "definition": null,
+                "related_terms": [
+                    "has value"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "hasDescription": {
+                "definition": null,
+                "related_terms": [
+                    "has description"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "Literal"
+            },
+            "quantifiesKPI": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KeyPerformanceIndicator"
+                }
+            },
+            "hasName": {
+                "definition": null,
+                "related_terms": [
+                    "has name"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Economic": {
+        "definition": null,
+        "related_terms": [
+            "Economic"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "unit": {
+                "definition": null,
+                "related_terms": [
+                    "unit"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "comment": {
+                "definition": null,
+                "related_terms": [
+                    "comment"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Energy": {
+        "definition": null,
+        "related_terms": [
+            "Energy"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "unit": {
+                "definition": null,
+                "related_terms": [
+                    "unit"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "comment": {
+                "definition": null,
+                "related_terms": [
+                    "comment"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "KeyPerformanceIndicatorAssessment": {
+        "definition": null,
+        "related_terms": [
+            "Key Performance Indicator Assessment"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "hasValue": {
+                "definition": null,
+                "related_terms": [
+                    "has value"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "hasDescription": {
+                "definition": null,
+                "related_terms": [
+                    "has description"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "Literal"
+            },
+            "quantifiesKPI": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KeyPerformanceIndicator"
+                }
+            },
+            "hasName": {
+                "definition": null,
+                "related_terms": [
+                    "has name"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Scenario": {
+        "definition": null,
+        "related_terms": [
+            "Scenario"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "relatedToProject": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Project"
+                }
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "name": {
+                "definition": null,
+                "related_terms": [
+                    "name"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Comfort": {
+        "definition": null,
+        "related_terms": [
+            "Comfort"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "unit": {
+                "definition": null,
+                "related_terms": [
+                    "unit"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "comment": {
+                "definition": null,
+                "related_terms": [
+                    "comment"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "KeyPerformanceIndicator": {
+        "definition": null,
+        "related_terms": [
+            "Key Performance Indicator"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {}
+    },
+    "Project": {
+        "definition": null,
+        "related_terms": [
+            "Project"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "changeDate": {
+                "definition": "The most recent editing date of a project .",
+                "related_terms": [
+                    "change date"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "name": {
+                "definition": null,
+                "related_terms": [
+                    "name"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "address": {
+                "definition": null,
+                "related_terms": [
+                    "address"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "coordinates": {
+                "definition": null,
+                "related_terms": [
+                    "coordinates"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Sustainability": {
+        "definition": null,
+        "related_terms": [
+            "Sustainability"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "unit": {
+                "definition": null,
+                "related_terms": [
+                    "unit"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "comment": {
+                "definition": null,
+                "related_terms": [
+                    "comment"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Kpi": {
+        "definition": "Key Performance Indicator",
+        "related_terms": [
+            "KPI"
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "unit": {
+                "definition": null,
+                "related_terms": [
+                    "unit"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "comment": {
+                "definition": null,
+                "related_terms": [
+                    "comment"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    "identifier"
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ import rdflib
 from rdflib.serializer import Serializer
 import json
 import os
+import re
 
 project_dir = os.path.dirname(os.getcwd())
 
@@ -33,6 +34,8 @@ def enrich_model(ont_jsonld, metadata):
     for meta_element in metadata:
         # This condition try except is because of the fact that there could exist some standards
         # defined as a Literal or with a URI pointing to their HTML documentation.
+
+        #related_terms = meta_element[rdfs+"label"][0]["@value"] if rdfs + "label" in meta_element else None
         try:
             standard = meta_element[rdfs + "isDefinedBy"][0]["@value"] if rdfs + "isDefinedBy" in meta_element else None
         except:
@@ -40,20 +43,43 @@ def enrich_model(ont_jsonld, metadata):
         date_added = meta_element[dc + "dateAdded"][0]["@value"] if dc + "dateAdded" in meta_element else None
         date_deprecated = meta_element[dc + "dateDeprecated"][0]["@value"] if dc + "dateDeprecated" in meta_element else None
         version = meta_element[owl + "versionInfo"][0]["@value"] if owl + "versionInfo" in meta_element else None
+        ordered = meta_element[dc + "ordered"][0]["@value"] if dc + "ordered" in meta_element else None
+        sensitive = meta_element[dc + "sensitive"][0]["@value"] if dc + "sensitive" in meta_element else None
+        transformation = meta_element[dc+"transformation"][0]["@value"] if dc + "transformation" in meta_element else None
+        measurementType = meta_element[dc+"measurementType"][0]["@value"] if dc + "measurementType" in meta_element else None
+        measurementUnit = meta_element[dc+"measurementUnit"][0]["@value"] if dc + "measurementUnit" in meta_element else None
+        timeZone = meta_element[dc+"timeZone"][0]["@value"] if dc + "timeZone" in meta_element else None
+        codeList = meta_element[dc+"codeList"][0]["@value"] if dc + "codeList" in meta_element else None
+        codeType = meta_element[dc+"codeType"][0]["@value"] if dc + "codeType" in meta_element else None
 
         for ont_element in ont_jsonld:
             if meta_element["@id"] == ont_element["@id"]:
 
+                type_uri = ont_element["@type"][0]
+                type = type_uri[type_uri.find("#") + 1:]
+
+                #ont_element[rdfs+"label"] = [{"@value": related_terms}]
                 ont_element[rdfs+"isDefinedBy"] = [{"@value": standard}]
                 ont_element[dc+"dateAdded"] = [{"@value": date_added}]
                 ont_element[dc+"dateDeprecated"] = [{"@value": date_deprecated}]
                 ont_element[owl+"versionInfo"] = [{"@value": version}]
+                if type != "Class":
+                    ont_element[dc+"ordered"] = [{"@value": ordered}]
+                    ont_element[dc+"sensitive"] = [{"@value": sensitive}]
+                    ont_element[dc + "transformation"] = [{"@value": transformation}]
+                    ont_element[dc + "measurementType"] = [{"@value": measurementType}]
+                    ont_element[dc + "measurementUnit"] = [{"@value": measurementUnit}]
+                    ont_element[dc + "timeZone"] = [{"@value": timeZone}]
+                    ont_element[dc + "codeList"] = [{"@value": codeList}]
+                    ont_element[dc + "codeType"] = [{"@value": codeType}]
                 break
 
     return ont_jsonld
 
 # Load ontology
-metadata_path = "D:/oeg-projects/bimerr/BO2DM/ontology/op_enriched.ttl"
+metadata_path = "D:/oeg-projects/bimerr/BO2DM/ontology/kpi_enriched.ttl"
+ont_ttl_filename = re.split(r'/', metadata_path)[-1]
+ont_prefix = ont_ttl_filename[:ont_ttl_filename.find("_")]
 g1 = rdflib.Graph()
 g1.parse(metadata_path, format='ttl')
 metadata_jsonld = g1.serialize(format='json-ld', indent=4).decode()
@@ -92,6 +118,7 @@ for concept_uri in concepts:
     definition = element[rdfs+"comment"][0]["@value"] if rdfs+"comment" in element else None
     # This condition try except is because of the fact that there could exist some standards
     # defined as a Literal or with a URI pointing to their HTML documentation.
+    related_terms = element[rdfs+"label"][0]["@value"] if rdfs+"label" in element else None
     try:
         standard = element[rdfs+"isDefinedBy"][0]["@value"] if rdfs+"isDefinedBy" in element else None
     except:
@@ -100,6 +127,7 @@ for concept_uri in concepts:
     date_deprecated = element[dc+"dateDeprecated"][0]["@value"] if dc+"dateDeprecated" in element else None
     version = element[owl+"versionInfo"][0]["@value"] if owl+"versionInfo" in element else None
     data_model[concept_name] = {"definition": definition}
+    data_model[concept_name]["related_terms"] = [related_terms]
     data_model[concept_name]["standards"] = [standard]
     data_model[concept_name]["date_added"] = date_added
     data_model[concept_name]["date_deprecated"] = date_deprecated
@@ -124,6 +152,7 @@ for concept_uri in concepts:
 
         data_model[concept_name]["children"][property_name] = {}
         definition = property_element[rdfs + "comment"][0]["@value"] if rdfs + "comment" in property_element else None
+        related_terms = property_element[rdfs+"label"][0]["@value"] if rdfs+"label" in property_element else None
         try:
             standard = property_element[rdfs + "isDefinedBy"][0]["@value"] if rdfs + "isDefinedBy" in property_element else None
         except:
@@ -135,7 +164,19 @@ for concept_uri in concepts:
             "@value"] if owl + "versionInfo" in property_element else None
         ordered = property_element[dc + "ordered"][0]["@value"] if dc + "ordered" in property_element else None
         sensitive = property_element[dc + "sensitive"][0]["@value"] if dc + "sensitive" in property_element else None
+        transformation = property_element[dc + "transformation"][0]["@value"] if dc + "transformation" in property_element else None
+        measurementType = property_element[dc + "measurementType"][0][
+            "@value"] if dc + "measurementType" in property_element else None
+        measurementUnit = property_element[dc + "measurementUnit"][0][
+            "@value"] if dc + "measurementUnit" in property_element else None
+        timeZone = property_element[dc + "timeZone"][0][
+            "@value"] if dc + "timeZone" in property_element else None
+        codeList = property_element[dc + "codeList"][0][
+            "@value"] if dc + "codeList" in property_element else None
+        codeType = property_element[dc + "codeType"][0][
+            "@value"] if dc + "codeType" in property_element else None
         data_model[concept_name]["children"][property_name]["definition"] = definition
+        data_model[concept_name]["children"][property_name]["related_terms"] = [related_terms]
         data_model[concept_name]["children"][property_name]["standards"] = [standard]
         data_model[concept_name]["children"][property_name]["date_added"] = date_added
         data_model[concept_name]["children"][property_name]["date_deprecated"] = date_deprecated
@@ -160,6 +201,12 @@ for concept_uri in concepts:
 
         data_model[concept_name]["children"][property_name]["facet"]["ordered"] = ordered
         data_model[concept_name]["children"][property_name]["facet"]["sensitive"] = sensitive
+        data_model[concept_name]["children"][property_name]["facet"]["transformation"] = transformation
+        data_model[concept_name]["children"][property_name]["facet"]["measurementType"] = measurementType
+        data_model[concept_name]["children"][property_name]["facet"]["measurementUnit"] = measurementUnit
+        data_model[concept_name]["children"][property_name]["facet"]["timeZone"] = timeZone
+        data_model[concept_name]["children"][property_name]["facet"]["codeList"] = codeList
+        data_model[concept_name]["children"][property_name]["facet"]["codeType"] = codeType
 
         if owl+"ObjectProperty" in property_types:
             data_model[concept_name]["children"][property_name]["type"] = {"$ref": "#/" + datatype}
@@ -192,6 +239,7 @@ for concept_uri in concepts:
 
 result = json.dumps(data_model, indent=4, separators=(',', ': '))
 
-with open(project_dir + "/output/op_data_model.json", "w") as f:
+output_file_name = ont_prefix + "_data_model.json"
+with open(project_dir + "/output/" + output_file_name, "w") as f:
     json.dump(data_model, f, indent=4, separators=(',', ': '))
 
