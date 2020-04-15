@@ -303,6 +303,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
         with open(output_datamodel_path, "w") as f:
             json.dump(data_model, f, indent=4, separators=(',', ': '))
 
+    return data_model
 
 if __name__ == "__main__":
 
