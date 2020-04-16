@@ -1,0 +1,374 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+@prefix dc: <http://purl.org/dc/elements/1.1> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix s4city: <https://w3id.org/def/saref4city#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> a owl:Ontology ;
+	<http://purl.org/dc/elements/1.1/created> "2020-02-01"@en ;
+	<http://purl.org/dc/elements/1.1/creator> "Serge Chávez Feria" ;
+	<http://purl.org/dc/elements/1.1/description> "The Key Performance Indicator module aims to model the metrics defined at the beginning of building renovation activities to monitor the conformance with typical requirements related to energy efficient buildings."@en ;
+	<http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" ;
+	<http://purl.org/dc/elements/1.1/title> "Key Performance Indicator ontology"@en ;
+	dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
+	vann:preferredNamespacePrefix "kpi"@en ;
+	vann:preferredNamespaceUri <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> ;
+	owl:versionInfo "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+
+<http://purl.org/dc/elements/1.1/created> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/creator
+
+<http://purl.org/dc/elements/1.1/creator> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/description
+
+<http://purl.org/dc/elements/1.1/description> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+
+<http://purl.org/dc/elements/1.1/publisher> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/creator
+
+dcterms:creator a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+dcterms:license a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasProject
+
+:hasProject a owl:ObjectProperty .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasScenario
+
+:hasScenario a owl:ObjectProperty .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToProject
+
+:relatedToProject a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#quantifiesKPI
+
+s4city:quantifiesKPI a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#address
+
+:address a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "address"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#changeDate
+
+:changeDate a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:comment "The most recent editing date of a project ."@en ;
+	rdfs:label "change date"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#comment
+
+:comment a owl:DatatypeProperty ;
+	rdfs:label "comment"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates
+
+:coordinates a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "coordinates"@en .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#identifier
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#identifier> a owl:DatatypeProperty ;
+	rdfs:label "identifier"@en .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#name
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#name> a owl:DatatypeProperty ;
+	rdfs:label "name"@en .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#unit
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#unit> a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:label "unit"@en .
+# 
+# https://w3id.org/saref#hasDescription
+
+saref:hasDescription a owl:DatatypeProperty ;
+	rdfs:label "has description"@en .
+# 
+# https://w3id.org/saref#hasName
+
+saref:hasName a owl:DatatypeProperty ;
+	rdfs:label "has name"@en .
+# 
+# https://w3id.org/saref#hasValue
+
+saref:hasValue a owl:DatatypeProperty ;
+	rdfs:label "has value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Comfort
+
+:Comfort a owl:Class ;
+	rdfs:subClassOf :Kpi ;
+	rdfs:label "Comfort"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Economic
+
+:Economic a owl:Class ;
+	rdfs:subClassOf :Kpi ;
+	rdfs:label "Economic"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Energy
+
+:Energy a owl:Class ;
+	rdfs:subClassOf :Kpi ;
+	rdfs:label "Energy"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPIValue
+
+:KPIValue a owl:Class ;
+	rdfs:subClassOf s4city:KeyPerformanceIndicatorAssessment , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty :hasProject ;
+	owl:someValuesFrom :Project .
+
+:KPIValue rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :hasScenario ;
+	owl:someValuesFrom :Scenario .
+
+:KPIValue rdfs:label "Key Performance Indicator Value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Kpi
+
+:Kpi a owl:Class ;
+	rdfs:subClassOf s4city:KeyPerformanceIndicator , _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :comment ;
+	owl:someValuesFrom xsd:string .
+
+:Kpi rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#identifier> ;
+	owl:someValuesFrom xsd:string .
+
+:Kpi rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#unit> ;
+	owl:someValuesFrom xsd:string .
+
+:Kpi rdfs:comment "Key Performance Indicator"@en ;
+	rdfs:label "KPI"@en , "Key Performance Indicator"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+
+:Project a owl:Class ;
+	rdfs:subClassOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty :address ;
+	owl:someValuesFrom xsd:string .
+
+:Project rdfs:subClassOf _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty :changeDate ;
+	owl:someValuesFrom xsd:dateTime .
+
+:Project rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :coordinates ;
+	owl:someValuesFrom xsd:string .
+
+:Project rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#identifier> ;
+	owl:someValuesFrom xsd:string .
+
+:Project rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#name> ;
+	owl:someValuesFrom xsd:string .
+
+:Project rdfs:label "Project"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario
+
+:Scenario a owl:Class ;
+	rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty :relatedToProject ;
+	owl:someValuesFrom :Project .
+
+:Scenario rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#identifier> ;
+	owl:someValuesFrom xsd:string .
+
+:Scenario rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/serge30/bimerr/kpi#name> ;
+	owl:someValuesFrom xsd:string .
+
+:Scenario rdfs:label "Scenario"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Sustainability
+
+:Sustainability a owl:Class ;
+	rdfs:subClassOf :Kpi ;
+	rdfs:label "Sustainability"@en .
+# 
+# https://w3id.org/def/saref4city#KeyPerformanceIndicator
+
+s4city:KeyPerformanceIndicator a owl:Class ;
+	rdfs:label "Key Performance Indicator"@en .
+# 
+# https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
+
+s4city:KeyPerformanceIndicatorAssessment a owl:Class ;
+	rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty s4city:quantifiesKPI ;
+	owl:someValuesFrom s4city:KeyPerformanceIndicator .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty saref:hasDescription ;
+	owl:someValuesFrom rdfs:Literal .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty saref:hasName ;
+	owl:someValuesFrom xsd:string .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:someValuesFrom xsd:float .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:label "Key Performance Indicator Assessment"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#Comfort
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#Comfort> a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#Economic
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#Economic> a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#Energy
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#Energy> a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/serge30/bimerr/kpi#Sustainability
+
+<http://www.semanticweb.org/serge30/bimerr/kpi#Sustainability> a owl:NamedIndividual .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid18 a owl:AllDifferent ;
+	owl:distinctMembers _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/serge30/bimerr/kpi#Comfort> ;
+	rdf:rest _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/serge30/bimerr/kpi#Economic> ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/serge30/bimerr/kpi#Energy> ;
+	rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/serge30/bimerr/kpi#Sustainability> ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

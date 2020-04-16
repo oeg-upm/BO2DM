@@ -1,0 +1,700 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bimerr.iot.linkeddata.es/def/metadata#> .
+
+<http://bimerr.iot.linkeddata.es/def/metadata#> rdf:type owl:Ontology ;
+                                                 :dateAdded "BIMERR metadata ontology"@en ;
+                                                 <http://purl.org/dc/elements/1.1/created> "2020-02-01" ;
+                                                 <http://purl.org/dc/elements/1.1/creator> "María Poveda Vilallón" ,
+                                                                                           "Serge Chávez Feria" ;
+                                                 <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
+                                                 rdfs:comment "Metadata ontology to generate the BIMERR data model"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#dateAdded
+:dateAdded rdf:type owl:AnnotationProperty .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#dateDeprecated
+:dateDeprecated rdf:type owl:AnnotationProperty .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#ordered
+:ordered rdf:type owl:AnnotationProperty .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#sensitive
+:sensitive rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://bimerr.iot.linkeddata.es/def/building#Building> :dateAdded "08/04/2020" ;
+                                                        rdfs:isDefinedBy "obXML" ;
+                                                        owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> owl:versionInfo 1 ;
+                                                             :dateAdded "08/04/2020" ;
+                                                             rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed> :dateAdded "08/04/2020" ;
+                                                                      rdfs:isDefinedBy "obXML" ;
+                                                                      owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action> owl:versionInfo 1 ;
+                                                               :dateAdded "08/04/2020" ;
+                                                               rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior> rdfs:isDefinedBy "obXML" ;
+                                                                 owl:versionInfo 1 ;
+                                                                 :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient> :dateAdded "08/04/2020" ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula> :dateAdded "08/04/2020" ;
+                                                                             owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#CustomProbabilityModel> :dateAdded "08/04/2020" ;
+                                                                               owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver> owl:versionInfo 1 ;
+                                                               rdfs:isDefinedBy "obXML" ;
+                                                               :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet> owl:versionInfo 1 ;
+                                                                  :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Environment> rdfs:isDefinedBy "obXML" ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter> :dateAdded "08/04/2020" ;
+                                                                               owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Equipment> owl:versionInfo 1 ;
+                                                                  :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Event> :dateAdded "08/04/2020" ;
+                                                              owl:versionInfo 1 ;
+                                                              rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Habit> :dateAdded "08/04/2020" ;
+                                                              owl:versionInfo 1 ;
+                                                              rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed> rdfs:isDefinedBy "obXML" ;
+                                                                owl:versionInfo 1 ;
+                                                                :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Inaction> rdfs:isDefinedBy "obXML" ;
+                                                                 owl:versionInfo 1 ;
+                                                                 :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction> rdfs:isDefinedBy "obXML" ;
+                                                                    owl:versionInfo 1 ;
+                                                                    :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept> owl:versionInfo 1 ;
+                                                                           :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula> rdfs:isDefinedBy "obXML" ;
+                                                                           :dateAdded "08/04/2020" ;
+                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme> owl:versionInfo 1 ;
+                                                                          :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice> owl:versionInfo 1 ;
+                                                                       :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#LinearFormula> :dateAdded "08/04/2020" ;
+                                                                      owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#LogitFormula> owl:versionInfo 1 ;
+                                                                     :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#MarkovChainModel> :dateAdded "08/04/2020" ;
+                                                                         owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting> :dateAdded "08/04/2020" ;
+                                                                owl:versionInfo 1 ;
+                                                                rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> :dateAdded "08/04/2020" ;
+                                                                 owl:versionInfo 1 ;
+                                                                 rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel> owl:versionInfo 1 ;
+                                                                      :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need> :dateAdded "08/04/2020" ;
+                                                             rdfs:isDefinedBy "obXML" ;
+                                                             owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#NonPhysicalNeed> owl:versionInfo 1 ;
+                                                                        :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#NormalProbabilityModel> owl:versionInfo 1 ;
+                                                                               :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> rdfs:isDefinedBy "obXML" ;
+                                                                 :dateAdded "08/04/2020" ;
+                                                                 owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> :dateAdded "08/04/2020" ;
+                                                                               owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> owl:versionInfo 1 ;
+                                                                                     :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> rdfs:isDefinedBy "obXML" ;
+                                                                       :dateAdded "08/04/2020" ;
+                                                                       owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> :dateAdded "08/04/2020" ;
+                                                                     owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula> :dateAdded "08/04/2020" ;
+                                                                         owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Report> :dateAdded "08/04/2020" ;
+                                                               owl:versionInfo 1 ;
+                                                               rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> rdfs:isDefinedBy "obXML" ;
+                                                               owl:versionInfo 1 ;
+                                                               :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> :dateAdded "08/04/2020" ;
+                                                                       rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> rdfs:isDefinedBy "obXML" ;
+                                                                :dateAdded "08/04/2020" ;
+                                                                owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionScheme> owl:versionInfo 1 ;
+                                                                               :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept> owl:versionInfo 1 ;
+                                                                                    :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ThermalNeed> rdfs:isDefinedBy "obXML" ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Thermostat> :dateAdded "08/04/2020" ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> rdfs:isDefinedBy "obXML" ;
+                                                             owl:versionInfo 1 ;
+                                                             :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> :dateAdded "08/04/2020" ;
+                                                                  rdfs:isDefinedBy "obXML" ;
+                                                                  owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#VisualNeed> rdfs:isDefinedBy "obXML" ;
+                                                                   :dateAdded "08/04/2020" ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula> owl:versionInfo 1 ;
+                                                                       :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Window> :dateAdded "08/04/2020" ;
+                                                               owl:versionInfo 1 ;
+                                                               rdfs:isDefinedBy "obXML" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress> :sensitive "false"^^xsd:boolean ;
+                                                                        owl:priorVersion 1 ;
+                                                                        :ordered "false"^^xsd:boolean ;
+                                                                        :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue> owl:versionInfo 1 ;
+                                                                         :sensitive "false"^^xsd:boolean ;
+                                                                         :dateAdded "08/04/2020" ;
+                                                                         :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf> :ordered "false"^^xsd:boolean ;
+                                                                   :sensitive "false"^^xsd:boolean ;
+                                                                   :dateAdded "08/04/2020" ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue> :ordered "false"^^xsd:boolean ;
+                                                                     :dateAdded "08/04/2020" ;
+                                                                     :sensitive "false"^^xsd:boolean ;
+                                                                     owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange> owl:versionInfo 1 ;
+                                                                       :sensitive "false"^^xsd:boolean ;
+                                                                       :ordered "false"^^xsd:boolean ;
+                                                                       :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula> :ordered "false"^^xsd:boolean ;
+                                                                           :sensitive "false"^^xsd:boolean ;
+                                                                           :dateAdded "08/04/2020" ;
+                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter> :ordered "false"^^xsd:boolean ;
+                                                                           :sensitive "false"^^xsd:boolean ;
+                                                                           owl:versionInfo 1 ;
+                                                                           :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesProperty> :sensitive "false"^^xsd:boolean ;
+                                                                          :ordered "false"^^xsd:boolean ;
+                                                                          owl:versionInfo 1 ;
+                                                                          :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> :dateAdded "08/04/2020" ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    owl:versionInfo 1 ;
+                                                                    :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> :dateAdded "08/04/2020" ;
+                                                                   :ordered "false"^^xsd:boolean ;
+                                                                   :sensitive "false"^^xsd:boolean ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy> :dateAdded "08/04/2020" ;
+                                                                 :sensitive "false"^^xsd:boolean ;
+                                                                 owl:versionInfo 1 ;
+                                                                 :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> owl:versionInfo 1 ;
+                                                                 :sensitive "false"^^xsd:boolean ;
+                                                                 :ordered "false"^^xsd:boolean ;
+                                                                 :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime> :ordered "false"^^xsd:boolean ;
+                                                                       owl:versionInfo 1 ;
+                                                                       :dateAdded "08/04/2020" ;
+                                                                       :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason> owl:versionInfo 1 ;
+                                                                  :sensitive "false"^^xsd:boolean ;
+                                                                  :dateAdded "08/04/2020" ;
+                                                                  :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime> :dateAdded "08/04/2020" ;
+                                                                :ordered "false"^^xsd:boolean ;
+                                                                owl:versionInfo 1 ;
+                                                                :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior> owl:versionInfo 1 ;
+                                                                    :ordered "false"^^xsd:boolean ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient> owl:versionInfo 1 ;
+                                                                       :sensitive "false"^^xsd:boolean ;
+                                                                       :dateAdded "08/04/2020" ;
+                                                                       :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek> :ordered "false"^^xsd:boolean ;
+                                                                     :dateAdded "08/04/2020" ;
+                                                                     :sensitive "false"^^xsd:boolean ;
+                                                                     owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasEnvironmentalParameter> :ordered "false"^^xsd:boolean ;
+                                                                                  :dateAdded "08/04/2020" ;
+                                                                                  :sensitive "false"^^xsd:boolean ;
+                                                                                  owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable> :ordered "false"^^xsd:boolean ;
+                                                                               owl:versionInfo 1 ;
+                                                                               :sensitive "false"^^xsd:boolean ;
+                                                                               :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> :ordered "false"^^xsd:boolean ;
+                                                                   :sensitive "false"^^xsd:boolean ;
+                                                                   :dateAdded "08/04/2020" ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> :ordered "false"^^xsd:boolean ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode> :sensitive "false"^^xsd:boolean ;
+                                                                           :dateAdded "08/04/2020" ;
+                                                                           owl:versionInfo 1 ;
+                                                                           :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason> :dateAdded "08/04/2020" ;
+                                                                  :sensitive "false"^^xsd:boolean ;
+                                                                  owl:versionInfo 1 ;
+                                                                  :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay> :ordered "false"^^xsd:boolean ;
+                                                                     :sensitive "false"^^xsd:boolean ;
+                                                                     :dateAdded "08/04/2020" ;
+                                                                     owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType> :dateAdded "08/04/2020" ;
+                                                                          :sensitive "false"^^xsd:boolean ;
+                                                                          owl:versionInfo 1 ;
+                                                                          :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure> :sensitive "false"^^xsd:boolean ;
+                                                                         :dateAdded "08/04/2020" ;
+                                                                         owl:versionInfo 1 ;
+                                                                         :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier> :ordered "false"^^xsd:boolean ;
+                                                                   :dateAdded "08/04/2020" ;
+                                                                   :sensitive "false"^^xsd:boolean ;
+                                                                   owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema> :ordered "false"^^xsd:boolean ;
+                                                                 owl:versionInfo 1 ;
+                                                                 :sensitive "false"^^xsd:boolean ;
+                                                                 :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#influencedByNeed> owl:versionInfo 1 ;
+                                                                         :sensitive "false"^^xsd:boolean ;
+                                                                         :dateAdded "08/04/2020" ;
+                                                                         :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver> :ordered "false"^^xsd:boolean ;
+                                                                      :sensitive "false"^^xsd:boolean ;
+                                                                      owl:versionInfo 1 ;
+                                                                      :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo> :ordered "false"^^xsd:boolean ;
+                                                                :sensitive "false"^^xsd:boolean ;
+                                                                :dateAdded "08/04/2020" ;
+                                                                owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> :ordered "false"^^xsd:boolean ;
+                                                                           :sensitive "false"^^xsd:boolean ;
+                                                                           owl:versionInfo 1 ;
+                                                                           :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> :dateAdded "08/04/2020" ;
+                                                                      owl:versionInfo 1 ;
+                                                                      :sensitive "false"^^xsd:boolean ;
+                                                                      :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> :sensitive "false"^^xsd:boolean ;
+                                                                           owl:versionInfo 1 ;
+                                                                           :dateAdded "08/04/2020" ;
+                                                                           :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> :ordered "false"^^xsd:boolean ;
+                                                                      :dateAdded "08/04/2020" ;
+                                                                      owl:versionInfo 1 ;
+                                                                      :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration> :dateAdded "08/04/2020" ;
+                                                                        :sensitive "false"^^xsd:boolean ;
+                                                                        owl:versionInfo 1 ;
+                                                                        :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> :dateAdded "08/04/2020" ;
+                                                             :ordered "false"^^xsd:boolean ;
+                                                             :sensitive "false"^^xsd:boolean ;
+                                                             owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge> owl:versionInfo 1 ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    :ordered "false"^^xsd:boolean ;
+                                                                    :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender> :dateAdded "08/04/2020" ;
+                                                                       :sensitive "false"^^xsd:boolean ;
+                                                                       owl:versionInfo 1 ;
+                                                                       :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype> :ordered "false"^^xsd:boolean ;
+                                                                        owl:versionInfo 1 ;
+                                                                        :dateAdded "08/04/2020" ;
+                                                                        :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle> :dateAdded "08/04/2020" ;
+                                                                          :ordered "false"^^xsd:boolean ;
+                                                                          owl:versionInfo 1 ;
+                                                                          :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays> :dateAdded "08/04/2020" ;
+                                                                   :sensitive "false"^^xsd:boolean ;
+                                                                   owl:versionInfo 1 ;
+                                                                   :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence> :dateAdded "08/04/2020" ;
+                                                                            :sensitive "false"^^xsd:boolean ;
+                                                                            owl:versionInfo 1 ;
+                                                                            :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability> :ordered "false"^^xsd:boolean ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> :ordered "false"^^xsd:boolean ;
+                                                                       owl:versionInfo 1 ;
+                                                                       :dateAdded "08/04/2020" ;
+                                                                       :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy> :dateAdded "08/04/2020" ;
+                                                                    :ordered "false"^^xsd:boolean ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason> :ordered "false"^^xsd:boolean ;
+                                                                    :dateAdded "08/04/2020" ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime> owl:versionInfo 1 ;
+                                                                  :sensitive "false"^^xsd:boolean ;
+                                                                  :ordered "false"^^xsd:boolean ;
+                                                                  :dateAdded "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#time> :dateAdded "08/04/2020" ;
+                                                             :sensitive "false"^^xsd:boolean ;
+                                                             owl:versionInfo 1 ;
+                                                             :ordered "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration> :ordered "false"^^xsd:boolean ;
+                                                                        :dateAdded "08/04/2020" ;
+                                                                        owl:versionInfo 1 ;
+                                                                        :sensitive "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime> :dateAdded "08/04/2020" ;
+                                                                    :sensitive "false"^^xsd:boolean ;
+                                                                    owl:versionInfo 1 ;
+                                                                    :ordered "false"^^xsd:boolean .
+
+
+<http://www.w3.org/2004/02/skos/core#Concept> :dateAdded "08/04/2020" ;
+                                              owl:versionInfo 1 .
+
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> owl:versionInfo 1 ;
+                                                    :dateAdded "08/04/2020" .
+
+
+<http://www.w3.org/2004/02/skos/core#broader> :sensitive "false"^^xsd:boolean ;
+                                              owl:versionInfo 1 ;
+                                              :ordered "false"^^xsd:boolean .
+
+
+<http://www.w3.org/2004/02/skos/core#narrower> :ordered "false"^^xsd:boolean ;
+                                               :dateAdded "08/04/2020" ;
+                                               owl:versionInfo 1 ;
+                                               :sensitive "false"^^xsd:boolean .
+
+
+<http://www.w3.org/2006/time#DayOfWeek> :dateAdded "08/04/2020" ;
+                                        owl:versionInfo 1 .
+
+
+<http://xmlns.com/foaf/0.1/Person> owl:versionInfo 1 ;
+                                   :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/def/saref4building#Building> :dateAdded "08/04/2020" ;
+                                               owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4building#BuildingObject> owl:versionInfo 1 ;
+                                                     :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/def/saref4building#BuildingSpace> :dateAdded "08/04/2020" ;
+                                                    owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4building#PhysicalObject> :dateAdded "08/04/2020" ;
+                                                     owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4building#ShadingDevice> owl:versionInfo 1 ;
+                                                    :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/def/saref4building#UnitaryControlElement> :dateAdded "08/04/2020" ;
+                                                            owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4building#contains> :ordered "false"^^xsd:boolean ;
+                                               :sensitive "false"^^xsd:boolean ;
+                                               owl:versionInfo 1 ;
+                                               :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/def/saref4building#hasSpace> owl:versionInfo 1 ;
+                                               :sensitive "false"^^xsd:boolean ;
+                                               :dateAdded "08/04/2020" ;
+                                               :ordered "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#Device> owl:versionInfo 1 ;
+                                :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/saref#HVAC> :dateAdded "08/04/2020" ;
+                              owl:versionInfo 1 .
+
+
+<https://w3id.org/saref#Property> owl:versionInfo 1 ;
+                                  :dateAdded "08/04/2020" .
+
+
+<https://w3id.org/saref#UnitOfMeasure> owl:versionInfo 1 ;
+                                       :dateAdded "08/04/2020" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
