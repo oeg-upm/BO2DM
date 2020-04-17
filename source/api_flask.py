@@ -2,9 +2,24 @@ import flask
 from flask import request, jsonify
 import sqlite3
 from converter import o2dm_conversion
+from flask_swagger_ui import get_swaggerui_blueprint
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+
+
+# swagger specific
+swagger_url = "/swagger"
+api_url = "/static/swagger.json"
+swaggerui_blueprint = get_swaggerui_blueprint(
+    swagger_url,
+    api_url,
+    config={
+        "app_name": "BO2DM Flask API"
+    }
+)
+
+app.register_blueprint(swaggerui_blueprint, url_prefix=swagger_url)
 
 domains_available = {
     "occupancy_profile": {"prefix": "op", "name": "Occupancy Profile"},
@@ -23,10 +38,7 @@ def home():
 @app.route("/parameters", methods=["GET"])
 def return_domains():
 
-    message = ""
-    for key, value in domains_available.items():
-        message = message + "<p><b>" + value["name"] + ":</b>" + "&ensp;" + key + "</p>"
-    return "<h1>Domains Available for Conversion</h1>" + message
+    return jsonify(domains_available)
 
 @app.route("/domains", methods=["GET"])
 def converter():

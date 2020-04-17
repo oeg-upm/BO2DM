@@ -1,0 +1,67 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+	
+		"description": "This is an application developed to transform ontologies from the BIMERR project to json serialized data models",
+		"version": "1.0.0",
+		"title": "BIMERR Ontology to Data Model Converter",
+		"contact": {
+			"email": "chavezferia.justinian@gmail.com"
+		},
+		"license": {
+			"name": "Creative Commons"
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	],
+	"tags": [
+		{
+			"name": "Data Model Request",
+			"description": "API for data model transformation from a BIMERR ontology"
+		
+		}
+	],
+	"paths": {
+		"/parameters": {
+			"get": {
+				"tags": [
+					"Data Model Request"
+				],
+				"summary": "Return the list of ontological models available",
+				"responses": {
+					"200": {
+						"description": "List of ontologies available"
+					}
+				}
+			}
+		},
+		"/domains": {
+			"get": {
+				"tags": [
+					"Data Model Request"
+				],
+				"summary": "Return the ontology serialized into de BIMERR data model",
+				"responses": {
+					"200": {
+						"description": "Data model generated successfully"
+					}
+				},
+				"parameters": [
+					{
+						"in": "query",
+						"name": "domain",
+						"required": true,
+						"description": "Domain identifier of the ontology to transform",
+						"schema": {
+							"type": "string",
+							"example": "occupancy_profile"
+						}
+					}
+				]
+			}
+		}
+	}
+}
