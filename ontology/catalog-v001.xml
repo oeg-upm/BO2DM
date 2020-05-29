@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://bimerr.iot.linkeddata.es/def/building#" uri="file:/D:/oeg-projects/bimerr/domains/building/bimerr-original/ontology/building.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#" uri="file:/D:/oeg-projects/bimerr/domains/KPI/bimerr-original/ontology/kpi.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#" uri="file:/D:/oeg-projects/bimerr/domains/KPI/bimerr-original/ontology/kpi.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>
