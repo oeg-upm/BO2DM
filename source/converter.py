@@ -9,8 +9,8 @@ import argparse
 def find_ontology_element(element_uri, ont_jsonld):
 
     """
-    Function to find an ontological element whether it is a concept,
-    relation or attribute
+    Function to return all the information w.r.t. an
+    ontological element wheter it is a class, property or attribute
 
     :param element_uri: Uri of the element we want to find
     :param ont_jsonld: ontology serialized as JSON-LD
@@ -22,7 +22,7 @@ def find_ontology_element(element_uri, ont_jsonld):
             break
     return element
 
-def get_classes(ont_jsonld):
+def get_all_uris(ont_jsonld):
 
     """
     Function to find all the classes inside an jsonld owl serialization.
@@ -31,7 +31,9 @@ def get_classes(ont_jsonld):
     :return: List of URI's of all the classes in the ontology
     """
 
-    total_concepts = []
+    classes = []
+    relations = []
+    attributes = []
     for element in ont_jsonld:
         try:
             # Classes have only one element inside the list "@type"
@@ -39,10 +41,15 @@ def get_classes(ont_jsonld):
             type = type_uri[type_uri.find("#") + 1:]
             # The "_" comparison avoids the inclusion of blank nodes in the list
             if type == "Class" and element["@id"][0] != "_":
-                total_concepts.append(element["@id"])
+                classes.append(element["@id"])
+            elif type == "ObjectProperty":
+                relations.append(element["@id"])
+            elif type == "DatatypeProperty":
+                attributes.append(element["@id"])
         except:
             continue
-    return total_concepts
+
+    return classes, relations, attributes
 
 def enrich_model(ont_jsonld, metadata):
 
@@ -105,7 +112,7 @@ def get_annotation_property_uris():
     prefixes["rdf"] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     prefixes["dc"] = "http://purl.org/dc/elements/1.1/"
     prefixes["owl"] = "http://www.w3.org/2002/07/owl#"
-    prefixes["metadata"] = "http://bimerr.iot.linkeddata.es/def/metadata#"
+    prefixes["metadata"] = "http://bimerr.iot.linkeddata.es/def/bimerr-metadata#"
 
     annotations["definition"] = prefixes["rdfs"] + "comment"
     annotations["terms"] = prefixes["rdfs"] + "label"
@@ -205,6 +212,31 @@ def load_ontology(ontology_path):
 
     return jsonld_model
 
+def extract_datatype(datatype, pref_uris, ont_jsonld):
+    """
+    Support function to find the correct datatype associate to a property
+    """
+    if "_:" in datatype:
+        blak_node = find_ontology_element(datatype, ont_jsonld)
+        if pref_uris["owl"] + "unionOf" in blak_node:
+            datatype = []
+            ref_concepts = blak_node[pref_uris["owl"] + "unionOf"][0]["@list"]
+            for item in ref_concepts:
+                ref_concept_name = item["@id"].split("#")[1]
+                datatype.append(ref_concept_name)
+
+        elif pref_uris["owl"] + "intersectionOf" in blak_node:
+            datatype = []
+            ref_concepts = blak_node[pref_uris["owl"] + "intersectionOf"][0]["@list"]
+            for item in ref_concepts:
+                ref_concept_name = item["@id"].split("#")[1]
+                datatype.append(ref_concept_name)
+    else:
+        datatype = datatype.split("#")[1]
+
+    return datatype
+
+
 def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
     ont_ttl_filename = re.split(r'/', ontology_path)[-1]
@@ -221,7 +253,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
     ont_jsonld = load_ontology(imported_ont[:-1]+"/ontology.ttl")
     ont_enriched_jsonld = enrich_model(ont_jsonld, metadata_jsonld)
-    concepts = get_classes(ont_enriched_jsonld)
+    concepts, relations, attributes = get_all_uris(ont_enriched_jsonld)
 
     for concept_uri in concepts:
 
@@ -249,18 +281,38 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             property_types = property_element["@type"]
             property_name = property_uri[property_uri.find("#") + 1:]
 
+            if pref_uris["rdfs"] + "domain" in property_element:
+                property_domain = property_element[pref_uris["rdfs"] + "domain"]
+            else:
+                property_domain = None
+
+            if pref_uris["rdfs"] + "range" in property_element:
+                property_range = property_element[pref_uris["rdfs"] + "range"]
+            else:
+                property_range = None
             property_metadata = extract_elem_metadata(property_element)
             data_model[concept_name]["children"][property_name] = {}
             populate_datamodel_elements(data_model[concept_name]["children"][property_name], property_metadata)
 
+            datatype = None
+
+            # To determine the datatype of a property, first check the existance of a restriction
             if pref_uris["owl"] + "someValuesFrom" in superclass_element:
                 datatype = superclass_element[pref_uris["owl"] + "someValuesFrom"][0]["@id"]
+                datatype = extract_datatype(datatype, pref_uris, ont_enriched_jsonld)
+
             elif pref_uris["owl"] + "allValuesFrom" in superclass_element:
                 datatype = superclass_element[pref_uris["owl"] + "allValuesFrom"][0]["@id"]
-            else:
-                datatype = superclass_element[pref_uris["owl"] + "onClass"][0]["@id"]
+                datatype = extract_datatype(datatype, pref_uris, ont_enriched_jsonld)
 
-            datatype = datatype[datatype.find("#") + 1:]
+            elif pref_uris["owl"] + "onClass" in superclass_element:
+                datatype = superclass_element[pref_uris["owl"] + "onClass"][0]["@id"]
+                datatype = datatype.split("#")[1]
+
+            # If there is not a restriction of type "some", "all" or "cardinality"
+            # evaluate is there is a range associated to the property
+            if property_range is not None:
+                datatype = property_range[0]["@id"].split("#")[-1]
 
             if pref_uris["owl"] + "FunctionalProperty" in property_types:
                 data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": 1}
@@ -274,7 +326,11 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
                                         property_metadata, facet=True)
 
             if pref_uris["owl"] + "ObjectProperty" in property_types:
-                data_model[concept_name]["children"][property_name]["type"] = {"$ref": "#/" + datatype}
+                if type(datatype) == list:
+                    datatype = ["#/" + item for item in datatype]
+                    data_model[concept_name]["children"][property_name]["type"] = {"$ref": datatype}
+                else:
+                    data_model[concept_name]["children"][property_name]["type"] = {"$ref": "#/" + datatype}
             else:
                 data_model[concept_name]["children"][property_name]["type"] = datatype
 
@@ -304,6 +360,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             json.dump(data_model, f, indent=4, separators=(',', ': '))
 
     return data_model
+
 
 if __name__ == "__main__":
 
