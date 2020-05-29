@@ -281,11 +281,6 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             property_types = property_element["@type"]
             property_name = property_uri[property_uri.find("#") + 1:]
 
-            if pref_uris["rdfs"] + "domain" in property_element:
-                property_domain = property_element[pref_uris["rdfs"] + "domain"]
-            else:
-                property_domain = None
-
             if pref_uris["rdfs"] + "range" in property_element:
                 property_range = property_element[pref_uris["rdfs"] + "range"]
             else:
@@ -319,6 +314,15 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             elif pref_uris["owl"] + "maxQualifiedCardinality" in superclass_element:
                 max_cardinality = superclass_element[pref_uris["owl"] + "maxQualifiedCardinality"][0]["@value"]
                 data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
+            elif pref_uris["owl"] + "qualifiedCardinality" in superclass_element:
+                max_cardinality = superclass_element[pref_uris["owl"] + "qualifiedCardinality"][0]["@value"]
+                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
+            elif pref_uris["owl"] + "maxCardinality" in superclass_element:
+                max_cardinality = superclass_element[pref_uris["owl"] + "maxCardinality"][0]["@value"]
+                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
+            elif pref_uris["owl"] + "cardinality" in superclass_element:
+                max_cardinality = superclass_element[pref_uris["owl"] + "cardinality"][0]["@value"]
+                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
             else:
                 data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": None}
 
@@ -333,6 +337,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
                     data_model[concept_name]["children"][property_name]["type"] = {"$ref": "#/" + datatype}
             else:
                 data_model[concept_name]["children"][property_name]["type"] = datatype
+
 
     for concept_uri in concepts:
 
@@ -354,6 +359,54 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
             for key, element in superclass_children.items():
                 data_model[concept_name]["children"][key] = element
+
+    for relation_uri in relations:
+
+        relation_element = find_ontology_element(relation_uri, ont_enriched_jsonld)
+
+        if pref_uris["rdfs"] + "domain" in relation_element:
+            property_domain = relation_element[pref_uris["rdfs"] + "domain"][0]["@id"]
+            domain_name = property_domain.split("#")[1]
+            relation_name = relation_uri.split("#")[1]
+
+            if relation_name not in data_model[domain_name]["children"]:
+                relation_metadata = extract_elem_metadata(relation_element)
+                data_model[domain_name]["children"][relation_name] = {}
+                populate_datamodel_elements(data_model[domain_name]["children"][relation_name], relation_metadata)
+
+                if pref_uris["rdfs"] + "range" in relation_element:
+                    relation_range = relation_element[pref_uris["rdfs"] + "range"]
+                else:
+                    relation_range = None
+
+                if relation_range is not None:
+                    datatype = relation_range[0]["@id"].split("#")[-1]
+                    data_model[domain_name]["children"][relation_name]["type"] = {"$ref": "#/" + datatype}
+
+
+    for attribute_uri in attributes:
+
+        attribute_element = find_ontology_element(attribute_uri, ont_enriched_jsonld)
+
+        if pref_uris["rdfs"] + "domain" in attribute_element:
+            property_domain = attribute_element[pref_uris["rdfs"] + "domain"][0]["@id"]
+            domain_name = property_domain.split("#")[1]
+            attribute_name = attribute_uri.split("#")[1]
+
+            if attribute_name not in data_model[domain_name]["children"]:
+                attribute_metadata = extract_elem_metadata(attribute_element)
+                data_model[domain_name]["children"][attribute_name] = {}
+                populate_datamodel_elements(data_model[domain_name]["children"][attribute_name], attribute_metadata)
+
+                if pref_uris["rdfs"] + "range" in attribute_element:
+                    attribute_range = attribute_element[pref_uris["rdfs"] + "range"]
+                else:
+                    attribute_range = None
+
+                if attribute_range is not None:
+                    datatype = attribute_range[0]["@id"].split("#")[-1]
+                    data_model[domain_name]["children"][attribute_name]["type"] = {"$ref": "#/" + datatype}
+
 
     if output_datamodel_path:
         with open(output_datamodel_path, "w") as f:
