@@ -207,10 +207,12 @@ def load_ontology(ontology_path):
 
     g = rdflib.Graph()
     g.parse(ontology_path, format='ttl')
+    namespaces = list(g.namespaces())
+    uri2prefix = {str(uri): prefix for (prefix, uri) in namespaces}
     jsonld_model = g.serialize(format='json-ld', indent=4).decode()
     jsonld_model = json.loads(jsonld_model)
 
-    return jsonld_model
+    return jsonld_model, uri2prefix
 
 def extract_datatype(datatype, pref_uris, ont_jsonld):
     """
@@ -240,8 +242,7 @@ def extract_datatype(datatype, pref_uris, ont_jsonld):
 def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
     ont_ttl_filename = re.split(r'/', ontology_path)[-1]
-    ont_prefix = ont_ttl_filename[:ont_ttl_filename.find("_")]
-    metadata_jsonld = load_ontology(ontology_path)
+    metadata_jsonld, _ = load_ontology(ontology_path)
     data_model = {}
 
     ann_uris, pref_uris = get_annotation_property_uris()
@@ -251,13 +252,13 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             imported_ont = element[pref_uris["owl"] + "imports"][0]["@id"]
             break
 
-    ont_jsonld = load_ontology(imported_ont[:-1]+"/ontology.ttl")
+    ont_jsonld, ns2prefix = load_ontology(imported_ont[:-1]+"/ontology.ttl")
     ont_enriched_jsonld = enrich_model(ont_jsonld, metadata_jsonld)
     concepts, relations, attributes = get_all_uris(ont_enriched_jsonld)
 
+    # Children identification evaluating Restrictions
     for concept_uri in concepts:
-
-        concept_name = concept_uri[concept_uri.find("#")+1:]
+        concept_name = concept_uri.split("#")[1]
         element = find_ontology_element(concept_uri, ont_enriched_jsonld)
 
         concept_metadata = extract_elem_metadata(element)
@@ -338,7 +339,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
             else:
                 data_model[concept_name]["children"][property_name]["type"] = datatype
 
-
+    # Children identification evaluating SubClasses
     for concept_uri in concepts:
 
         concept_name = concept_uri[concept_uri.find("#")+1:]
@@ -357,9 +358,15 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
             superclass_children = data_model[superclass_name]["children"]
 
+            if "hasSubClass" in superclass_children:
+                data_model[superclass_name]["children"]["hasSubClass"]["type"]["$ref"].append("#/" + concept_name)
+            else:
+                data_model[superclass_name]["children"]["hasSubClass"] = {"type": {"$ref": ["#/" + concept_name]}}
+
             for key, element in superclass_children.items():
                 data_model[concept_name]["children"][key] = element
 
+    # Children identification evaluating Domain and Range in Object Properties
     for relation_uri in relations:
 
         relation_element = find_ontology_element(relation_uri, ont_enriched_jsonld)
@@ -383,7 +390,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
                     datatype = relation_range[0]["@id"].split("#")[-1]
                     data_model[domain_name]["children"][relation_name]["type"] = {"$ref": "#/" + datatype}
 
-
+    # Children identification evaluating Domain and Range in Datatype Properties
     for attribute_uri in attributes:
 
         attribute_element = find_ontology_element(attribute_uri, ont_enriched_jsonld)
