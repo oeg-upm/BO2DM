@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="261bfad5-e1dc-4264-bfb6-a07cc5f152e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontology/building_enriched.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontology/catalog-v001.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontology/kpi_enriched.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontology/op_enriched.ttl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/source/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/converter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,10 +87,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="417" y="125" key="EnvironmentVariablesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590676580470" />
-    <state x="419" y="131" key="FileChooserDialogImpl" timestamp="1590772261016">
+    <state x="419" y="131" key="FileChooserDialogImpl" timestamp="1591548822814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="419" y="131" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590772261016" />
+    <state x="419" y="131" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591548822814" />
     <state width="1345" height="293" key="GridCell.Tab.0.bottom" timestamp="1590750115752">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -108,10 +111,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590749544847" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590772068026">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1591686490248">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590772068026" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591686490248" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591195991172">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -241,7 +241,7 @@ def extract_datatype(datatype, pref_uris, ont_jsonld):
 
 def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
-    ont_ttl_filename = re.split(r'/', ontology_path)[-1]
+    #ont_ttl_filename = re.split(r'/', ontology_path)[-1]
     metadata_jsonld, _ = load_ontology(ontology_path)
     data_model = {}
 
@@ -258,14 +258,17 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
 
     # Children identification evaluating Restrictions
     for concept_uri in concepts:
+        concept_ns = concept_uri.split("#")[0]
         concept_name = concept_uri.split("#")[1]
         element = find_ontology_element(concept_uri, ont_enriched_jsonld)
 
         concept_metadata = extract_elem_metadata(element)
-        data_model[concept_name] = {}
-        populate_datamodel_elements(data_model[concept_name], concept_metadata)
+        if concept_name not in data_model:
+            data_model[concept_name] = {}
+            populate_datamodel_elements(data_model[concept_name], concept_metadata)
+            data_model[concept_name]["children"] = {}
         superclasses = element[pref_uris["rdfs"] + "subClassOf"] if pref_uris["rdfs"] + "subClassOf" in element else []
-        data_model[concept_name]["children"] = {}
+
 
         for superclass in superclasses:
             superclass_uri = superclass["@id"]
@@ -349,6 +352,10 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
         for superclass in superclasses:
             superclass_uri = superclass["@id"]
             superclass_name = superclass_uri[superclass_uri.find("#") + 1:]
+
+            if concept_name == superclass_name:
+                break
+
             superclass_element = find_ontology_element(superclass_uri, ont_enriched_jsonld)
             superclass_type = superclass_element["@type"][0]
             superclass_type_name = superclass_type[superclass_type.find("#") + 1:]
@@ -362,10 +369,12 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
                 data_model[superclass_name]["children"]["hasSubClass"]["type"]["$ref"].append("#/" + concept_name)
             else:
                 data_model[superclass_name]["children"]["hasSubClass"] = {"type": {"$ref": ["#/" + concept_name]}}
-
+            """
             for key, element in superclass_children.items():
+                if key == "hasSubClass":
+                    continue
                 data_model[concept_name]["children"][key] = element
-
+            """
     # Children identification evaluating Domain and Range in Object Properties
     for relation_uri in relations:
 
