@@ -74,8 +74,7 @@ def enrich_model(ont_jsonld, metadata):
         for ont_element in ont_jsonld:
             if meta_element["@id"] == ont_element["@id"]:
 
-                type_uri = ont_element["@type"][0]
-                type = type_uri[type_uri.find("#") + 1:]
+                type = ont_element["@type"][0].split("#")[:-1]
 
                 ont_element[ann_uris["standard"]] = [{"@value": metadata_extracted["standard"]}]
                 ont_element[ann_uris["added"]] = [{"@value": metadata_extracted["date_added"]}]
@@ -115,7 +114,7 @@ def get_annotation_property_uris():
     prefixes["metadata"] = "http://bimerr.iot.linkeddata.es/def/bimerr-metadata#"
 
     annotations["definition"] = prefixes["rdfs"] + "comment"
-    annotations["terms"] = prefixes["rdfs"] + "label"
+    annotations["terms"] = [prefixes["rdfs"] + "label", prefixes["rdfs"] + "seeAlso"]
     annotations["standard"] = prefixes["metadata"] + "isDefinedByStandard"
     annotations["added"] = prefixes["dc"] + "created"
     annotations["deprecated"] = prefixes["metadata"] + "deprecated"
@@ -169,7 +168,12 @@ def extract_elem_metadata(element):
 
     # Metadata extraction from the metadata ontology
     definition = element[ann["definition"]][0]["@value"] if ann["definition"] in element else None
-    related_terms = element[ann["terms"]][0]["@value"] if ann["terms"] in element else None
+
+    related_terms = []
+    for annotation in ann["terms"]:
+        if annotation in element:
+            related_terms.append(element[annotation][0]["@value"])
+    #related_terms = element[ann["terms"]][0]["@value"] if ann["terms"] in element else None
     try:
         standard = element[ann["standard"]][0]["@value"] if ann["standard"] in element else None
     except:
@@ -263,7 +267,10 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None):
         element = find_ontology_element(concept_uri, ont_enriched_jsonld)
 
         concept_metadata = extract_elem_metadata(element)
-        if concept_name not in data_model:
+        if concept_name in data_model:
+            if concept_ns == imported_ont:
+                populate_datamodel_elements(data_model[concept_name], concept_metadata)
+        else:
             data_model[concept_name] = {}
             populate_datamodel_elements(data_model[concept_name], concept_metadata)
             data_model[concept_name]["children"] = {}

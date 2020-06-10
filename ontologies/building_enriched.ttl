@@ -104,8 +104,8 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                  <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash> owl:versionInfo 1 ;
-                                                                           <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+<http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                                           owl:versionInfo 1 .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#AdobeMasonryUnfired> owl:versionInfo 1 ;
@@ -121,7 +121,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
-                                                         owl:versionInfo 1 .
+                                                         owl:versionInfo 1 ;
+                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone"^^xsd:string ;
+                                                         :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
@@ -133,6 +135,8 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                        :isDefinedByStandard "IFC 4.1" ;
+                                                        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding"^^xsd:string ;
                                                         owl:versionInfo 1 .
 
 
@@ -209,7 +213,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Construction> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
-                                                            owl:versionInfo 1 .
+                                                            owl:versionInfo 1 ;
+                                                            :isDefinedByStandard "IFC 4.1" ;
+                                                            rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet"^^xsd:string .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
@@ -220,20 +226,29 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                         <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#Door> owl:versionInfo 1 ;
-                                                    <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+<http://bimerr.iot.linkeddata.es/def/building#Door> rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor"^^xsd:string ;
+                                                    owl:versionInfo 1 ;
+                                                    <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                    :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial> owl:versionInfo 1 ;
                                                                      <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#Element> owl:versionInfo 1 ;
+<http://bimerr.iot.linkeddata.es/def/building#Element> :isDefinedByStandard "IFC 4.1" ;
+                                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement"^^xsd:string ;
+                                                       owl:versionInfo 1 ;
                                                        <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster> owl:versionInfo 1 ;
                                                                <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                      rdfs:label "Facade"@en ;
+                                                      owl:versionInfo 1 .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#FacadeCladding> owl:versionInfo 1 ;
@@ -254,6 +269,13 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 <http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial> owl:versionInfo 1 ;
                                                                       <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                     owl:versionInfo 1 ;
+                                                     rdfs:label "Floor"@en ;
+                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab"^^xsd:string ;
+                                                     :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#FloorCovering> owl:versionInfo 1 ;
@@ -333,7 +355,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
-                                                     owl:versionInfo 1 .
+                                                     owl:versionInfo 1 ;
+                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer"^^xsd:string ;
+                                                     :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Masonry> owl:versionInfo 1 ;
@@ -344,7 +368,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                        owl:versionInfo 1 .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#Material> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+<http://bimerr.iot.linkeddata.es/def/building#Material> rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial"^^xsd:string ;
+                                                        :isDefinedByStandard "IFC 4.1" ;
+                                                        <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
                                                         owl:versionInfo 1 .
 
 
@@ -371,16 +397,16 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                               <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#PURPIRInsulationBoard> owl:versionInfo 1 ;
-                                                                     <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+<http://bimerr.iot.linkeddata.es/def/building#PURPIRInsulationBoard> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                                     owl:versionInfo 1 .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#PerliteInsulationBoard> owl:versionInfo 1 ;
                                                                       <http://purl.org/dc/elements/1.1/created> "20/05/220" .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#PhenolicResinFoamBoard> owl:versionInfo 1 ;
-                                                                      <http://purl.org/dc/elements/1.1/created> "20/05/220" .
+<http://bimerr.iot.linkeddata.es/def/building#PhenolicResinFoamBoard> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                                      owl:versionInfo 1 .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> owl:versionInfo 1 ;
@@ -417,6 +443,13 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 <http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Roof> rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof"^^xsd:string ;
+                                                    owl:versionInfo 1 ;
+                                                    <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                    rdfs:label "Roof"@en ;
+                                                    :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#RoofCovery> owl:versionInfo 1 ;
@@ -459,12 +492,16 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                            owl:versionInfo 1 .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#Space> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
-                                                     owl:versionInfo 1 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> :isDefinedByStandard "IFC 4.1" ;
+                                                     <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
+                                                     owl:versionInfo 1 ;
+                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace"^^xsd:string .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
-                                                      owl:versionInfo 1 .
+                                                      owl:versionInfo 1 ;
+                                                      :isDefinedByStandard "IFC 4.1" ;
+                                                      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey"^^xsd:string .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
@@ -508,6 +545,10 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 <http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
                                                                     owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Window> rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow"^^xsd:string ;
+                                                      :isDefinedByStandard "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://purl.org/dc/elements/1.1/created> "20/05/220" ;
