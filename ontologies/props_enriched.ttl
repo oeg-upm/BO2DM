@@ -1,0 +1,313 @@
+@prefix : <http://www.semanticweb.org/hp/ontologies/2020/6/untitled-ontology-160#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hp/ontologies/2020/6/untitled-ontology-160> .
+
+<http://www.semanticweb.org/hp/ontologies/2020/6/untitled-ontology-160> rdf:type owl:Ontology ;
+                                                                         owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                     <http://bimerr.iot.linkeddata.es/def/material-properties#> .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> owl:versionInfo 1 ;
+                                                              <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#BuildingElement> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                               <http://www.w3.org/2004/02/skos/core#altLabel> "IfcBuildingElement" ;
+                                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                               owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Door> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                    owl:versionInfo 1 ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDoor" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#DuctSegment> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDuctSegment" ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "IfcElement" ;
+                                                       owl:versionInfo 1 ;
+                                                       <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowSegment" ;
+                                                           <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> owl:versionInfo 1 ;
+                                                            <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcPipeSegment" ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                           <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Roof> owl:versionInfo 1 ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "IfcRoof" ;
+                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Slab> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    owl:versionInfo 1 ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSlab" ;
+                                                    <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Wall> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    owl:versionInfo 1 ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "IfcWall" ;
+                                                    <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Window> owl:versionInfo 1 ;
+                                                      <http://www.w3.org/2004/02/skos/core#altLabel> "IfcWindow" ;
+                                                      <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#Material> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterial" ;
+                                                                   owl:versionInfo 1 ;
+                                                                   <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituent> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                              owl:versionInfo 1 ;
+                                                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialConstituent" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituentSet> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialConstituentSet" ;
+                                                                                 <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                                 owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase> owl:versionInfo 1 ;
+                                                                           <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialLayer" ;
+                                                                        owl:versionInfo 1 ;
+                                                                        <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                        <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayerSet> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                                           <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialLayerSet" ;
+                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfile> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialProfile" ;
+                                                                          owl:versionInfo 1 ;
+                                                                          <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfileSet> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                             owl:versionInfo 1 ;
+                                                                             <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "IfcMaterialProfileSet" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialPropertyMeasurement> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                                      owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasConstruction> owl:versionInfo 1 ;
+                                                                          <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial> owl:versionInfo 1 ;
+                                                                      <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituent> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                                 owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialLayer> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                           owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialProfile> owl:versionInfo 1 ;
+                                                                             <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement> owl:versionInfo 1 ;
+                                                                         <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#isMeasuredIn> owl:versionInfo 1 ;
+                                                                       <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#propertyReference> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                            owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#propertyValueReference> owl:versionInfo 1 ;
+                                                                                 <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                                            owl:versionInfo 1 .
+
+
+<https://saref.etsi.org/core/FeatureOfInterest> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                owl:versionInfo 1 .
+
+
+<https://saref.etsi.org/core/Measurement> owl:versionInfo 1 ;
+                                          <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://saref.etsi.org/core/Property> owl:versionInfo 1 ;
+                                       <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://saref.etsi.org/core/UnitOfMeasure> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                            owl:versionInfo 1 .
+
+
+<https://saref.etsi.org/core/hasProperty> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                          owl:versionInfo 1 .
+
+
+<https://saref.etsi.org/core/hasValue> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                       owl:versionInfo 1 .
+
+
+<https://saref.etsi.org/core/relatesToMeasurement> owl:versionInfo 1 ;
+                                                   <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://saref.etsi.org/core/relatesToProperty> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4bldg#Boiler> owl:versionInfo 1 ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcBoiler" ;
+                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                         <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                     owl:versionInfo 1 ;
+                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDistributionElement" ;
+                                                     <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDistributionFlowElement" ;
+                                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                         owl:versionInfo 1 .
+
+
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcEnergyConversionDevice" ;
+                                                         owl:versionInfo 1 ;
+                                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#Fan> owl:versionInfo 1 ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFan" ;
+                                      <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#FlowController> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                 owl:versionInfo 1 ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowController" ;
+                                                 <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowMovingDevice" ;
+                                                   <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                   owl:versionInfo 1 ;
+                                                   <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> owl:versionInfo 1 ;
+                                                    <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowStorageDevice" .
+
+
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                               owl:versionInfo 1 ;
+                                               <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowTerminal" .
+
+
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                owl:versionInfo 1 ;
+                                                <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "IfcHeatExchanger" .
+
+
+<https://w3id.org/def/saref4bldg#Outlet> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                         owl:versionInfo 1 ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcOutlet" ;
+                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#Pump> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                       owl:versionInfo 1 ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "IfcPump" .
+
+
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSolarDevice" ;
+                                              owl:versionInfo 1 ;
+                                              <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#SpaceHeater> owl:versionInfo 1 ;
+                                              <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSpaceHeater" ;
+                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSwitchingDevice" ;
+                                                  owl:versionInfo 1 ;
+                                                  <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                                  <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+
+
+<https://w3id.org/def/saref4bldg#Tank> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                       owl:versionInfo 1 ;
+                                       <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "IfcTank" .
+
+
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "IfcTubeBundle" ;
+                                             owl:versionInfo 1 ;
+                                             <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

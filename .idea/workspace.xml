@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="261bfad5-e1dc-4264-bfb6-a07cc5f152e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BO2DM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BO2DM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ontologies/building_enriched.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/ontologies/building_enriched.ttl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontologies/building_enriched.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontologies/catalog-v001.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ontologies/catalog-v001.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/converter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +34,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\oeg-projects\bimerr\BO2DM" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test">
     <configuration name="converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BO2DM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,8 +63,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BO2DM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.converter" />
       </list>
     </recent_temporary>
@@ -84,34 +109,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="417" y="125" key="EnvironmentVariablesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590676580470" />
-    <state x="419" y="131" key="FileChooserDialogImpl" timestamp="1591548822814">
+    <state x="419" y="131" key="FileChooserDialogImpl" timestamp="1593808362861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="419" y="131" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591548822814" />
-    <state width="1345" height="293" key="GridCell.Tab.0.bottom" timestamp="1591789516522">
+    <state x="419" y="131" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593808362861" />
+    <state width="1345" height="220" key="GridCell.Tab.0.bottom" timestamp="1592945479170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="293" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591789516522" />
-    <state width="1345" height="293" key="GridCell.Tab.0.center" timestamp="1591789516522">
+    <state width="1345" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592945479170" />
+    <state width="1345" height="220" key="GridCell.Tab.0.center" timestamp="1592945479170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="293" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591789516522" />
-    <state width="1345" height="293" key="GridCell.Tab.0.left" timestamp="1591789516522">
+    <state width="1345" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592945479170" />
+    <state width="1345" height="220" key="GridCell.Tab.0.left" timestamp="1592945479155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="293" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591789516522" />
-    <state width="1345" height="293" key="GridCell.Tab.0.right" timestamp="1591789516522">
+    <state width="1345" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592945479155" />
+    <state width="1345" height="220" key="GridCell.Tab.0.right" timestamp="1592945479170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="293" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591789516522" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1590749544847">
+    <state width="1345" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592945479170" />
+    <state x="263" y="99" key="IDE.errors.dialog" timestamp="1593509348936">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590749544847" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1591786691385">
+    <state x="263" y="99" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1593509348936" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1592903164161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591786691385" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592903164161" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1593808347464">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1593808347464" />
+    <state x="424" y="7" key="refactoring.ChangeSignatureDialog" timestamp="1593115448254">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="424" y="7" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1593115448254" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591195991172">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
