@@ -1,0 +1,679 @@
+{
+    "Property": {
+        "definition": "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "isMeasuredByDevice": {
+                "definition": "A relationship specifying the devices that can measure a certain property.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Device"
+                }
+            },
+            "isControlledByDevice": {
+                "definition": "A relationship specifying the devices that can control a certain property.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Device"
+                }
+            }
+        }
+    },
+    "Sensor": {
+        "definition": "A device that is able to produce measurement signals following the SenML standard. A sensor detects and responds to events or changes in the physical environment.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "updateTime": {
+                "definition": "Period of time in seconds that represents the maximum time before this sensor will provide an updated reading for a measurement. This can be used to detect the failure of sensors or the communications path from the sensor.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            },
+            "makesMeasurement": {
+                "definition": "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Measurement"
+                }
+            },
+            "baseVersion": {
+                "definition": "Version number of the media type format.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "name": {
+                "definition": "Name of the sensor or parameter.  When appended to the Base Name field, this must result in a globally unique identifier for the resource.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "baseName": {
+                "definition": "This is a string that is prepended to the names found in the records.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "FeatureOfInterest": {
+        "definition": "A feature of interest represents any real world entity from which a property is measured.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "Measurement": {
+        "definition": "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "relatesToProperty": {
+                "definition": "A relationship between a measurement and the property it relates to.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Property"
+                }
+            },
+            "isMeasurementOf": {
+                "definition": "A relationship between a measurement and the feature of interest whose quality was measured.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/FeatureOfInterest"
+                }
+            },
+            "isMeasuredIn": {
+                "definition": "A relationship identifying the unit of measure used for a certain entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/UnitOfMeasure"
+                }
+            },
+            "baseSum": {
+                "definition": "A base sum is added to the sum found in a record.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            },
+            "baseTime": {
+                "definition": "A base time that is added to the time found in a record.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            },
+            "baseValue": {
+                "definition": "A base value is added to the value found in a record.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            },
+            "sum": {
+                "definition": "Integrated sum of the values over time.  Optional.  This field is in the unit specified in the Unit value multiplied by seconds.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            },
+            "time": {
+                "definition": "Time when the value was recorded.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "double"
+            }
+        }
+    },
+    "UnitOfMeasure": {
+        "definition": "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \\\"watt\\\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "Device": {
+        "definition": "A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "makesMeasurement": {
+                "definition": "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Measurement"
+                }
+            },
+            "baseVersion": {
+                "definition": "Version number of the media type format.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "name": {
+                "definition": "Name of the sensor or parameter.  When appended to the Base Name field, this must result in a globally unique identifier for the resource.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "baseName": {
+                "definition": "This is a string that is prepended to the names found in the records.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Actuator": {
+        "definition": "A device that is able to receive command signals in the SenML standard, and act over building components in order to change their state.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "makesMeasurement": {
+                "definition": "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Measurement"
+                }
+            },
+            "baseVersion": {
+                "definition": "Version number of the media type format.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "name": {
+                "definition": "Name of the sensor or parameter.  When appended to the Base Name field, this must result in a globally unique identifier for the resource.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "baseName": {
+                "definition": "This is a string that is prepended to the names found in the records.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "22/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Element": {
+        "definition": "Building component or construction element which can be described by a set of properties.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "22/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    }
+}

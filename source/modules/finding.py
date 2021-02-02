@@ -6,10 +6,8 @@ from modules.utils import get_annotation_property_uris
 
 
 def find_ontology_element(element_uri, ont_jsonld):
-
     """
-    Function to return all the information of an ontological element
-    wheter it is a class, property or attribute.
+    Function to return a specific ontology element within the model.
 
     :arg element_uri: Uri of the element we want to find
     :arg ont_jsonld: ontology in JSON-LD format
@@ -23,7 +21,6 @@ def find_ontology_element(element_uri, ont_jsonld):
 
 
 def get_all_uris(ont_jsonld):
-
     """
     Function to find all the uris of the concepts, relations, and attributes inside an ontology.
 
@@ -41,66 +38,41 @@ def get_all_uris(ont_jsonld):
     for element in ont_jsonld:
         try:
             # Classes have only one element inside the list "@type"
-            type = element["@type"][0].split("#")[-1]
-            # The "_" comparison avoids the inclusion of blank nodes in the list
-            if type == "Class" and element["@id"][0] != "_":
-                classes.append(element["@id"])
-            elif type == "ObjectProperty":
-                relations.append(element["@id"])
-            elif type == "DatatypeProperty":
-                attributes.append(element["@id"])
-            elif type == "NamedIndividual":
-                individuals.append(element["@id"])
+            for single_type in element["@type"]:
+                type_ = single_type.split("#")[-1]
+                # The "_" comparison avoids the inclusion of blank nodes in the list
+                if type_ == "Class" and element["@id"][0] != "_":
+                    classes.append(element["@id"])
+                    break
+                elif type_ == "ObjectProperty":
+                    relations.append(element["@id"])
+                    break
+                elif type_ == "DatatypeProperty":
+                    attributes.append(element["@id"])
+                    break
+                elif type_ == "NamedIndividual":
+                    individuals.append(element["@id"])
+                    break
         except:
             continue
 
     return classes, relations, attributes, individuals
 
 
-def extract_elem_metadata(element):
-
+def extract_elem_metadata(enriched_element):
     """
-    Extract all the annotations made to the element in the enriched model
-    arg: element: ontological element in a dictionary form {element_uri: content},
-                the user should assume that the ontology is in a JSON-LD format.
-    return: annotations_extracted: a dictionary containing all the annotations of that element
-                                during enrichment time. The strucure is:
-                                {metada_term: value, ...}
+    Extract the annotations made to an ontology element in the enriched model
+    :arg ontology element from the enriched version of the model
+    :return A dictionary containing the annotations made to the ontology element during the enrichment phase.
     """
 
-    ann, _ = get_annotation_property_uris()
     annotations_extracted = {}
+    ann, _ = get_annotation_property_uris()
 
-    # Metadata extraction from the metadata ontology
-    definition = element[ann["definition"]][0]["@value"] if ann["definition"] in element else None
-    related_terms = element[ann["terms"]][0]["@value"] if ann["terms"] in element else None
-    standard = element[ann["standard"]][0]["@value"] if ann["standard"] in element else None
-    date_added = element[ann["added"]][0]["@value"] if ann["added"] in element else None
-    date_deprecated = element[ann["deprecated"]][0]["@value"] if ann["deprecated"] in element else None
-    version = element[ann["version"]][0]["@value"] if ann["version"] in element else None
-    ordered = element[ann["ordered"]][0]["@value"] if ann["ordered"] in element else None
-    sensitive = element[ann["sensitive"]][0]["@value"] if ann["sensitive"] in element else None
-    transformation = element[ann["transformation"]][0]["@value"] if ann["transformation"] in element else None
-    measurementType = element[ann["measureType"]][0]["@value"] if ann["measureType"] in element else None
-    measurementUnit = element[ann["measureUnit"]][0]["@value"] if ann["measureUnit"] in element else None
-    timeZone = element[ann["timeZone"]][0]["@value"] if ann["timeZone"] in element else None
-    codeList = element[ann["codeList"]][0]["@value"] if ann["codeList"] in element else None
-    codeType = element[ann["codeType"]][0]["@value"] if ann["codeType"] in element else None
+    for metadata_name in ann.keys():
 
-    annotations_extracted["definition"] = definition
-    annotations_extracted["related_terms"] = related_terms
-    annotations_extracted["standard"] = standard
-    annotations_extracted["date_added"] = date_added
-    annotations_extracted["date_deprecated"] = date_deprecated
-    annotations_extracted["version"] = version
-    annotations_extracted["ordered"] = ordered
-    annotations_extracted["sensitive"] = sensitive
-    annotations_extracted["transformation"] = transformation
-    annotations_extracted["measurementType"] = measurementType
-    annotations_extracted["measurementUnit"] = measurementUnit
-    annotations_extracted["timeZone"] = timeZone
-    annotations_extracted["codeList"] = codeList
-    annotations_extracted["codeType"] = codeType
+        metadata_uri = ann[metadata_name]
+        annotations_extracted[metadata_name] = enriched_element[metadata_uri][0]["@value"] if metadata_uri in enriched_element else None
 
     return annotations_extracted
 

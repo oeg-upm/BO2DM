@@ -1,0 +1,284 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <https://bimerr.iot.linkeddata.es/def/bimerr-metadata> .
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#> rdf:type owl:Ontology ;
+                                                        owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                    <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList
+:codeList rdf:type owl:AnnotationProperty ;
+          rdfs:comment "A link to the code list that should be typically used for the data that refers to the specific concept."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType
+:codeType rdf:type owl:AnnotationProperty ;
+          rdfs:comment "The type of code list that is applied for the specific concept"@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated
+:deprecated rdf:type owl:AnnotationProperty ;
+            rdfs:comment "The date when the specific concept became obsolete in the data model"@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard
+:isDefinedByStandard rdf:type owl:AnnotationProperty ;
+                     rdfs:comment "A list of standards in which the specific concept is modeled, along with their complementary information, i.e. the exact concept used in such a standard, its type (e.g. element, attribute) and its use (required/optional) that applies for attributes."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType
+:measurementType rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "An indication of the measurement type that is applicable to a concept, e.g. referring to distance, temperature, etc."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit
+:measurementUnit rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "The baseline measurement unit for the specific concept and measurement type."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered
+:ordered rdf:type owl:AnnotationProperty ;
+         rdfs:comment "An indication of whether ordering is needed for multiple appearances of the same concept."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive
+:sensitive rdf:type owl:AnnotationProperty ;
+           rdfs:comment "An indication whether the specific concept models personal or sensitive data."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone
+:timeZone rdf:type owl:AnnotationProperty ;
+          rdfs:comment "The timezone to which the data refer by default."@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation
+:transformation rdf:type owl:AnnotationProperty ;
+                rdfs:comment "Information for the transformation rules that are related to a specific applicable standard. It practically contains the function that is required for the transformation and the parameters / concepts that are involved."@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#CalculationParameter> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                                     owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ComfortKPI> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                           <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#EconomicKPI> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                            <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#EnergyKPI> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                          <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Goal> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                     <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPIUnit> owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPIValue> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                         owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Kpi> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                    owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                        owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                         <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#SustainabilityKPI> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                                  owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#TimeKPI> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                        <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ValueType> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                          owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#address> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                        <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#assessedUnderProject> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                                     owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#assessedUnderScenario> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                                      <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#basedOnParameter> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                                 owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#changeDate> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                           <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                            <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasGoal> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                        owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasProject> owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasScenario> owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSubGoal> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                           owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasValueType> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                             owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                           owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#maxValue> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                         owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#minValue> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                                         owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#monitorIndicator> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                                 owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding> <http://purl.org/dc/elements/1.1/created> "20/10/2020" ;
+                                                                                  owl:versionInfo "0.1.0"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToProject> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                                 <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#tolerance> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                                          owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://purl.org/dc/terms/ISO3166> owl:versionInfo "0.1.0"^^xsd:string ;
+                                   <http://purl.org/dc/elements/1.1/created> "20/10/2020" .
+
+
+<http://purl.org/dc/terms/created> <http://purl.org/dc/elements/1.1/created> "20/10/2020" ;
+                                   owl:versionInfo "0.1.0"^^xsd:string .
+
+
+<http://schema.org/maxValue> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                             owl:versionInfo 1 .
+
+
+<http://schema.org/minValue> owl:versionInfo 1 ;
+                             <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<http://www.w3.org/2006/time#Instant> owl:versionInfo "0.0.3"^^xsd:string ;
+                                      <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<http://www.w3.org/2006/time#Interval> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                       owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://www.w3.org/2006/time#TemporalDuration> owl:versionInfo "0.0.3"^^xsd:string ;
+                                               <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<http://www.w3.org/2006/time#TemporalEntity> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                             owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
+                                                          owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> owl:versionInfo "0.0.3"^^xsd:string ;
+                                                                    <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<https://w3id.org/def/saref4city#hasCalculationPeriod> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
+                                                       owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<https://w3id.org/def/saref4city#quantifiesKPI> owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<https://w3id.org/def/saref4city#refersToTime> owl:versionInfo "0.0.3"^^xsd:string ;
+                                               <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#UnitOfMeasure> owl:versionInfo "0.0.3"^^xsd:string ;
+                                       <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#hasValue> owl:versionInfo "0.0.3"^^xsd:string ;
+                                  <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
+
+
+<https://w3id.org/saref#isMeasuredIn> owl:versionInfo "0.0.3"^^xsd:string ;
+                                      <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

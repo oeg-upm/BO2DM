@@ -1,2 +1,5 @@
-.serge
-.venv
+serge/
+venv/
+*.pyc
+*.pyo
+__pycache__/

@@ -1,0 +1,173 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/sensor-data-enriched#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hp/ontologies/2020/9/untitled-ontology-209> .
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data-enriched#> rdf:type owl:Ontology ;
+                                                                         owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                     <http://bimerr.iot.linkeddata.es/def/sensor-data#> .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                        <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                        <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                        owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#Actuator> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                           owl:versionInfo "0.0.3"^^xsd:string ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                           <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#Device> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                         owl:versionInfo "0.0.3"^^xsd:string ;
+                                                         <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#Measurement> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                              owl:versionInfo "0.0.3"^^xsd:string ;
+                                                              <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#Sensor> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                         owl:versionInfo "0.0.3"^^xsd:string ;
+                                                         <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#baseName> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                           owl:versionInfo "0.0.3"^^xsd:string ;
+                                                           <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#baseSum> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                          <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                          owl:versionInfo "0.0.3"^^xsd:string ;
+                                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#baseTime> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                           <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                           owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#baseValue> <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                            owl:versionInfo "0.0.3"^^xsd:string ;
+                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#baseVersion> <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                              owl:versionInfo "0.0.3"^^xsd:string ;
+                                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#name> <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                       owl:versionInfo "0.0.3"^^xsd:string ;
+                                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#sum> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                      owl:versionInfo "0.0.3"^^xsd:string ;
+                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                      <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#time> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                       <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                       owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/sensor-data#updateTime> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                             owl:versionInfo "0.0.3"^^xsd:string ;
+                                                             <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                             <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#Device> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                owl:versionInfo "0.0.3"^^xsd:string ;
+                                <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#FeatureOfInterest> owl:versionInfo "0.0.3"^^xsd:string ;
+                                           <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#Measurement> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                     owl:versionInfo "0.0.3"^^xsd:string ;
+                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                     <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#Property> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                  owl:versionInfo "0.0.3"^^xsd:string ;
+                                  <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                  <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#UnitOfMeasure> owl:versionInfo "0.0.3"^^xsd:string ;
+                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                       <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#hasValue> owl:versionInfo "0.0.3"^^xsd:string ;
+                                  <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                  <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                  <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#isControlledByDevice> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                              <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                              owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<https://w3id.org/saref#isMeasuredByDevice> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                            owl:versionInfo "0.0.3"^^xsd:string ;
+                                            <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#isMeasuredIn> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                      <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                      owl:versionInfo "0.0.3"^^xsd:string ;
+                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#isMeasurementOf> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                         owl:versionInfo "0.0.3"^^xsd:string ;
+                                         <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string .
+
+
+<https://w3id.org/saref#makesMeasurement> owl:versionInfo "0.0.3"^^xsd:string ;
+                                          <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
+
+
+<https://w3id.org/saref#relatesToProperty> owl:versionInfo "0.0.3"^^xsd:string ;
+                                           <http://purl.org/dc/elements/1.1/created> "22/05/2020"^^xsd:string ;
+                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,254 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/annotation-objects-enriched#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hp/ontologies/2020/9/untitled-ontology-217> .
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects-enriched#> rdf:type owl:Ontology ;
+                                                                         owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                     <http://bimerr.iot.linkeddata.es/def/annotation-objects#> .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#description> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#index> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#priority> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#title> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Building> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#colorDisplay> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#originatingSystem> <http://purl.org/dc/elements/1.1/created> "14/10/2020"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#Format> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://purl.org/dc/elements/1.1/created> "06/11/2020" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

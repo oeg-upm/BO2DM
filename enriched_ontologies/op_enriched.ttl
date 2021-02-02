@@ -7,7 +7,8 @@
 @base <http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#> .
 
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile-enriched#> rdf:type owl:Ontology ;
-                                                                   owl:imports <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+                                                                   owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 
 #################################################################
 #    Annotation properties

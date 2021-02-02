@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="261bfad5-e1dc-4264-bfb6-a07cc5f152e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BO2DM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BO2DM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ontologies/building_enriched.ttl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ontologies/catalog-v001.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ontologies/catalog-v001.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/converter.py" afterDir="false" />
-    </list>
+    <list default="true" id="261bfad5-e1dc-4264-bfb6-a07cc5f152e3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

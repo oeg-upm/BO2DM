@@ -32,18 +32,18 @@ def enrich_model(original_model, enriched_model):
                 type = ont_element["@type"][0].split("#")[-1]
 
                 ont_element[ann_uris["standard"]] = [{"@value": metadata_extracted["standard"]}]
-                ont_element[ann_uris["terms"]] = [{"@value": metadata_extracted["related_terms"]}]
-                ont_element[ann_uris["added"]] = [{"@value": metadata_extracted["date_added"]}]
-                ont_element[ann_uris["deprecated"]] = [{"@value": metadata_extracted["date_deprecated"]}]
+                ont_element[ann_uris["related_terms"]] = [{"@value": metadata_extracted["related_terms"]}]
+                ont_element[ann_uris["date_added"]] = [{"@value": metadata_extracted["date_added"]}]
+                ont_element[ann_uris["date_deprecated"]] = [{"@value": metadata_extracted["date_deprecated"]}]
                 ont_element[ann_uris["version"]] = [{"@value": metadata_extracted["version"]}]
 
-                # The following metadata fields are only used by children elements
+                # The following metadata fields are only used by elements that are not classes (children)
                 if type != "Class":
                     ont_element[ann_uris["ordered"]] = [{"@value": metadata_extracted["ordered"]}]
                     ont_element[ann_uris["sensitive"]] = [{"@value": metadata_extracted["sensitive"]}]
                     ont_element[ann_uris["transformation"]] = [{"@value": metadata_extracted["transformation"]}]
-                    ont_element[ann_uris["measureType"]] = [{"@value": metadata_extracted["measurementType"]}]
-                    ont_element[ann_uris["measureUnit"]] = [{"@value": metadata_extracted["measurementUnit"]}]
+                    ont_element[ann_uris["measurementType"]] = [{"@value": metadata_extracted["measurementType"]}]
+                    ont_element[ann_uris["measurementUnit"]] = [{"@value": metadata_extracted["measurementUnit"]}]
                     ont_element[ann_uris["timeZone"]] = [{"@value": metadata_extracted["timeZone"]}]
                     ont_element[ann_uris["codeList"]] = [{"@value": metadata_extracted["codeList"]}]
                     ont_element[ann_uris["codeType"]] = [{"@value": metadata_extracted["codeType"]}]

@@ -1,0 +1,1178 @@
+{
+    "TemporalEntity": {
+        "definition": "A temporal interval or instant.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "Interval": {
+        "definition": "A temporal entity with an extent or duration.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "EconomicKPI": {
+        "definition": "KPI metric related to the economic aspects of a building renovation project.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "Project": {
+        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia).",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "address": {
+                "definition": "Address of a project.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "coordinates": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedToBuilding": {
+                "definition": "Links to the building the project is about.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/10/2020",
+                "date_deprecated": null,
+                "version": "0.1.0",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Building"
+                }
+            },
+            "Goal": {
+                "definition": "Link to link a project with a set of goals.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Goal"
+                }
+            },
+            "changeDate": {
+                "definition": "The most recent editing date of a project.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "ISO3166": {
+                "definition": "The ISO country code where the project is being developed.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/10/2020",
+                "date_deprecated": null,
+                "version": "0.1.0",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "created": {
+                "definition": "The date when the project was created.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/10/2020",
+                "date_deprecated": null,
+                "version": "0.1.0",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            }
+        }
+    },
+    "TemporalDuration": {
+        "definition": "Time extent; duration of a time interval separate from its particular start position.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "Kpi": {
+        "definition": "Key performance indicators related to building renovation projects",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "KPIValue": {
+        "definition": "Key performance indicator values calculated for a specific renovation project and scenario.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "assessedUnderScenario": {
+                "definition": "A KPI value is assessed within the context of a scenario.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Scenario"
+                }
+            },
+            "assessedUnderProject": {
+                "definition": "A KPI value is assessed within the context of a project.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Project"
+                }
+            },
+            "tolerance": {
+                "definition": "Tolerance error in the value of a KPI.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3"
+            },
+            "refersToTime": {
+                "definition": "Property to add a time stamp to a KPI value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalEntity"
+                }
+            },
+            "isMeasuredIn": {
+                "definition": "Link a KPI value to a unit of measure.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/UnitOfMeasure"
+                }
+            },
+            "Value": {
+                "definition": "Numeric quantity of a KPI value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "quantifiesKPI": {
+                "definition": "A KPI value quantifies a specific KPI.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KeyPerformanceIndicator"
+                }
+            }
+        }
+    },
+    "Instant": {
+        "definition": "A temporal entity with zero extent or duration.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "SustainabilityKPI": {
+        "definition": "KPI metric focused on the sustainability of a building renovation project.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "Goal": {
+        "definition": "Goals or subgoals describe the objetives to be achieved within the renovation process. For instance: \"Stay within estimated budget\"",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "monitorIndicator": {
+                "definition": "A goal need to monitor a set of KPI values, to verify its accomplishment.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KPIValue"
+                }
+            }
+        }
+    },
+    "ComfortKPI": {
+        "definition": "KPI metric related to the residents comfort level for a building renovation project.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "Scenario": {
+        "definition": "The simluation of a building renovation work.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "relatedToProject": {
+                "definition": "A renovation scenario is simulated within the context of a project.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Project"
+                }
+            },
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "KeyPerformanceIndicatorAssessment": {
+        "definition": "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "refersToTime": {
+                "definition": "Property to add a time stamp to a KPI value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalEntity"
+                }
+            },
+            "isMeasuredIn": {
+                "definition": "Link a KPI value to a unit of measure.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/UnitOfMeasure"
+                }
+            },
+            "Value": {
+                "definition": "Numeric quantity of a KPI value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "quantifiesKPI": {
+                "definition": "A KPI value quantifies a specific KPI.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KeyPerformanceIndicator"
+                }
+            }
+        }
+    },
+    "EnergyKPI": {
+        "definition": "KPI metric focused on the energy aspects of a building renovation project.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "Building": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {}
+    },
+    "UnitOfMeasure": {
+        "definition": "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {}
+    },
+    "CalculationParameter": {
+        "definition": "Represent the parameters or variables that take places in the assessment of a KPI.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "isMeasuredIn": {
+                "definition": "Link a KPI value to a unit of measure.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/UnitOfMeasure"
+                }
+            },
+            "Value": {
+                "definition": "Numeric quantity of a KPI value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            }
+        }
+    },
+    "TimeKPI": {
+        "definition": "KPI metric related to temporal metrics for a building renovation project.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "identifier": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    },
+    "KeyPerformanceIndicator": {
+        "definition": "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "20/05/2020",
+        "date_deprecated": null,
+        "version": "0.0.3",
+        "children": {
+            "CalculationPeriod": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "20/05/2020",
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TemporalDuration"
+                }
+            }
+        }
+    }
+}
