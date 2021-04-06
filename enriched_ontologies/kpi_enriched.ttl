@@ -5,15 +5,65 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@base <https://bimerr.iot.linkeddata.es/def/bimerr-metadata> .
+@base <http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#> .
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#> rdf:type owl:Ontology ;
-                                                        owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
-                                                                    <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+                                                                           owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                       <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#codeList
+:codeList rdf:type owl:AnnotationProperty ;
+          rdfs:comment "A link to the code list that should be typically used for the data that refers to the specific concept."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#codeType
+:codeType rdf:type owl:AnnotationProperty ;
+          rdfs:comment "The type of code list that is applied for the specific concept"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#deprecated
+:deprecated rdf:type owl:AnnotationProperty ;
+            rdfs:comment "The date when the specific concept became obsolete in the data model"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#isDefinedByStandard
+:isDefinedByStandard rdf:type owl:AnnotationProperty ;
+                     rdfs:comment "A list of standards in which the specific concept is modeled, along with their complementary information, i.e. the exact concept used in such a standard, its type (e.g. element, attribute) and its use (required/optional) that applies for attributes."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#measurementType
+:measurementType rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "An indication of the measurement type that is applicable to a concept, e.g. referring to distance, temperature, etc."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#measurementUnit
+:measurementUnit rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "The baseline measurement unit for the specific concept and measurement type."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#ordered
+:ordered rdf:type owl:AnnotationProperty ;
+         rdfs:comment "An indication of whether ordering is needed for multiple appearances of the same concept."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#sensitive
+:sensitive rdf:type owl:AnnotationProperty ;
+           rdfs:comment "An indication whether the specific concept models personal or sensitive data."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#timeZone
+:timeZone rdf:type owl:AnnotationProperty ;
+          rdfs:comment "The timezone to which the data refer by default."@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator-enriched#transformation
+:transformation rdf:type owl:AnnotationProperty ;
+                rdfs:comment "Information for the transformation rules that are related to a specific applicable standard. It practically contains the function that is required for the transformation and the parameters / concepts that are involved."@en .
+
 
 ###  http://purl.org/dc/elements/1.1/created
 <http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
@@ -43,59 +93,31 @@
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList
-:codeList rdf:type owl:AnnotationProperty ;
-          rdfs:comment "A link to the code list that should be typically used for the data that refers to the specific concept."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType
-:codeType rdf:type owl:AnnotationProperty ;
-          rdfs:comment "The type of code list that is applied for the specific concept"@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated
-:deprecated rdf:type owl:AnnotationProperty ;
-            rdfs:comment "The date when the specific concept became obsolete in the data model"@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard
-:isDefinedByStandard rdf:type owl:AnnotationProperty ;
-                     rdfs:comment "A list of standards in which the specific concept is modeled, along with their complementary information, i.e. the exact concept used in such a standard, its type (e.g. element, attribute) and its use (required/optional) that applies for attributes."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType
-:measurementType rdf:type owl:AnnotationProperty ;
-                 rdfs:comment "An indication of the measurement type that is applicable to a concept, e.g. referring to distance, temperature, etc."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit
-:measurementUnit rdf:type owl:AnnotationProperty ;
-                 rdfs:comment "The baseline measurement unit for the specific concept and measurement type."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered
-:ordered rdf:type owl:AnnotationProperty ;
-         rdfs:comment "An indication of whether ordering is needed for multiple appearances of the same concept."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive
-:sensitive rdf:type owl:AnnotationProperty ;
-           rdfs:comment "An indication whether the specific concept models personal or sensitive data."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone
-:timeZone rdf:type owl:AnnotationProperty ;
-          rdfs:comment "The timezone to which the data refer by default."@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation
-:transformation rdf:type owl:AnnotationProperty ;
-                rdfs:comment "Information for the transformation rules that are related to a specific applicable standard. It practically contains the function that is required for the transformation and the parameters / concepts that are involved."@en .
-
-
 #################################################################
 #    Annotations
 #################################################################
+
+<http://bimerr.iot.linkeddata.es/def/building#Building> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Element> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#type> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://purl.org/dc/elements/1.1/created> "04/03/2021" ;
+                                                                            owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#datatype> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#format> rdfs:comment "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/information-objects#location> owl:versionInfo "0.1.4" .
+
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#CalculationParameter> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
                                                                                      owl:versionInfo "0.0.3"^^xsd:string .
@@ -117,6 +139,12 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                      <http://purl.org/dc/elements/1.1/created> "20/05/2020" .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ISO3166> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#InformationSource> owl:versionInfo "0.1.3" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPIUnit> owl:versionInfo 1 .
 
 
@@ -128,8 +156,17 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                     owl:versionInfo "0.0.3"^^xsd:string .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#LayerCost> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#PerformanceParameter> owl:versionInfo "0.1.3" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
                                                                         owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#RenovationMeasure> owl:versionInfo "0.1.3" .
 
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> owl:versionInfo "0.0.3"^^xsd:string ;
@@ -152,6 +189,15 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                         <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#affectedElement> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#affectedLayer> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#area> owl:versionInfo "0.1.3" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#assessedUnderProject> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
                                                                                      owl:versionInfo "0.0.3"^^xsd:string .
 
@@ -172,8 +218,32 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                             <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#costValue> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#countryCode> rdfs:comment "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#created> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#creationDate> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#description> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasDocumentation> owl:versionInfo "0.1.3" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasGoal> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
                                                                         owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasKPI> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasKPIValue> owl:versionInfo "0.1.3" .
 
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasProject> owl:versionInfo 1 .
@@ -182,8 +252,14 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasScenario> owl:versionInfo 1 .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSource> owl:versionInfo "0.1.3" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSubGoal> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
                                                                            owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasUnit> owl:versionInfo "0.1.3" .
 
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasValueType> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
@@ -192,6 +268,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
                                                                            owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ifcIdentifier> owl:versionInfo "0.1.3" .
 
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#maxValue> <http://purl.org/dc/elements/1.1/created> "20/05/2020"^^xsd:string ;
@@ -206,6 +285,51 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                                                                  owl:versionInfo "0.0.3"^^xsd:string .
 
 
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#name> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#quantity> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedBuilding> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedDocumentation> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedElement> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedGoal> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedKPI> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedKPIValue> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedLayer> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedMaterialLayerCost> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedMeasure> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedParameter> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedProject> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedScenario> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedSubGoal> owl:versionInfo "0.1.5" .
+
+
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding> <http://purl.org/dc/elements/1.1/created> "20/10/2020" ;
                                                                                   owl:versionInfo "0.1.0"^^xsd:string .
 
@@ -216,6 +340,24 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#tolerance> <http://purl.org/dc/elements/1.1/created> "20/05/2020" ;
                                                                           owl:versionInfo "0.0.3"^^xsd:string .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#unitOfMeasure> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#updateDate> owl:versionInfo "0.1.4" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#position> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#thickness> owl:versionInfo "0.1.3" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#type> owl:versionInfo "0.1.3" .
 
 
 <http://purl.org/dc/terms/ISO3166> owl:versionInfo "0.1.0"^^xsd:string ;

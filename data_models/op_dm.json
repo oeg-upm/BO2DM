@@ -1,0 +1,3293 @@
+{
+    "RandomMovement": {
+        "definition": "Type of occupant movements inside a building or space.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "parent": {
+                "$ref": "#/Movement"
+            }
+        }
+    },
+    "Property": {
+        "definition": "An aspect of an entity that can be observable by a sensor.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "LinearFormula": {
+        "definition": "Class to represent linear mathematical formulas",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/InteractionFormula"
+            },
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "HVAC": {
+        "definition": "Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. A saref:HVAC is typically used to accomplish saref:Comfort.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Device"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "ConceptScheme": {
+        "definition": "A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.\n\nThe notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "DriverSet": {
+        "definition": "Set of drivers that could be causing a behavior at a specific time.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "composedOf": {
+                "definition": "Relationship that indicates the composition of a set of drivers.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Driver"
+                }
+            }
+        }
+    },
+    "LightingDevice": {
+        "definition": "A devide used for illumination.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Device"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "Thermostat": {
+        "definition": "A thermostat is a component which senses the temperature of a physical space and performs actions so that the space temperature is maintained near a desired setpoint. (Definition adapted from Wikipedia)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/UnitaryControlElement"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "OperationalModeConceptScheme": {
+        "definition": "An aggregation of SKOS concepts regarding the operational mode of space systems.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/ConceptScheme"
+            }
+        }
+    },
+    "NonPhysicalNeed": {
+        "definition": "Non physical comfort needs (e.g. privacy, status, etc) that could influence a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Need"
+            }
+        }
+    },
+    "PhysicalNeed": {
+        "definition": "Physical comfort need that could influence a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "definedByRange": {
+                "definition": "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            },
+            "parent": {
+                "$ref": "#/Need"
+            }
+        }
+    },
+    "Spatial": {
+        "definition": "Driver related to spatial conditions that could be causing a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "detailedBy": {
+                "definition": "Relates a spatial driver to an specific building space",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "parent": {
+                "$ref": "#/Driver"
+            }
+        }
+    },
+    "MarkovChainModel": {
+        "definition": "Class to represent instances of Markov chain models.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "typicalTime": {
+                "definition": "Typical occurrence time of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "time"
+            },
+            "earlyOccurTime": {
+                "definition": "Earliest occurrence time of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "time"
+            },
+            "parent": {
+                "$ref": "#/MovementModel"
+            }
+        }
+    },
+    "BuildingObject": {
+        "definition": "An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalObject"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "Coefficient": {
+        "definition": "Class to represent the value and name of coefficients inside mathematical formulas.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "coefficientValue": {
+                "definition": "A relationship indicating the value of a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            }
+        }
+    },
+    "LogitFormula": {
+        "definition": "Class to represent logit mathematical formulas.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/InteractionFormula"
+            },
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "Season": {
+        "definition": "Season of the year.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "startSeason": {
+                "definition": "Relationship that indicates the month when a season start.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "gMonthDay"
+            },
+            "endSeason": {
+                "definition": "Relationship that indicates the month when a season ends.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "gMonthDay"
+            }
+        }
+    },
+    "QuadraticFormula": {
+        "definition": "Class to represent quadratic mathematical formulas.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/InteractionFormula"
+            },
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "Window": {
+        "definition": "A window is an opening in a wall, door, roof or vehicle that allows the passage of light, sound, and sometimes air. (Definition taken from Wikipedia)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/BuildingObject"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "TimeOfDay": {
+        "definition": "Relative time of day.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "startTime": {
+                "definition": "The start time of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "endTime": {
+                "definition": "The end time of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            }
+        }
+    },
+    "Concept": {
+        "definition": "The class skos:Concept is the class of SKOS concepts. A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.\n\nThe notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.\n\nNote that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "inScheme": {
+                "definition": "Property used to indicate that an SKOS concept in within an specific SKOS scheme.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ConceptScheme"
+                }
+            },
+            "broader": {
+                "definition": "The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            },
+            "narrower": {
+                "definition": "The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            }
+        }
+    },
+    "Inaction": {
+        "definition": "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "AccousticNeed": {
+        "definition": "Range of parameter values where occupants do not feel accoustic discomfort and therefore, they don't carry out any actions.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalNeed"
+            },
+            "definedByRange": {
+                "definition": "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            }
+        }
+    },
+    "SpaceOccupancy": {
+        "definition": "Occupancy percentage of staying in a specific space category in a building.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "duration": {
+                "definition": "Average duration of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "duration"
+            },
+            "percentTimePresence": {
+                "definition": "Percentage of occupancy time in a space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "relatedToSpace": {
+                "definition": "Property that relates space occupancy events to an specific building space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "typicalDuration": {
+                "definition": "The typical duration of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "type": {
+                    "$ref": "#/duration"
+                }
+            },
+            "parent": {
+                "$ref": "#/RandomMovement"
+            }
+        }
+    },
+    "ThermalNeed": {
+        "definition": "Range of parameter values where occupants do not feel thermal discomfort and therefore, they don't carry out any actions.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalNeed"
+            },
+            "definedByRange": {
+                "definition": "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            }
+        }
+    },
+    "Report": {
+        "definition": "The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Action"
+            }
+        }
+    },
+    "Driver": {
+        "definition": "A Driver represents the environmental factor from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "CustomProbabilityModel": {
+        "definition": "Class to represent instances of custom probabilistic models.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "probability": {
+                "definition": "Relationship that links a probility to an event. For example the occurance probability of a meeting.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "parent": {
+                "$ref": "#/MovementModel"
+            }
+        }
+    },
+    "Need": {
+        "definition": "Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "Occupant": {
+        "definition": "Occupants or residents of a building.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "identifier": {
+                "definition": "Identifier of an element given in the obXML file. Attribute considered for backward compatibility.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "occupantAge": {
+                "definition": "Age of an occupant",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "occupantJobtype": {
+                "definition": "Jobtype of an occupant",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "occupantLifestyle": {
+                "definition": "Lifestyle of an occupant",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedBehavior": {
+                "definition": "Property to indicate that an occupant has a behavior.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Behavior"
+                }
+            },
+            "occupantGender": {
+                "definition": "Gender of an occupant",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "parent": {
+                "$ref": "#/Person"
+            }
+        }
+    },
+    "InteractionFormula": {
+        "definition": "Formula to model the probability of interaction between ocupant and system.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "Person": {
+        "definition": "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "MovementModel": {
+        "definition": "Probabilistic model to define occupant movements inside and between spaces.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "Action": {
+        "definition": "Actions are the interactions with systems or activities that an occupant can conduct to achieve environmental comfort. Actions connect occupants' inside-world needs with the environmental outside world. (Defintion taken from obXML)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "ParameterRange": {
+        "definition": "Class to represent the minimum and maximm comfort values with respect to an environmental parameter.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "minRangeValue": {
+                "definition": "Lower boundary of a parameter range description.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "maxRangeValue": {
+                "definition": "Upper boundary of a parameter range description.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "describesParameter": {
+                "definition": "Relates a comfort envelop with an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            }
+        }
+    },
+    "OperationalModeConcept": {
+        "definition": "Types of operational modes for space systems.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Concept"
+            },
+            "inScheme": {
+                "definition": "Property used to indicate that an SKOS concept in within an specific SKOS scheme.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ConceptScheme"
+                }
+            },
+            "broader": {
+                "definition": "The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            },
+            "narrower": {
+                "definition": "The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            }
+        }
+    },
+    "ConstantValueFormula": {
+        "definition": "Class to represent constant value mathematical formulas",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/InteractionFormula"
+            },
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "ShadingDevice": {
+        "definition": "Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable. (Definition taken from S4BLDG ontology)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Device"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "Behavior": {
+        "definition": "Behavior related to the interaction with buildings",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "influencedByNeed": {
+                "definition": "Indicates that a driver can be influenced by an occupant comfort need.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Need"
+                }
+            },
+            "identifier": {
+                "definition": "Identifier of an element given in the obXML file. Attribute considered for backward compatibility.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "leadsTo": {
+                "definition": "Relationship to indicate the outcome of a behavior. It could lead to an action over a building system to recover comfort or to a passive acceptance of the environmental conditions.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Action"
+                }
+            },
+            "drivenBy": {
+                "definition": "Property to link an occupant with a set of internal or external drivers that are controlling its interactions with building systems.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/DriverSet"
+                }
+            }
+        }
+    },
+    "WeibullFormula": {
+        "definition": "Class to represent weibull mathematical formulas.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/InteractionFormula"
+            },
+            "relatedCoefficient": {
+                "definition": "Relates a formula with a coefficient.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Coefficient"
+                }
+            },
+            "relatedIndependentVariable": {
+                "definition": "Relates a formula with an independent variable.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            }
+        }
+    },
+    "Equipment": {
+        "definition": "Class to represent electrical equipments occupants interact with but do not have influence over indoor thermal conditions. These systems contribute to the energy bugdet estimation.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Device"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "Space": {
+        "definition": "Class to represent the different spaces the building have and where the occupant behaviors occur.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedOccupant": {
+                "definition": "Relationship that indicates that an space can have an occupant.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Occupant"
+                }
+            },
+            "relatedMeeting": {
+                "definition": "Indicates that a meeting can occur within a space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Meeting"
+                }
+            },
+            "contains": {
+                "definition": "A relation between a physical space and the objects located in such space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/PhysicalObject"
+                }
+            },
+            "minOccupants": {
+                "definition": "Relationship that indicates the minimum number of occupants inside a space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "maxOccupants": {
+                "definition": "Relationship that indicates the maximum number of occupants inside a space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "identifier": {
+                "definition": "Identifier of an element given in the obXML file. Attribute considered for backward compatibility.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "UnitaryControlElement": {
+        "definition": "A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location. (Definition taken from S4BLDG ontology)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Device"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "VisualNeed": {
+        "definition": "Range of parameter values where occupants do not feel visual discomfort and therefore, they don't carry out any actions.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalNeed"
+            },
+            "definedByRange": {
+                "definition": "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            }
+        }
+    },
+    "EnvironmentalParameter": {
+        "definition": "Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedUnitOfMeasure": {
+                "definition": "Relates an environmental parameter with a unit of measure.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/UnitOfMeasure"
+                }
+            },
+            "identifier": {
+                "definition": "Identifier of an element given in the obXML file. Attribute considered for backward compatibility.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "parent": {
+                "$ref": "#/Property"
+            }
+        }
+    },
+    "Meeting": {
+        "definition": "Class to represent a meeting inside a communal space.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "endTime": {
+                "definition": "The end time of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "duration": {
+                "definition": "Average duration of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "duration"
+            },
+            "probability": {
+                "definition": "Relationship that links a probility to an event. For example the occurance probability of a meeting.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "startTime": {
+                "definition": "The start time of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            }
+        }
+    },
+    "InteractionConcept": {
+        "definition": "Types of interactions between occupants and systems.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Concept"
+            },
+            "inScheme": {
+                "definition": "Property used to indicate that an SKOS concept in within an specific SKOS scheme.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ConceptScheme"
+                }
+            },
+            "broader": {
+                "definition": "The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            },
+            "narrower": {
+                "definition": "The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            }
+        }
+    },
+    "Device": {
+        "definition": "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalObject"
+            },
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    },
+    "UnitOfMeasure": {
+        "definition": "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "Event": {
+        "definition": "Driver related to events that could be causing a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Driver"
+            }
+        }
+    },
+    "NormalProbabilityModel": {
+        "definition": "Class to represent instances of Normal probabilistic models.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "typicalTime": {
+                "definition": "Typical occurrence time of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "time"
+            },
+            "earlyOccurTime": {
+                "definition": "Earliest occurrence time of an event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "time"
+            },
+            "parent": {
+                "$ref": "#/MovementModel"
+            }
+        }
+    },
+    "InteractionScheme": {
+        "definition": "An aggregation of SKOS concepts regarding the interaction type between occupants and space systems",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/ConceptScheme"
+            }
+        }
+    },
+    "DayOfWeek": {
+        "definition": "The day of the week.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {}
+    },
+    "Time": {
+        "definition": "Driver related to time conditions that could be causing a behavior. It also describes the time when another type of driver occur.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedSeason": {
+                "definition": "Indicates which seasons are behavioral drivers for an occupant.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Season"
+                }
+            },
+            "relatedTimeOfDay": {
+                "definition": "Indicates which times during a day are behavioral drivers for an occupant.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/TimeOfDay"
+                }
+            },
+            "relatedDayOfWeek": {
+                "definition": "Indicates which days of the week are behavioral drivers for an occupant.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/DayOfWeek"
+                }
+            },
+            "onHolidays": {
+                "definition": "Indicates which days that act as time drivers are holidays.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "date"
+            },
+            "parent": {
+                "$ref": "#/Driver"
+            }
+        }
+    },
+    "Habit": {
+        "definition": "Driver related to habits that could be causing a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Driver"
+            }
+        }
+    },
+    "IAQNeed": {
+        "definition": "Range of parameter values where occupants do not feel indoor air quality discomfort and therefore, they don't carry out any actions.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/PhysicalNeed"
+            },
+            "definedByRange": {
+                "definition": "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ParameterRange"
+                }
+            }
+        }
+    },
+    "StatusTransitionTypeConcept": {
+        "definition": "One time event involving occupancy status transition in building level.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Concept"
+            },
+            "inScheme": {
+                "definition": "Property used to indicate that an SKOS concept in within an specific SKOS scheme.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/ConceptScheme"
+                }
+            },
+            "broader": {
+                "definition": "The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            },
+            "narrower": {
+                "definition": "The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Concept"
+                }
+            }
+        }
+    },
+    "StatusTransition": {
+        "definition": "Type of movements to represent transition events between spaces.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "relatedTransitionType": {
+                "definition": "Relationship that indicates the type of status transition event.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/StatusTransitionTypeConcept"
+                }
+            },
+            "typicalDuration": {
+                "definition": "The typical duration of an event or activity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "duration"
+            },
+            "specifiedBy": {
+                "definition": "Relates a transition event to a movement model that describe this action.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/MovementModel"
+                }
+            },
+            "parent": {
+                "$ref": "#/Movement"
+            }
+        }
+    },
+    "Environment": {
+        "definition": "Driver related to the environmental conditions that could be causing a behavior.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedEnvironmentalParameter": {
+                "definition": "Relates and occupant environmental driver with an environmental property like temperature or illuminance.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/EnvironmentalParameter"
+                }
+            },
+            "parent": {
+                "$ref": "#/Driver"
+            }
+        }
+    },
+    "StatusTransitionScheme": {
+        "definition": "An aggregation of SKOS concepts regarding the status transition type of movements between spaces.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/ConceptScheme"
+            }
+        }
+    },
+    "Interaction": {
+        "definition": "The Interaction class represent the interactions of occupants with systems within a space to recover their comfort.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "describedByFormula": {
+                "definition": "Property to relate an interaction with a formula describing the probability of occurance.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/InteractionFormula"
+                }
+            },
+            "interactsOver": {
+                "definition": "Relationship that describes an interaction between an occupant and a building component or system.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": 1,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/PhysicalObject"
+                }
+            },
+            "controlValue": {
+                "definition": "A relationship indicating the magnitud of a control action over a building system.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
+            "parent": {
+                "$ref": "#/Action"
+            }
+        }
+    },
+    "Movement": {
+        "definition": "The Movement class is used to represent the occupant's movements inside or between spaces.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "parent": {
+                "$ref": "#/Action"
+            }
+        }
+    },
+    "PhysicalObject": {
+        "definition": "Any Object that has a proper space region. (Definition extracted from DUL ontology)",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": 1,
+        "children": {
+            "relatedOperationalMode": {
+                "definition": "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": 1,
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/OperationalModeConcept"
+                }
+            }
+        }
+    }
+}

@@ -12,7 +12,8 @@ def get_ontology_dict():
              "mat": "http://bimerr.iot.linkeddata.es/def/material-properties#",
              "kpi": "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#",
              "ao": "http://bimerr.iot.linkeddata.es/def/annotation-objects#",
-             "io": "http://bimerr.iot.linkeddata.es/def/information-objects#"}
+             "io": "http://bimerr.iot.linkeddata.es/def/information-objects#",
+             "renp": "http://bimerr.iot.linkeddata.es/def/renovation-process#"}
 
     return ontos
 
@@ -77,6 +78,7 @@ def get_annotation_property_uris():
     annotations["timeZone"] = prefixes["metadata"] + "timeZone"
     annotations["codeList"] = prefixes["metadata"] + "codeList"
     annotations["codeType"] = prefixes["metadata"] + "codeType"
+    annotations["avoidElement"] = prefixes["metadata"] + "avoidElement"
 
     return annotations, prefixes
 

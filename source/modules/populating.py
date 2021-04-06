@@ -36,6 +36,7 @@ def enrich_model(original_model, enriched_model):
                 ont_element[ann_uris["date_added"]] = [{"@value": metadata_extracted["date_added"]}]
                 ont_element[ann_uris["date_deprecated"]] = [{"@value": metadata_extracted["date_deprecated"]}]
                 ont_element[ann_uris["version"]] = [{"@value": metadata_extracted["version"]}]
+                ont_element[ann_uris["avoidElement"]] = [{"@value": metadata_extracted["avoidElement"]}]
 
                 # The following metadata fields are only used by elements that are not classes (children)
                 if type != "Class":
@@ -71,6 +72,9 @@ def populate_datamodel_elements(data_model_element, metadata, facet=False):
         data_model_element["date_added"] = metadata["date_added"]
         data_model_element["date_deprecated"] = metadata["date_deprecated"]
         data_model_element["version"] = metadata["version"]
+
+        if "avoidElement" in metadata and metadata["avoidElement"] is not None or metadata["avoidElement"] == False:
+            data_model_element["avoidElement"] = metadata["avoidElement"]
 
     else:
         data_model_element["ordered"] = metadata["ordered"]

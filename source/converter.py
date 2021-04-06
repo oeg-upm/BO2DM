@@ -4,6 +4,7 @@ import json
 import argparse
 import re
 import os
+import copy
 
 from modules.utils import *
 from modules.finding import *
@@ -23,8 +24,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
     for element in enriched_onto:
         if prefixes["owl"] + "imports" in element:
             imported_ontos = element[prefixes["owl"] + "imports"]
-            imported_ontos = [onto["@id"] for onto in imported_ontos if ontology_uri in onto["@id"]]
-            original_onto_uri = imported_ontos[0]
+            original_onto_uri = [onto["@id"] for onto in imported_ontos if ontology_uri in onto["@id"]][0]
             break
     
     if local_ontology_dir:
@@ -34,12 +34,19 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
     else:
         original_onto, _ = load_ontology(original_onto_uri[:-1]+"/ontology.ttl")
 
+    # In the enriched ontology made with protege only the uri and the additional annotations
+    # exist, that is why we need to make a merge of the ontology with annotations and the original one
     enriched_onto = enrich_model(original_onto, enriched_onto)
-    concepts, relations, attributes, individuals = get_all_uris(enriched_onto)
-    concepts = concepts + individuals
+    concepts, relations, attributes, _ = get_all_uris(enriched_onto)
     properties = relations + attributes
 
-    # Children identification evaluating Restrictions
+    # The attributes and relations will be transformed to properties in the data model
+    # the properties will be listed under the keyword "children"
+    # In order to identify that we need a property under a specific concept, we need that the concepts
+    # in the ontology include whether a restriction with an attribute or relation or their range
+    # and domain is specified.
+
+    # Properties identification, evaluating Restrictions
     for concept_uri in concepts:
         if "#" in concept_uri:
             concept_ns = concept_uri.split("#")[0]
@@ -50,11 +57,12 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
         element = find_ontology_element(concept_uri, enriched_onto)
 
         concept_metadata = extract_elem_metadata(element)
-        # This if else condition deals with strange cases when two concepts have the same name
+        # This condition deals with strange cases when two concepts have the same name
         # like bot:Space and building:Space, in this case we just take the metadata from the most
         # specific concept.
         if concept_name in data_model:
             if concept_ns == original_onto:
+                data_model[concept_name]["avoidElement"] = False
                 populate_datamodel_elements(data_model[concept_name], concept_metadata)
         else:
             data_model[concept_name] = {}
@@ -77,7 +85,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
             property_types = property_element["@type"]
 
             property_name = get_element_name(property_uri)
-            property_name = re.sub("has", "", property_name)
+            property_name = re.sub("has", "related", property_name)
 
             if prefixes["rdfs"] + "range" in property_element:
                 property_range = property_element[prefixes["rdfs"] + "range"]
@@ -152,7 +160,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
             property_domain = property_element[prefixes["rdfs"] + "domain"][0]["@id"]
             domain_name = get_element_name(property_domain)
             property_name = get_element_name(property_uri)
-            property_name = re.sub("has", "", property_name)
+            property_name = re.sub("has", "related", property_name)
 
             if property_name not in data_model[domain_name]["children"]:
                 property_metadata = extract_elem_metadata(property_element)
@@ -198,12 +206,18 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
                         continue
                     data_model[concept_name]["children"][key] = element
 
+    data_model_filtered = copy.copy(data_model)
+
+    for concept, _ in data_model.items():
+        if "avoidElement" in data_model[concept] and data_model[concept]["avoidElement"] == True:
+            del data_model_filtered[concept]
+
 
     if output_datamodel_path:
         with open(output_datamodel_path, "w") as f:
-            json.dump(data_model, f, indent=4, separators=(',', ': '))
+            json.dump(data_model_filtered, f, indent=4, separators=(',', ': '))
 
-    return data_model
+    return data_model_filtered
 
 
 if __name__ == "__main__":

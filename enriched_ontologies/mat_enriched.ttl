@@ -4,11 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/hp/ontologies/2020/9/untitled-ontology-206> .
+@base <http://bimerr.iot.linkeddata.es/def/material-properties-enriched#> .
 
 <http://bimerr.iot.linkeddata.es/def/material-properties-enriched#> rdf:type owl:Ontology ;
-                                                                         owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
-                                                                                     <http://bimerr.iot.linkeddata.es/def/material-properties#> .
+                                                                     owl:imports <http://bimerr.iot.linkeddata.es/def/bimerr-metadata> ,
+                                                                                 <http://bimerr.iot.linkeddata.es/def/material-properties#> .
 
 #################################################################
 #    Annotations
@@ -82,8 +82,8 @@
 
 <http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
-                                                                      <http://purl.org/dc/elements/1.1/created> "08/07/2020"^^xsd:string ;
-                                                                      owl:versionInfo "0.5.0"^^xsd:string .
+                                                                      owl:versionInfo "0.5.0"^^xsd:string ;
+                                                                      <http://purl.org/dc/elements/1.1/created> "08/07/2020"^^xsd:string .
 
 
 <http://bimerr.iot.linkeddata.es/def/material-properties#description> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
@@ -152,8 +152,8 @@
                                                                          <http://purl.org/dc/elements/1.1/created> "08/07/2020"^^xsd:string .
 
 
-<http://bimerr.iot.linkeddata.es/def/material-properties#identifierInDatabase> owl:versionInfo "08/07/2020" ;
-                                                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+<http://bimerr.iot.linkeddata.es/def/material-properties#identifierInDatabase> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                                               owl:versionInfo "08/07/2020" ;
                                                                                <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                                                owl:versionInfo "0.5.0"^^xsd:string .
 
@@ -180,6 +180,15 @@
                                                                owl:versionInfo "0.5.0"^^xsd:string ;
                                                                <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                                owl:versionInfo "08/07/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#position> owl:versionInfo "0.5.0" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#thickness> owl:versionInfo "0.5.0" .
+
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#type> owl:versionInfo "0.5.0" .
 
 
 <https://saref.etsi.org/core/Measurement> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;

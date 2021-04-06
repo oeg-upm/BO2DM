@@ -1,27 +1,27 @@
 {
-    "Coordinate3D": {
-        "definition": null,
+    "InformationObject": {
+        "definition": "Class that represents any type of file.",
         "related_terms": [
             null
         ],
         "standards": [
             null
         ],
-        "date_added": "14/10/2020",
+        "date_added": "06/11/2020",
         "date_deprecated": null,
         "version": null,
         "children": {
-            "yCoordinate": {
-                "definition": null,
+            "location": {
+                "definition": "Location of the file.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
@@ -33,795 +33,12 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "float"
-            },
-            "zCoordinate": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "float"
-            },
-            "xCoordinate": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "float"
-            }
-        }
-    },
-    "Line": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "Point": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "2",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            }
-        }
-    },
-    "Bitmap": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "Format": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Format"
-                }
-            },
-            "normalVector": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "reference": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "Location": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "upVector": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            }
-        }
-    },
-    "Viewpoint": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "snapshotName": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "ClippingPlane": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/ClippingPlane"
-                }
-            },
-            "Camera": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Camera"
-                }
-            },
-            "index": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "integer"
-            },
-            "Bitmap": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Bitmap"
-                }
-            },
-            "relatedToComment": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Comment"
-                }
-            },
-            "viewpointName": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "Line": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Line"
-                }
-            },
-            "identifier": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "Component": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Element"
-                }
-            }
-        }
-    },
-    "TopicType": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {}
-    },
-    "Camera": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "cameraDirection": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraUpVector": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraViewPoint": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            }
-        }
-    },
-    "PerspectiveCamera": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "fieldOfView": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "float"
-            },
-            "cameraDirection": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraUpVector": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraViewPoint": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            }
-        }
-    },
-    "ClippingPlane": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "Direction": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "Location": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
+                "type": "anyURI"
             }
         }
     },
     "Comment": {
-        "definition": null,
+        "definition": "Their purpose is to record discussion between different parties related to the topic.",
         "related_terms": [
             null
         ],
@@ -832,8 +49,8 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "identifier": {
-                "definition": null,
+            "modifiedDate": {
+                "definition": "Indicates the last time the entity was modified.",
                 "related_terms": [
                     null
                 ],
@@ -844,7 +61,31 @@
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
-                    "cardinalityMax": null,
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "creationAuthor": {
+                "definition": "Indicates the creator of the entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -856,8 +97,32 @@
                 },
                 "type": "string"
             },
-            "creationAuthor": {
-                "definition": null,
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments and viewpoints.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "modifiedAuthor": {
+                "definition": "Indicates who modified the entity.",
                 "related_terms": [
                     null
                 ],
@@ -881,7 +146,7 @@
                 "type": "string"
             },
             "comment": {
-                "definition": null,
+                "definition": "Large description of the comment.",
                 "related_terms": [
                     null
                 ],
@@ -904,58 +169,8 @@
                 },
                 "type": "string"
             },
-            "Viewpoint": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Viewpoint"
-                }
-            },
             "creationDate": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "dateTime"
-            },
-            "modifiedDate": {
-                "definition": null,
+                "definition": "Indicates the creation date of the entity.",
                 "related_terms": [
                     null
                 ],
@@ -977,9 +192,49 @@
                     "codeType": null
                 },
                 "type": "dateTime"
+            }
+        }
+    },
+    "Project": {
+        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "06/11/2020",
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "Topic": {
+                "definition": "\"Relates the project to topics/issues\"",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Topic"
+                }
             },
-            "modifiedAuthor": {
-                "definition": null,
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments and viewpoints.",
                 "related_terms": [
                     null
                 ],
@@ -1005,7 +260,7 @@
         }
     },
     "Topic": {
-        "definition": null,
+        "definition": "Topic contains reference information of the topic.",
         "related_terms": [
             null
         ],
@@ -1016,34 +271,8 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "DocumentReference": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "TopicType": {
-                "definition": null,
+            "creationDate": {
+                "definition": "Indicates the creation date of the entity.",
                 "related_terms": [
                     null
                 ],
@@ -1064,12 +293,10 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": {
-                    "$ref": "#/TopicType"
-                }
+                "type": "dateTime"
             },
-            "identifier": {
-                "definition": null,
+            "modifiedDate": {
+                "definition": "Indicates the last time the entity was modified.",
                 "related_terms": [
                     null
                 ],
@@ -1080,7 +307,55 @@
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
-                    "cardinalityMax": null,
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments and viewpoints.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "stage": {
+                "definition": "Stage of the project: Preliminary Planning End, Construction Start, Construction End.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "1",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -1093,7 +368,7 @@
                 "type": "string"
             },
             "priority": {
-                "definition": null,
+                "definition": "Priority of the topic indicated by an integer number: 1, 2, 3, 4.",
                 "related_terms": [
                     null
                 ],
@@ -1116,19 +391,19 @@
                 },
                 "type": "integer"
             },
-            "title": {
-                "definition": null,
+            "relatedSpace": {
+                "definition": "Relates a topic to a space.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
-                    "cardinalityMax": null,
+                    "cardinalityMax": "1",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -1138,19 +413,21 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "string"
+                "type": {
+                    "$ref": "#/Space"
+                }
             },
-            "relatedToProject": {
-                "definition": null,
+            "relatedDocumentation": {
+                "definition": "Links a topic to extra document references, such as additional payloads, or links.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": null,
                     "ordered": null,
@@ -1163,11 +440,257 @@
                     "codeType": null
                 },
                 "type": {
-                    "$ref": "#/Project"
+                    "$ref": "#/InformationObject"
+                }
+            },
+            "relatedImageFile": {
+                "definition": "Relates to an image file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/InformationObject"
+                }
+            },
+            "modifiedAuthor": {
+                "definition": "Indicates who modified the entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "assignedTo": {
+                "definition": "The user to whom this topic is assigned to. Recommended to be in email format.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "topicType": {
+                "definition": "Comment, Issue, Request, Solution",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "topicStatus": {
+                "definition": "Status of the topic: Open, In Progress, Closed, ReOpened.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedComponent": {
+                "definition": "Relates a topic to an element.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "taskId": {
+                "definition": "Relates the topic/issue to an specific task id.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "06/11/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "creationAuthor": {
+                "definition": "Indicates the creator of the entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "description": {
+                "definition": "Provides a description of the topic.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedVideoFile": {
+                "definition": "Relates to a video file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/InformationObject"
                 }
             },
             "Comment": {
-                "definition": null,
+                "definition": "Relates a topic with a comment.",
                 "related_terms": [
                     null
                 ],
@@ -1192,8 +715,32 @@
                     "$ref": "#/Comment"
                 }
             },
-            "File": {
-                "definition": null,
+            "label": {
+                "definition": "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "title": {
+                "definition": "Title of the topic.",
                 "related_terms": [
                     null
                 ],
@@ -1203,6 +750,30 @@
                 "date_added": "14/10/2020",
                 "date_deprecated": null,
                 "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedAudioFile": {
+                "definition": "Relates to an audio file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": null,
                     "ordered": null,
@@ -1218,17 +789,17 @@
                     "$ref": "#/InformationObject"
                 }
             },
-            "creationAuthor": {
-                "definition": null,
+            "relatedIFCFile": {
+                "definition": "Relates to an IFC file.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": null,
                     "ordered": null,
@@ -1240,10 +811,12 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "string"
+                "type": {
+                    "$ref": "#/InformationObject"
+                }
             },
             "dueDate": {
-                "definition": null,
+                "definition": "Date until when the topics issue needs to be resolved.",
                 "related_terms": [
                     null
                 ],
@@ -1265,242 +838,32 @@
                     "codeType": null
                 },
                 "type": "dateTime"
-            },
-            "creationDate": {
-                "definition": null,
+            }
+        }
+    },
+    "Space": {
+        "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "06/11/2020",
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "ifcIdentifier": {
+                "definition": "Global ID of the space in the IFC file",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "dateTime"
-            },
-            "ReferenceLink": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "BimSnippet": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "description": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "TopicStatus": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/TopicStatus"
-                }
-            },
-            "modifiedAuthor": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "Stage": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Stage"
-                }
-            },
-            "modifiedDate": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "dateTime"
-            },
-            "index": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "integer"
-            },
-            "assignedTo": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
@@ -1515,35 +878,9 @@
                 "type": "string"
             }
         }
-    },
-    "TopicLabel": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {}
-    },
-    "Stage": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {}
     },
     "Element": {
-        "definition": null,
+        "definition": "An element is a generalization of all components that make up an AEC product.",
         "related_terms": [
             null
         ],
@@ -1554,298 +891,8 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "autoringToolId": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "originatingSystem": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
             "ifcIdentifier": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "06/11/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "colorDisplay": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
-    "Format": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "06/11/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {}
-    },
-    "TopicStatus": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {}
-    },
-    "OrthogonalCamera": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "14/10/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "viewToWorldScale": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "float"
-            },
-            "cameraDirection": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraUpVector": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            },
-            "cameraViewPoint": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Coordinate3D"
-                }
-            }
-        }
-    },
-    "Project": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "06/11/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "identifier": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "06/11/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
-    "InformationObject": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "06/11/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "Extension": {
-                "definition": null,
+                "definition": "Global ID of the space in the IFC file",
                 "related_terms": [
                     null
                 ],
@@ -1854,7 +901,7 @@
                 ],
                 "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
@@ -1866,9 +913,7 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": {
-                    "$ref": "#/Format"
-                }
+                "type": "string"
             }
         }
     }
