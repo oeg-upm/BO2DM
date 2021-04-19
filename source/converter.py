@@ -61,7 +61,8 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
         # like bot:Space and building:Space, in this case we just take the metadata from the most
         # specific concept.
         if concept_name in data_model:
-            if concept_ns == original_onto:
+            if concept_ns == ontology_uri[:-1]:
+
                 data_model[concept_name]["avoidElement"] = False
                 populate_datamodel_elements(data_model[concept_name], concept_metadata)
         else:
