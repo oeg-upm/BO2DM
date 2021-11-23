@@ -11,7 +11,7 @@ from modules.finding import *
 from modules.populating import *
 
 
-def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_dir=None):
+def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_path=None):
 
     ontology_prefix = ontology_path.split("/")[-1].split("_")[0]
     enriched_onto, _ = load_ontology(ontology_path)
@@ -27,10 +27,10 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
             original_onto_uri = [onto["@id"] for onto in imported_ontos if ontology_uri in onto["@id"]][0]
             break
     
-    if local_ontology_dir:
-        ontology_filename = local_ontology_dir + "/" + ontology_prefix + ".ttl"
-        print("Original Onto: ", ontology_filename)
-        original_onto, _ = load_ontology(ontology_filename)
+    if local_ontology_path:
+        #ontology_filename = local_ontology_dir + "/" + ontology_prefix + ".ttl"
+        print("Original Onto: ", local_ontology_path)
+        original_onto, _ = load_ontology(local_ontology_path)
     else:
         original_onto, _ = load_ontology(original_onto_uri[:-1]+"/ontology.ttl")
 
@@ -136,7 +136,7 @@ def o2dm_conversion(ontology_path, output_datamodel_path=None, local_ontology_di
                 max_cardinality = superclass_element[prefixes["owl"] + "cardinality"][0]["@value"]
                 data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": max_cardinality}
             else:
-                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": None}
+                data_model[concept_name]["children"][property_name]["facet"] = {"cardinalityMax": "unlimited"}
 
             populate_datamodel_elements(data_model[concept_name]["children"][property_name]["facet"],
                                         property_metadata, facet=True)
@@ -226,7 +226,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ontology to data model conversion")
     parser.add_argument("enriched_ontology_path", help="Full path to the ontology model enriched with metadata")
     parser.add_argument("datamodel_output_path", help="Full path to the output data model")
-    parser.add_argument("-ontology_dir", help="Directory path to the original ontology")
+    parser.add_argument("ontology_dir", help="Directory path to the original ontology")
     args = parser.parse_args()
 
     o2dm_conversion(args.enriched_ontology_path, args.datamodel_output_path, args.ontology_dir)

@@ -38,8 +38,19 @@
 #    Annotations
 #################################################################
 
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://purl.org/dc/elements/1.1/dataAdded> "13/04/2021" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#Building> <http://purl.org/dc/elements/1.1/dataAdded> "13/04/2021" .
+
 
 <http://bimerr.iot.linkeddata.es/def/building#Space> owl:versionInfo 1 .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://purl.org/dc/elements/1.1/dataAdded> "13/04/2021" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#hasSpace> <http://purl.org/dc/elements/1.1/dataAdded> "13/04/2021" .
 
 
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
@@ -125,8 +136,8 @@
                                                                            owl:versionInfo 1 .
 
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme> owl:versionInfo 1 ;
-                                                                          <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
+                                                                          owl:versionInfo 1 .
 
 
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice> owl:versionInfo 1 ;
@@ -175,6 +186,9 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> rdfs:isDefinedBy "obXML" ;
                                                                  owl:versionInfo 1 ;
                                                                  <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://purl.org/dc/elements/1.1/dataAdded> "26/04/2021" .
 
 
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> owl:versionInfo 1 ;
@@ -360,6 +374,9 @@
                                                                     <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean .
 
 
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding> <http://purl.org/dc/elements/1.1/dataAdded> "26/04/2021" .
+
+
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient> owl:versionInfo 1 ;
                                                                        <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                                        <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
@@ -396,8 +413,8 @@
                                                                     <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                                                           <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+                                                                           <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                                            owl:versionInfo 1 ;
                                                                            <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean .
 
@@ -432,6 +449,9 @@
                                                                    owl:versionInfo 1 .
 
 
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ifcIdentifier> <http://purl.org/dc/elements/1.1/dataAdded> "13/04/2021" .
+
+
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
                                                                  <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                                  owl:versionInfo 1 ;
@@ -451,8 +471,8 @@
 
 
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo> <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean ;
-                                                                <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
                                                                 <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
+                                                                <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
                                                                 owl:versionInfo 1 .
 
 
@@ -516,14 +536,14 @@
                                                                         <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean .
 
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
-                                                                          <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
+                                                                          <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
                                                                           <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean ;
                                                                           owl:versionInfo 1 .
 
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                                                   <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+                                                                   <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                                    owl:versionInfo 1 ;
                                                                    <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean .
 
@@ -570,8 +590,11 @@
                                                              <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                                                        <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#type> <http://purl.org/dc/elements/1.1/dateAdded> "26/04/2021" .
+
+
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+                                                                        <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                                         <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean ;
                                                                         owl:versionInfo 1 .
 
@@ -582,12 +605,15 @@
                                                                     <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#version> <http://purl.org/dc/elements/1.1/dataAdded> "26/04/2021" .
+
+
 <http://www.w3.org/2004/02/skos/core#Concept> owl:versionInfo 1 ;
                                               <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                                    owl:versionInfo 1 .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> owl:versionInfo 1 ;
+                                                    <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
@@ -600,8 +626,8 @@
 
 
 <http://www.w3.org/2004/02/skos/core#narrower> <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean ;
-                                               <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
+                                               <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
                                                owl:versionInfo 1 .
 
 
@@ -636,14 +662,14 @@
                                                     owl:versionInfo 1 .
 
 
-<https://w3id.org/def/saref4building#UnitaryControlElement> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                                            owl:versionInfo 1 .
+<https://w3id.org/def/saref4building#UnitaryControlElement> owl:versionInfo 1 ;
+                                                            <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
 <https://w3id.org/def/saref4building#contains> <http://purl.org/dc/elements/1.1/ordered> "false"^^xsd:boolean ;
                                                owl:versionInfo 1 ;
-                                               <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean ;
-                                               <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
+                                               <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
+                                               <http://purl.org/dc/elements/1.1/sensitive> "false"^^xsd:boolean .
 
 
 <https://w3id.org/def/saref4building#hasSpace> owl:versionInfo 1 ;
@@ -664,8 +690,8 @@
                                   <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
-<https://w3id.org/saref#UnitOfMeasure> <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" ;
-                                       owl:versionInfo 1 .
+<https://w3id.org/saref#UnitOfMeasure> owl:versionInfo 1 ;
+                                       <http://purl.org/dc/elements/1.1/dateAdded> "08/04/2020" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

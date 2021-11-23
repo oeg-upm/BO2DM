@@ -11,6 +11,54 @@
         "date_deprecated": null,
         "version": "0.0.1",
         "children": {
+            "datatype": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.3",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "base64Binary"
+            },
+            "updateDate": {
+                "definition": "Date when the file was last modified.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.1",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
             "creationAuthor": {
                 "definition": "Creator of the file.",
                 "related_terms": [
@@ -35,32 +83,8 @@
                 },
                 "type": "string"
             },
-            "location": {
-                "definition": "Filename or path to the location of the file.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.3",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "anyURI"
-            },
-            "creationDate": {
-                "definition": "Date when the document has been created.",
+            "description": {
+                "definition": "A short description of the content of the file.",
                 "related_terms": [
                     null
                 ],
@@ -81,10 +105,10 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "dateTime"
+                "type": "string"
             },
-            "updateDate": {
-                "definition": "Date when the file was last modified.",
+            "creationDate": {
+                "definition": "Date when the document has been created.",
                 "related_terms": [
                     null
                 ],
@@ -131,30 +155,6 @@
                 },
                 "type": "string"
             },
-            "updateAuthor": {
-                "definition": "The user who last modified the file.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.1",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
             "format": {
                 "definition": "Format or extension of the file.",
                 "related_terms": [
@@ -179,8 +179,8 @@
                 },
                 "type": "string"
             },
-            "datatype": {
-                "definition": null,
+            "location": {
+                "definition": "Filename or path to the location of the file.",
                 "related_terms": [
                     null
                 ],
@@ -201,7 +201,7 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "base64Binary"
+                "type": "anyURI"
             },
             "version": {
                 "definition": "Version of the file.",
@@ -227,8 +227,8 @@
                 },
                 "type": "string"
             },
-            "description": {
-                "definition": "A short description of the content of the file.",
+            "updateAuthor": {
+                "definition": "The user who last modified the file.",
                 "related_terms": [
                     null
                 ],

@@ -45,8 +45,8 @@
 <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                                                <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                                                <http://www.w3.org/2004/02/skos/core#altLabel> "IfcBuildingElement" ;
-                                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                                <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                                owl:versionInfo "0.0.4"^^xsd:string .
 
 
@@ -55,8 +55,8 @@
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
-                                                    owl:versionInfo "0.0.4"^^xsd:string ;
                                                     <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
+                                                    owl:versionInfo "0.0.4"^^xsd:string ;
                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDoor" ;
                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
@@ -66,8 +66,8 @@
                                                            <http://www.w3.org/2004/02/skos/core#altLabel> "IfcDuctSegment" ;
                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                                            owl:versionInfo "0.0.4"^^xsd:string ;
-                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
-                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
@@ -82,8 +82,8 @@
                                                                   owl:versionInfo 1 .
 
 
-<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowSegment" ;
-                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowSegment" ;
                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                            <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
@@ -100,13 +100,16 @@
                                                              owl:versionInfo 1 .
 
 
+<http://bimerr.iot.linkeddata.es/def/building#Measurement> owl:versionInfo "0.1.5" .
+
+
 <http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> owl:versionInfo 1 ;
                                                                   <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcPipeSegment" ;
-                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                           <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                            <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                                            <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                                            owl:versionInfo "0.0.4"^^xsd:string .
@@ -115,11 +118,17 @@
 <http://bimerr.iot.linkeddata.es/def/building#Project> owl:versionInfo "0.1.3" .
 
 
+<http://bimerr.iot.linkeddata.es/def/building#Property> owl:versionInfo "0.1.5" .
+
+
+<http://bimerr.iot.linkeddata.es/def/building#PropertySet> owl:versionInfo "0.1.5" .
+
+
 <http://bimerr.iot.linkeddata.es/def/building#Roof> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                                     owl:versionInfo "0.0.4"^^xsd:string ;
                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "IfcRoof" ;
-                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                     <http://purl.org/dc/elements/1.1/created> "29/06/2020" .
 
 
@@ -136,8 +145,8 @@
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
-                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                      owl:versionInfo "0.0.4"^^xsd:string ;
                                                      <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                                      <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSpace" .
@@ -155,6 +164,9 @@
                                                       <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
 
 
+<http://bimerr.iot.linkeddata.es/def/building#UnitOfMeasure> owl:versionInfo "0.1.5" .
+
+
 <http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
                                                                  owl:versionInfo 1 .
 
@@ -168,11 +180,11 @@
 
 
 <http://bimerr.iot.linkeddata.es/def/building#Window> owl:versionInfo "0.0.4"^^xsd:string ;
-                                                      <http://www.w3.org/2004/02/skos/core#altLabel> "IfcWindow" ;
                                                       <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                      <http://www.w3.org/2004/02/skos/core#altLabel> "IfcWindow" ;
                                                       <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
-                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
-                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" .
+                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                                      <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
 
 
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
@@ -224,6 +236,9 @@
                                                                <http://purl.org/dc/elements/1.1/created> "08/07/2020" .
 
 
+<http://bimerr.iot.linkeddata.es/def/building#isMeasurementOfElement> owl:versionInfo "0.1.5" .
+
+
 <http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> <http://purl.org/dc/elements/1.1/created> "08/07/2020" ;
                                                               owl:versionInfo 1 .
 
@@ -244,8 +259,8 @@
 
 
 <http://bimerr.iot.linkeddata.es/def/building#name> <http://purl.org/dc/elements/1.1/created> "02/02/2021" ;
-                                                    owl:versionInfo "0.1.2" ;
                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                                    owl:versionInfo "0.1.2" ;
                                                     <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
 
 
@@ -273,8 +288,8 @@
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> owl:versionInfo "0.1.3" .
 
 
-<http://bimerr.iot.linkeddata.es/def/material-properties#Measurement> owl:versionInfo "0.1.5" ;
-                                                                      <http://purl.org/dc/elements/1.1/created> "14/04/2021" .
+<http://bimerr.iot.linkeddata.es/def/material-properties#Measurement> <http://purl.org/dc/elements/1.1/created> "14/04/2021" ;
+                                                                      owl:versionInfo "0.1.5" .
 
 
 <http://bimerr.iot.linkeddata.es/def/material-properties#Property> <http://purl.org/dc/elements/1.1/created> "14/04/2021" ;
@@ -323,8 +338,8 @@
                                            <http://purl.org/dc/elements/1.1/created> "14/04/2021" .
 
 
-<https://saref.etsi.org/core/relatesToMeasurement> owl:versionInfo "0.1.5" ;
-                                                   <http://purl.org/dc/elements/1.1/created> "14/04/2021" .
+<https://saref.etsi.org/core/relatesToMeasurement> <http://purl.org/dc/elements/1.1/created> "14/04/2021" ;
+                                                   owl:versionInfo "0.1.5" .
 
 
 <https://w3id.org/bot#Building> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
@@ -401,8 +416,8 @@
 <https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcBoiler" ;
                                          owl:versionInfo "0.0.4"^^xsd:string ;
                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
-                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
+                                         <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                          <http://purl.org/dc/elements/1.1/created> "29/06/2020" .
 
 
@@ -447,8 +462,8 @@
 
 
 <https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2004/02/skos/core#altLabel> "IfcFlowMovingDevice" ;
-                                                   <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
+                                                   <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                                    <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                                    <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                                    owl:versionInfo "0.0.4"^^xsd:string .
@@ -481,8 +496,8 @@
 <https://w3id.org/def/saref4bldg#Outlet> <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                          owl:versionInfo "0.0.4"^^xsd:string ;
                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
-                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcOutlet" ;
                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "IfcOutlet" ;
                                          <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .
 
 
@@ -504,8 +519,8 @@
 
 <https://w3id.org/def/saref4bldg#SpaceHeater> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                               <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
-                                              owl:versionInfo "0.0.4"^^xsd:string ;
                                               <http://www.w3.org/2004/02/skos/core#altLabel> "IfcSpaceHeater" ;
+                                              owl:versionInfo "0.0.4"^^xsd:string ;
                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                               <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean .
 
@@ -522,13 +537,13 @@
                                        <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
                                        <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean ;
                                        owl:versionInfo "0.0.4"^^xsd:string ;
-                                       <http://www.w3.org/2004/02/skos/core#altLabel> "IfcTank" ;
-                                       <http://purl.org/dc/elements/1.1/created> "29/06/2020" .
+                                       <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "IfcTank" .
 
 
 <https://w3id.org/def/saref4bldg#TubeBundle> <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> "false"^^xsd:boolean ;
-                                             <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                              <http://www.w3.org/2004/02/skos/core#altLabel> "IfcTubeBundle" ;
+                                             <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> "IFC 4.1" ;
                                              owl:versionInfo "0.0.4"^^xsd:string ;
                                              <http://purl.org/dc/elements/1.1/created> "29/06/2020" ;
                                              <http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> "false"^^xsd:boolean .

@@ -1,18 +1,18 @@
 {
-    "Topic": {
-        "definition": "Topic contains reference information of the topic.",
+    "Space": {
+        "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
         "related_terms": [
             null
         ],
         "standards": [
             null
         ],
-        "date_added": "14/10/2020",
+        "date_added": "06/11/2020",
         "date_deprecated": null,
         "version": null,
         "children": {
-            "relatedVideoFile": {
-                "definition": "Relates to a video file.",
+            "ifcIdentifier": {
+                "definition": "Global ID of the space in the IFC file",
                 "related_terms": [
                     null
                 ],
@@ -22,58 +22,6 @@
                 "date_added": null,
                 "date_deprecated": null,
                 "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "relatedDocumentation": {
-                "definition": "Links a topic to extra document references, such as additional payloads, or links.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "assignedTo": {
-                "definition": "The user to whom this topic is assigned to. Recommended to be in email format.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
@@ -86,6 +34,122 @@
                     "codeType": null
                 },
                 "type": "string"
+            }
+        }
+    },
+    "Topic": {
+        "definition": "Topic contains reference information of the topic.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "14/10/2020",
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "relatedDocumentation": {
+                "definition": "Links a topic to extra document references, such as additional payloads, or links.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/InformationObject"
+                }
+            },
+            "relatedComment": {
+                "definition": "Relates a topic with a comment.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Comment"
+                }
+            },
+            "label": {
+                "definition": "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedComponent": {
+                "definition": "Relates a topic to an element.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
             },
             "topicType": {
                 "definition": "Comment, Issue, Request, Solution",
@@ -111,32 +175,8 @@
                 },
                 "type": "string"
             },
-            "modifiedAuthor": {
-                "definition": "Indicates who modified the entity.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "relatedSpace": {
-                "definition": "Relates a topic to a space.",
+            "relatedImageFile": {
+                "definition": "Relates to an image file.",
                 "related_terms": [
                     null
                 ],
@@ -147,7 +187,7 @@
                 "date_deprecated": null,
                 "version": "0.0.2",
                 "facet": {
-                    "cardinalityMax": "1",
+                    "cardinalityMax": "unlimited",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -158,20 +198,20 @@
                     "codeType": null
                 },
                 "type": {
-                    "$ref": "#/Space"
+                    "$ref": "#/InformationObject"
                 }
             },
-            "taskId": {
-                "definition": "Relates the topic/issue to an specific task id.",
+            "topicStatus": {
+                "definition": "Status of the topic: Open, In Progress, Closed, ReOpened.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "06/11/2020",
+                "date_added": null,
                 "date_deprecated": null,
-                "version": null,
+                "version": "0.0.2",
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
@@ -209,30 +249,6 @@
                 },
                 "type": "string"
             },
-            "modifiedDate": {
-                "definition": "Indicates the last time the entity was modified.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "dateTime"
-            },
             "creationDate": {
                 "definition": "Indicates the creation date of the entity.",
                 "related_terms": [
@@ -257,8 +273,8 @@
                 },
                 "type": "dateTime"
             },
-            "relatedIFCFile": {
-                "definition": "Relates to an IFC file.",
+            "relatedAudioFile": {
+                "definition": "Relates to an audio file.",
                 "related_terms": [
                     null
                 ],
@@ -269,7 +285,7 @@
                 "date_deprecated": null,
                 "version": "0.0.2",
                 "facet": {
-                    "cardinalityMax": null,
+                    "cardinalityMax": "unlimited",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -283,39 +299,15 @@
                     "$ref": "#/InformationObject"
                 }
             },
-            "description": {
-                "definition": "Provides a description of the topic.",
+            "taskId": {
+                "definition": "Relates the topic/issue to an specific task id.",
                 "related_terms": [
                     null
                 ],
                 "standards": [
                     null
                 ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "identifier": {
-                "definition": "Attribute to uniquely identify the topics, comments.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
+                "date_added": "06/11/2020",
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
@@ -355,8 +347,8 @@
                 },
                 "type": "string"
             },
-            "relatedComponent": {
-                "definition": "Relates a topic to an element.",
+            "relatedVideoFile": {
+                "definition": "Relates to a video file.",
                 "related_terms": [
                     null
                 ],
@@ -367,33 +359,7 @@
                 "date_deprecated": null,
                 "version": "0.0.2",
                 "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Element"
-                }
-            },
-            "relatedImageFile": {
-                "definition": "Relates to an image file.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": null,
+                    "cardinalityMax": "unlimited",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -406,106 +372,6 @@
                 "type": {
                     "$ref": "#/InformationObject"
                 }
-            },
-            "label": {
-                "definition": "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "relatedAudioFile": {
-                "definition": "Relates to an audio file.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/InformationObject"
-                }
-            },
-            "relatedComment": {
-                "definition": "Relates a topic with a comment.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Comment"
-                }
-            },
-            "dueDate": {
-                "definition": "Date until when the topics issue needs to be resolved.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "dateTime"
             },
             "creationAuthor": {
                 "definition": "Indicates the creator of the entity.",
@@ -555,8 +421,178 @@
                 },
                 "type": "integer"
             },
-            "topicStatus": {
-                "definition": "Status of the topic: Open, In Progress, Closed, ReOpened.",
+            "modifiedAuthor": {
+                "definition": "Indicates who modified the entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "dueDate": {
+                "definition": "Date until when the topics issue needs to be resolved.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "assignedTo": {
+                "definition": "The user to whom this topic is assigned to. Recommended to be in email format.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedIFCFile": {
+                "definition": "Relates to an IFC file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/InformationObject"
+                }
+            },
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "description": {
+                "definition": "Provides a description of the topic.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "modifiedDate": {
+                "definition": "Indicates the last time the entity was modified.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "relatedSpace": {
+                "definition": "Relates a topic to a space.",
                 "related_terms": [
                     null
                 ],
@@ -577,83 +613,9 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "string"
-            }
-        }
-    },
-    "Element": {
-        "definition": "An element is a generalization of all components that make up an AEC product.",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "06/11/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "ifcIdentifier": {
-                "definition": "Global ID of the space in the IFC file",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
-    "Space": {
-        "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": "06/11/2020",
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "ifcIdentifier": {
-                "definition": "Global ID of the space in the IFC file",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
+                "type": {
+                    "$ref": "#/Space"
+                }
             }
         }
     },
@@ -669,8 +631,8 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "comment": {
-                "definition": "Large description of the comment.",
+            "modifiedAuthor": {
+                "definition": "Indicates who modified the entity.",
                 "related_terms": [
                     null
                 ],
@@ -717,32 +679,8 @@
                 },
                 "type": "dateTime"
             },
-            "modifiedAuthor": {
-                "definition": "Indicates who modified the entity.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "identifier": {
-                "definition": "Attribute to uniquely identify the topics, comments.",
+            "comment": {
+                "definition": "Large description of the comment.",
                 "related_terms": [
                     null
                 ],
@@ -791,6 +729,94 @@
             },
             "creationAuthor": {
                 "definition": "Indicates the creator of the entity.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "14/10/2020",
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Project": {
+        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "06/11/2020",
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "relatedTopic": {
+                "definition": "Relates the project to topics/issues",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.2",
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Topic"
+                }
+            },
+            "identifier": {
+                "definition": "Attribute to uniquely identify the topics, comments.",
                 "related_terms": [
                     null
                 ],
@@ -853,8 +879,8 @@
             }
         }
     },
-    "Project": {
-        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives.",
+    "Element": {
+        "definition": "An element is a generalization of all components that make up an AEC product.",
         "related_terms": [
             null
         ],
@@ -865,8 +891,8 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "relatedTopic": {
-                "definition": "Relates the project to topics/issues",
+            "ifcIdentifier": {
+                "definition": "Global ID of the space in the IFC file",
                 "related_terms": [
                     null
                 ],
@@ -876,32 +902,6 @@
                 "date_added": null,
                 "date_deprecated": null,
                 "version": "0.0.2",
-                "facet": {
-                    "cardinalityMax": null,
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Topic"
-                }
-            },
-            "identifier": {
-                "definition": "Attribute to uniquely identify the topics, comments.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": "14/10/2020",
-                "date_deprecated": null,
-                "version": null,
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,

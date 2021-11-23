@@ -1,556 +1,4 @@
 {
-    "UnitOfMeasure": {
-        "definition": "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "name": {
-                "definition": "Name of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
-    "Project": {
-        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia).",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "name": {
-                "definition": "Name of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "identifier": {
-                "definition": "Identifier of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "relatedProcess": {
-                "definition": "Relates a project with its processes",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Process"
-                }
-            }
-        }
-    },
-    "Process": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "relatedTask": {
-                "definition": "Indicates the tasks involved in a process",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Task"
-                }
-            },
-            "actualStart": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": null
-            },
-            "executedBy": {
-                "definition": "Indicates who is responsable for executing a process or task",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Worker"
-                }
-            },
-            "name": {
-                "definition": "Name of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "actualFinish": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": null
-            },
-            "performedAtStorey": {
-                "definition": "Relate a process with a storey",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Storey"
-                }
-            },
-            "identifier": {
-                "definition": "Identifier of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "plannedStart": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": null
-            },
-            "relatedKPI": {
-                "definition": "Relates an entity with specific kpi definitions.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/KPI"
-                }
-            },
-            "executionStatus": {
-                "definition": "Indicates the state of the work order - possible values: ABORTED, COMPLETED, DOWNLOADED, PAUSED, RUNNING",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "performedAtSpace": {
-                "definition": "Relate a process with a space",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Space"
-                }
-            },
-            "performedOverComponent": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/Element"
-                }
-            },
-            "plannedFinish": {
-                "definition": null,
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": null
-            }
-        }
-    },
-    "KPI": {
-        "definition": "Key performance indicators related to building renovation projects",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "name": {
-                "definition": "Name of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "relatedKPIValue": {
-                "definition": "Relates an entity with specific kpi values.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "unlimited",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": {
-                    "$ref": "#/KPIValue"
-                }
-            },
-            "identifier": {
-                "definition": "Identifier of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
     "KPIValue": {
         "definition": "Key performance indicator values calculated for a specific renovation project and scenario.",
         "related_terms": [
@@ -563,6 +11,30 @@
         "date_deprecated": null,
         "version": null,
         "children": {
+            "maxValue": {
+                "definition": "Upper limit to define a KPI Value.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "float"
+            },
             "relativeDeviation": {
                 "definition": null,
                 "related_terms": [
@@ -611,8 +83,8 @@
                 },
                 "type": null
             },
-            "minValue": {
-                "definition": "Lower limit to define a KPI Value.",
+            "tolerance": {
+                "definition": "Tolerance error in the value of a KPI.",
                 "related_terms": [
                     null
                 ],
@@ -623,7 +95,7 @@
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
-                    "cardinalityMax": "1",
+                    "cardinalityMax": "unlimited",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -659,8 +131,8 @@
                 },
                 "type": "double"
             },
-            "tolerance": {
-                "definition": "Tolerance error in the value of a KPI.",
+            "minValue": {
+                "definition": "Lower limit to define a KPI Value.",
                 "related_terms": [
                     null
                 ],
@@ -671,7 +143,7 @@
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
-                    "cardinalityMax": "unlimited",
+                    "cardinalityMax": "1",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -708,154 +180,6 @@
                 "type": {
                     "$ref": "#/UnitOfMeasure"
                 }
-            },
-            "maxValue": {
-                "definition": "Upper limit to define a KPI Value.",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "float"
-            }
-        }
-    },
-    "Worker": {
-        "definition": null,
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "identifier": {
-                "definition": "Identifier of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "email": {
-                "definition": "Email of the worker",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            }
-        }
-    },
-    "Storey": {
-        "definition": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
-        "related_terms": [
-            null
-        ],
-        "standards": [
-            null
-        ],
-        "date_added": null,
-        "date_deprecated": null,
-        "version": null,
-        "children": {
-            "name": {
-                "definition": "Name of the entity",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": null,
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
-            },
-            "ifcIdentifier": {
-                "definition": "Global identifier in the IFC file",
-                "related_terms": [
-                    null
-                ],
-                "standards": [
-                    null
-                ],
-                "date_added": null,
-                "date_deprecated": null,
-                "version": "0.0.1",
-                "facet": {
-                    "cardinalityMax": "1",
-                    "ordered": null,
-                    "sensitive": null,
-                    "transformation": null,
-                    "measurementType": null,
-                    "measurementUnit": null,
-                    "timeZone": null,
-                    "codeList": null,
-                    "codeType": null
-                },
-                "type": "string"
             }
         }
     },
@@ -921,7 +245,7 @@
             }
         }
     },
-    "Task": {
+    "Worker": {
         "definition": null,
         "related_terms": [
             null
@@ -933,8 +257,70 @@
         "date_deprecated": null,
         "version": null,
         "children": {
-            "executedBy": {
-                "definition": "Indicates who is responsable for executing a process or task",
+            "processId": {
+                "definition": "Identifier of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "email": {
+                "definition": "Email of the worker",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Process": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "performedAtSpace": {
+                "definition": "Relate a process with a space",
                 "related_terms": [
                     null
                 ],
@@ -956,10 +342,418 @@
                     "codeType": null
                 },
                 "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "executionStatus": {
+                "definition": "Indicates the state of the work order - possible values: ABORTED, COMPLETED, DOWNLOADED, PAUSED, RUNNING",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "version": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedProject": {
+                "definition": "Relation to connect a process or workorder with a project.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Project"
+                }
+            },
+            "plannedFinishDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "plannedStartDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "processId": {
+                "definition": "Identifier of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "creationDate": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "executedBy": {
+                "definition": "Indicates who is responsable for executing a process or task",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
                     "$ref": "#/Worker"
                 }
             },
-            "dustIssue": {
+            "relatedKPI": {
+                "definition": "Relates an entity with specific kpi definitions.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KPI"
+                }
+            },
+            "i3did": {
+                "definition": "Identifier in the i3d tool",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "name": {
+                "definition": "Name of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "processName": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "actualStartDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "relatedTask": {
+                "definition": "Indicates the tasks involved in a process",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Task"
+                }
+            },
+            "actualFinishDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "performedAtStorey": {
+                "definition": "Relate a process with a storey",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Storey"
+                }
+            }
+        }
+    },
+    "HealthSafetyIssue": {
+        "definition": "Health and safety issues related to an specific task.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "noiseIssue": {
                 "definition": null,
                 "related_terms": [
                     null
@@ -1007,8 +801,8 @@
                 },
                 "type": "boolean"
             },
-            "relatedKPI": {
-                "definition": "Relates an entity with specific kpi definitions.",
+            "message": {
+                "definition": "Message describing the health and safety issue.",
                 "related_terms": [
                     null
                 ],
@@ -1019,7 +813,7 @@
                 "date_deprecated": null,
                 "version": null,
                 "facet": {
-                    "cardinalityMax": "unlimited",
+                    "cardinalityMax": "1",
                     "ordered": null,
                     "sensitive": null,
                     "transformation": null,
@@ -1029,11 +823,33 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": {
-                    "$ref": "#/KPI"
-                }
+                "type": "string"
             },
-            "noiseIssue": {
+            "gasIssue": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "boolean"
+            },
+            "dustIssue": {
                 "definition": null,
                 "related_terms": [
                     null
@@ -1081,7 +897,33 @@
                 },
                 "type": "boolean"
             },
-            "gasIssue": {
+            "relatedStorey": {
+                "definition": "Relates an issue with a storey.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Storey"
+                }
+            },
+            "waterIssue": {
                 "definition": null,
                 "related_terms": [
                     null
@@ -1104,6 +946,158 @@
                     "codeType": null
                 },
                 "type": "boolean"
+            },
+            "relatedSpace": {
+                "definition": "Relates an issue with a space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            }
+        }
+    },
+    "KPI": {
+        "definition": "Key performance indicators related to building renovation projects",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "name": {
+                "definition": "Name of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "processId": {
+                "definition": "Identifier of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedKPIValue": {
+                "definition": "Relates an entity with specific kpi values.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KPIValue"
+                }
+            }
+        }
+    },
+    "Task": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "plannedStartDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
             },
             "result": {
                 "definition": "Indicates the state of the task, possible values are: YES (done), NO (not done), PROBLEM (finished with problems), STARTED, READY",
@@ -1153,8 +1147,8 @@
                 },
                 "type": "string"
             },
-            "identifier": {
-                "definition": "Identifier of the entity",
+            "taskId": {
+                "definition": null,
                 "related_terms": [
                     null
                 ],
@@ -1177,7 +1171,7 @@
                 },
                 "type": "string"
             },
-            "waterIssue": {
+            "duration": {
                 "definition": null,
                 "related_terms": [
                     null
@@ -1199,7 +1193,331 @@
                     "codeList": null,
                     "codeType": null
                 },
-                "type": "boolean"
+                "type": "duration"
+            },
+            "plannedFinishDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "actualStartDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "actualFinishDateTime": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "start": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "dateTime"
+            },
+            "relatedIssue": {
+                "definition": "Relates an specific task to an issue.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/HealthSafetyIssue"
+                }
+            },
+            "executedBy": {
+                "definition": "Indicates who is responsable for executing a process or task",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Worker"
+                }
+            },
+            "i3dResultId": {
+                "definition": null,
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedKPI": {
+                "definition": "Relates an entity with specific kpi definitions.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/KPI"
+                }
+            }
+        }
+    },
+    "Project": {
+        "definition": "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia).",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "name": {
+                "definition": "Name of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "relatedProcess": {
+                "definition": "Relates a project with its processes",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "unlimited",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Process"
+                }
+            },
+            "processId": {
+                "definition": "Identifier of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "UnitOfMeasure": {
+        "definition": "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "name": {
+                "definition": "Name of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
             }
         }
     },
@@ -1250,6 +1568,68 @@
                 "date_added": null,
                 "date_deprecated": null,
                 "version": "0.0.1",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Storey": {
+        "definition": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": null,
+        "date_deprecated": null,
+        "version": null,
+        "children": {
+            "ifcIdentifier": {
+                "definition": "Global identifier in the IFC file",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": "0.0.1",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": null,
+                    "sensitive": null,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "name": {
+                "definition": "Name of the entity",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": null,
+                "date_deprecated": null,
+                "version": null,
                 "facet": {
                     "cardinalityMax": "1",
                     "ordered": null,
