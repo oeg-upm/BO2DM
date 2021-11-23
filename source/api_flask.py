@@ -1,4 +1,6 @@
+import tempfile
 import flask
+import os
 from flask import request, jsonify
 from converter import o2dm_conversion
 from flask_swagger_ui import get_swaggerui_blueprint
@@ -39,13 +41,21 @@ def return_domains():
 
     return jsonify(domains_available)
 
-@app.route("/domains", methods=["GET"])
+@app.route("/domains", methods=["GET", "POST"])
 def converter():
-    query_parameters = request.args
-    domain = query_parameters.get("domain")
-    prefix = domains_available[domain]["prefix"]
-    ontology_path = "ontology/" + prefix + "_enriched.ttl"
-    data_model = o2dm_conversion(ontology_path)
+    file = request.files["data"]
+    filename = file.filename
+    
+    os.makedirs("tmp/ttl", exist_ok=True)
+    os.makedirs("tmp/json", exist_ok=True)
+
+    input_filepath = "tmp/ttl/" + filename
+    output_filepath = "tmp/json/" + filename[:-3] + ".json"
+
+    file.save(input_filepath)
+
+    data_model = o2dm_conversion(input_filepath, output_filepath)
+
 
     return jsonify(data_model)
 
