@@ -1,6 +1,5 @@
 import flask
 from flask import request, jsonify
-import sqlite3
 from converter import o2dm_conversion
 from flask_swagger_ui import get_swaggerui_blueprint
 
