@@ -20,8 +20,10 @@ Repository for the BIMERR to Data Model Converter which transforms an OWL ontolo
 
 4. Run the converter.py script
 
-    `python converter.py path/to/enriched/ontology path/to/output/datamodel path/to/original/ontology`
+    4.1. If you want to generate the data model using the original ontology published online.
 
-    Notes:
+    `python converter.py path/to/enriched/ontology path/to/output/datamodel`
 
-    * If the path to the original ontology (not enriched version) is no included, the script will look for the published version of the ontology online.
+    4.2. If you want to generate the data model using the original ontology from you local system.
+
+    `python converter.py path/to/enriched/ontology path/to/output/datamodel -o path/to/original/ontology`

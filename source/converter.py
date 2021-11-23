@@ -226,7 +226,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ontology to data model conversion")
     parser.add_argument("enriched_ontology_path", help="Full path to the ontology model enriched with metadata")
     parser.add_argument("datamodel_output_path", help="Full path to the output data model")
-    parser.add_argument("ontology_dir", help="Directory path to the original ontology")
+    parser.add_argument("-o", "--ontology_dir", help="Directory path to the original ontology")
     args = parser.parse_args()
 
     o2dm_conversion(args.enriched_ontology_path, args.datamodel_output_path, args.ontology_dir)
