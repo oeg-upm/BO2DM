@@ -1,0 +1,174 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": [
+    "SoftwareSourceCode",
+    "SoftwareApplication"
+  ],
+  "codeRepository": "https://github.com/oeg-upm/BO2DM",
+  "issueTracker": "https://github.com/oeg-upm/BO2DM/issues",
+  "dateCreated": "2020-03-11",
+  "dateModified": "2021-11-23",
+  "downloadUrl": "https://github.com/oeg-upm/BO2DM/releases",
+  "name": "BO2DM",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "softwareRequirements": [
+    {
+      "name": "aniso8601",
+      "@type": "SoftwareApplication",
+      "version": "==8.0.0"
+    },
+    {
+      "name": "astroid",
+      "@type": "SoftwareApplication",
+      "version": "==2.5.2"
+    },
+    {
+      "name": "attrs",
+      "@type": "SoftwareApplication",
+      "version": "==19.3.0"
+    },
+    {
+      "name": "click",
+      "@type": "SoftwareApplication",
+      "version": "==7.1.1"
+    },
+    {
+      "name": "Flask",
+      "@type": "SoftwareApplication",
+      "version": "==1.1.2"
+    },
+    {
+      "name": "flask-restplus",
+      "@type": "SoftwareApplication",
+      "version": "==0.13.0"
+    },
+    {
+      "name": "flask-swagger-ui",
+      "@type": "SoftwareApplication",
+      "version": "==3.25.0"
+    },
+    {
+      "name": "html5lib",
+      "@type": "SoftwareApplication",
+      "version": "==1.0.1"
+    },
+    {
+      "name": "importlib-metadata",
+      "@type": "SoftwareApplication",
+      "version": "==1.6.0"
+    },
+    {
+      "name": "isodate",
+      "@type": "SoftwareApplication",
+      "version": "==0.6.0"
+    },
+    {
+      "name": "isort",
+      "@type": "SoftwareApplication",
+      "version": "==5.8.0"
+    },
+    {
+      "name": "itsdangerous",
+      "@type": "SoftwareApplication",
+      "version": "==1.1.0"
+    },
+    {
+      "name": "Jinja2",
+      "@type": "SoftwareApplication",
+      "version": "==2.11.2"
+    },
+    {
+      "name": "jsonschema",
+      "@type": "SoftwareApplication",
+      "version": "==3.2.0"
+    },
+    {
+      "name": "lazy-object-proxy",
+      "@type": "SoftwareApplication",
+      "version": "==1.6.0"
+    },
+    {
+      "name": "MarkupSafe",
+      "@type": "SoftwareApplication",
+      "version": "==1.1.1"
+    },
+    {
+      "name": "mccabe",
+      "@type": "SoftwareApplication",
+      "version": "==0.6.1"
+    },
+    {
+      "name": "pylint",
+      "@type": "SoftwareApplication",
+      "version": "==2.7.4"
+    },
+    {
+      "name": "pyparsing",
+      "@type": "SoftwareApplication",
+      "version": "==2.4.6"
+    },
+    {
+      "name": "pyrsistent",
+      "@type": "SoftwareApplication",
+      "version": "==0.16.0"
+    },
+    {
+      "name": "pytz",
+      "@type": "SoftwareApplication",
+      "version": "==2019.3"
+    },
+    {
+      "name": "rdflib",
+      "@type": "SoftwareApplication",
+      "version": "==4.2.2"
+    },
+    {
+      "name": "rdflib-jsonld",
+      "@type": "SoftwareApplication",
+      "version": "==0.4.0"
+    },
+    {
+      "name": "six",
+      "@type": "SoftwareApplication",
+      "version": "==1.14.0"
+    },
+    {
+      "name": "toml",
+      "@type": "SoftwareApplication",
+      "version": "==0.10.2"
+    },
+    {
+      "name": "webencodings",
+      "@type": "SoftwareApplication",
+      "version": "==0.5.1"
+    },
+    {
+      "name": "Werkzeug",
+      "@type": "SoftwareApplication",
+      "version": "==1.0.1"
+    },
+    {
+      "name": "wrapt",
+      "@type": "SoftwareApplication",
+      "version": "==1.12.1"
+    },
+    {
+      "name": "zipp",
+      "@type": "SoftwareApplication",
+      "version": "==3.1.0"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "identifier": "oeg-upm",
+      "@id": "https://github.com/oeg-upm"
+    }
+  ],
+  "readme": "https://raw.githubusercontent.com/oeg-upm/BO2DM/master/readme.md",
+  "description": [
+    "BIMERR Ontology to Data Model Converter"
+  ]
+}
